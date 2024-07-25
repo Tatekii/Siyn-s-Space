@@ -39,7 +39,7 @@ processTaskQueue()
 - `MessageChannel`
 	MessageChannel 是基于异步消息传递的。当通过 MessageChannel 发送消息时，它会创建一个宏任务，所以可以模拟setTimeout(,0)，并且延迟比setTimeout更小。
 
-## 任务优先级
+## 更新的优先级
 ### 优先级
 - **ImmediatePriority**, **直接优先级**，对应用户的 **click**、**input**、**focus** 等操作；
 	- 过期时间-1ms
@@ -47,7 +47,7 @@ processTaskQueue()
 	- 过期时间250ms
 - **NormalPriority**，**普通优先级**，对应**网络请求**、**useTransition** 等操作；
 	- 过期时间5000ms
-- **LowPriority**，**低优先级**(未找到应用场景)；
+- **LowPriority**，**低优先级**；
 	- 过期时间10000ms
 - **IdlePriority**，**空闲优先级**，如 **OffScreen**;
 	- 过期时间1073741823ms
@@ -57,3 +57,10 @@ processTaskQueue()
 
 ### 判断优先级
 react内部使用最小堆识别出目前taskQueue中最高优先级的task。
+
+
+### 协调调度
+Legacy模式下，协调为workLoopSync不可中断；Concurrent模式下，协调为workLoopConcurrent，可中断/插队与继续。
+
+#### workLoopSync
+#### workLoopConcurrent

@@ -62,5 +62,7 @@ react内部使用最小堆识别出目前taskQueue中最高优先级的task。
 ### 协调调度
 Legacy模式下，协调为workLoopSync不可中断；Concurrent模式下，协调为workLoopConcurrent，可中断/插队与继续。
 
-#### workLoopSync
-#### workLoopConcurrent
+- workLoopSync
+	在event,setTimeout,network request中出发的更新则启动。
+- workLoopConcurrent
+	与Suspense,useTransition,OffScreen相关则启用。

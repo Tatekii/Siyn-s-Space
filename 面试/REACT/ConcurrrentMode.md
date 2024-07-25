@@ -38,3 +38,22 @@ processTaskQueue()
 	另外一个不同点是，`window.performance.now()`是以一个恒定的速率慢慢增加的，它不会受到系统时间的影响（系统时钟可能会被手动调整或被 NTP 等软件篡改）。另外，`performance.timing.navigationStart + performance.now()` 约等于 `Date.now()`。
 - `MessageChannel`
 	MessageChannel 是基于异步消息传递的。当通过 MessageChannel 发送消息时，它会创建一个宏任务，所以可以模拟setTimeout(,0)，并且延迟比setTimeout更小。
+
+## 任务优先级
+### 优先级
+- **ImmediatePriority**, **直接优先级**，对应用户的 **click**、**input**、**focus** 等操作；
+	- 过期时间-1ms
+- **UserBlockingPriority**，**用户阻塞优先级**，对应用户的 **mousemove**、**scroll** 等操作；
+	- 过期时间250ms
+- **NormalPriority**，**普通优先级**，对应**网络请求**、**useTransition** 等操作；
+	- 过期时间5000ms
+- **LowPriority**，**低优先级**(未找到应用场景)；
+	- 过期时间10000ms
+- **IdlePriority**，**空闲优先级**，如 **OffScreen**;
+	- 过期时间1073741823ms
+
+### react中任务的创建
+每一次react更新代表一次协调过程，每个更新都会作为回调添加到react得taskQueue中。
+
+### 判断优先级
+react内部使用最小堆识别出目前taskQueue中最高优先级的task。

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/TYPESCRIPT/Untitled.md",
+                "file": "面试/TYPESCRIPT/类型工具.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/TYPESCRIPT/Untitled.md",
+                "file": "面试/TYPESCRIPT/类型工具.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/TYPESCRIPT/Untitled.md",
+                "file": "面试/TYPESCRIPT/类型工具.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/TYPESCRIPT/Untitled.md"
+                "file": "面试/TYPESCRIPT/类型工具.md"
               }
             }
           },
@@ -171,6 +171,7 @@
   "active": "fab36d3a9a6bbf93",
   "lastOpenFiles": [
     "面试/TYPESCRIPT/Untitled.md",
+    "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT",
     "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
@@ -207,7 +208,6 @@
     "Gundam",
     "notebook/Programming/VIM",
     "notebook/VIM/BASIC.md",
-    "NoteBook/Untitled.md",
-    "VIM/BASIC.md"
+    "NoteBook/Untitled.md"
   ]
 }

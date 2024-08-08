@@ -11,7 +11,7 @@
 
 		type res<'x'|'y'> // 1|2
 
-		// 但注意
+		// 使用[]可以组织分发
 		type res<T> = [T] extends 'x' ? 1 : 2
 
 		type res<'x'|'y'> // 2

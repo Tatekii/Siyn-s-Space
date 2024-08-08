@@ -16,3 +16,25 @@
 
 		type res<'x'|'y'> // 2
 	   ```
+	- 与`infer`出现在协变，逆变场景下
+		- 处于协变位置的同一变量的不同类型会联合
+		```javascript
+		type Foo<T> = T extends { a: infer U; b: infer U } ? U : never;
+
+		type T10 = Foo<{ a: string; b: string }>; // string
+		
+		type T11 = Foo<{ a: string; b: number }>; // string | number
+
+		```
+		- 处于逆变（函数参数）位置的同一变量的不同类型会交叉
+		```javascript
+		type Bar<T> = T extends { a: (x: infer U) => void; b: (x: infer U) => void }
+
+? U
+
+: never;
+
+		type T20 = Bar<{ a: (x: string) => void; b: (x: string) => void }>; // string
+		
+		type T21 = Bar<{ a: (x: string) => void; b: (x: number) => void }>; // string & number
+```

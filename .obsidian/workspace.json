@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "52a5e26d2dad2be3",
+        "id": "58fdb3932eaa7f8a",
         "type": "tabs",
         "children": [
           {
-            "id": "7d8dd98e0650b55b",
+            "id": "4038fe63f2c14176",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -169,10 +168,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7d8dd98e0650b55b",
+  "active": "4038fe63f2c14176",
   "lastOpenFiles": [
-    "面试/TYPESCRIPT/类型工具.md",
+    "READEME.md",
     "面试/TYPESCRIPT/关键字.md",
+    "Untitled",
+    "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT",
     "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
@@ -201,14 +202,11 @@
     "通信加密流程.canvas",
     "面试/项目",
     "面试",
-    "Untitled.md",
     "notebook/Programming/VIM/BASIC.md",
     "Gundam/Summary.md",
     "马思引的简历.md",
     "resume.jpeg",
     "Gundam",
-    "notebook/Programming/VIM",
-    "notebook/VIM/BASIC.md",
-    "NoteBook/Untitled.md"
+    "notebook/VIM/BASIC.md"
   ]
 }

@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "微服务初见"
             }
-          },
-          {
-            "id": "861af3fe9682f23d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,7 +189,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "861af3fe9682f23d",
+  "active": "409ffdca332aef45",
   "lastOpenFiles": [
     "Pasted image 20241115140813.png",
     "Pasted image 20241115111755.png",

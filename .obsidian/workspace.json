@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node/微服务/K8S.md",
+                "file": "Node/微服务/Skaffold.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K8S"
+              "title": "Skaffold"
             }
           }
         ]
@@ -190,10 +190,11 @@
   },
   "active": "409ffdca332aef45",
   "lastOpenFiles": [
+    "Node/微服务/K8S.md",
+    "Node/微服务/Skaffold.md",
     "Pasted image 20241125223229.png",
     "Pasted image 20241125222923.png",
     "Node/微服务/Micro Service.md",
-    "Node/微服务/K8S.md",
     "Pasted image 20241125103819.png",
     "Pasted image 20241125103638.png",
     "Pasted image 20241125103500.png",
@@ -202,7 +203,6 @@
     "Pasted image 20241125102946.png",
     "Pasted image 20241115140813.png",
     "Pasted image 20241115111755.png",
-    "Pasted image 20241115111733.png",
     "Node/微服务",
     "Node",
     "面试/TYPESCRIPT/类型工具.md",

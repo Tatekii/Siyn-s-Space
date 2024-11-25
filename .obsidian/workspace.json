@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node/微服务/微服务初见.md",
+                "file": "Node/微服务/K8S.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "微服务初见"
+              "title": "K8S"
             }
           }
         ]
@@ -87,8 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -191,10 +190,14 @@
   },
   "active": "409ffdca332aef45",
   "lastOpenFiles": [
+    "Pasted image 20241125103133.png",
+    "Pasted image 20241125103130.png",
+    "Node/微服务/Micro Service.md",
+    "Node/微服务/K8S.md",
+    "Pasted image 20241125102946.png",
     "Pasted image 20241115140813.png",
     "Pasted image 20241115111755.png",
     "Pasted image 20241115111733.png",
-    "Node/微服务/微服务初见.md",
     "Node/微服务",
     "Node",
     "面试/TYPESCRIPT/类型工具.md",
@@ -230,7 +233,6 @@
     "面试",
     "notebook/Programming/VIM/BASIC.md",
     "Gundam/Summary.md",
-    "马思引的简历.md",
     "resume.jpeg"
   ]
 }

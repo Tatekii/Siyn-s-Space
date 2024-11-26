@@ -40,19 +40,19 @@ Write two paragraphs in about 150 words using the ideas given below:
 
 Give the correct form of the verbs in parentheses:
 
-The mummy of an Egyptian woman who (die) in 800 B.C. just (have) an operation. As there (be) strange marks on the X-ray plates taken of the mummy, doctors (try) to find out whether the woman (die) of a rare disease. The only way to do this (be) to operate. The operation, which (last) for over four hours, (prove) to be very difficult. The doctors (remove) a section of the mummy and (send) it to a laboratory. They also (find) something which the X-ray plates not (show). The doctors not (decide) yet how the woman (die). They (fear) that the mummy would fall to pieces when they (cut) it open, but fortunately, this not (happen). The mummy successfully (survive) the opera­tion.
+The mummy of an Egyptian woman who __ (die) in 800 B.C. just __ (have) an operation. As there __ (be) strange marks on the X-ray plates taken of the mummy, doctors (try) to find out whether the woman __ (die) of a rare disease. The only way to do this __ (be) to operate. The operation, which __ (last) for over four hours, __ (prove) to be very difficult. The doctors __ (remove) a section of the mummy and __ (send) it to a laboratory. They also __ (find) something which the X-ray plates not __ (show). The doctors not __ (decide) yet how the woman __ (die). They __ (fear) that the mummy would fall to pieces when they __ (cut) it open, but fortunately, this not __ (happen). The mummy successfully __ (survive) the opera­tion.
 
 ### _b What happened? What was happening? What used to happen?_
 
 Give the correct form of the verbs in parentheses. Use _would_ in place of _used to_ where possible:
 
-I (travel) by air a great deal when I (be) a boy. My parents (live) in South America and I (fly) there from Europe in the holidays. An air hostess (take) charge of me  and I never (have) an unpleasant experience. I am used to traveling by air and only on one occasion have I ever felt frightened. After taking off, we (fly) low over the city and slowly (gain) height, when the plane suddenly (turn) round and (fly) back to the airport. While we (wait) to land, an air hostess (tell) us to keep calm, and to get off the plane quietly as soon as it had touched down.
+I __ (travel) by air a great deal when I __ (be) a boy. My parents __ (live) in South America and I __ (fly) there from Europe in the holidays. An air hostess __ (take) charge of me  and I never __ (have) an unpleasant experience. I am used to traveling by air and only on one occasion have I ever felt frightened. After taking off, we __ (fly) low over the city and slowly __ (gain) height, when the plane suddenly __ (turn) round and __ (fly) back to the airport. While we __ (wait) to land, an air hostess __ (tell) us to keep calm, and to get off the plane quietly as soon as it had touched down.
 
 ### _c What will happen ?_
 
 Give the correct form of the verbs in parentheses:
 
-Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it (last). The busmen have stated that the strike    (continue) until general agreement (reach) about pay and working conditions. Most people believe that the strike (last) for a week. Many owners of private cars  (offer) free rides, to people on their way to work. This (relieve) pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike (last). All the young men are expert drivers, but before they (drive) any of the buses, they (have to) pass a special test
+Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it __ (last). The busmen have stated that the strike    __ (continue) until general agreement __ (reach) about pay and working conditions. Most people believe that the strike __ (last) for a week. Many owners of private cars  __ (offer) free rides, to people on their way to work. This __ (relieve) pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike __ (last). All the young men are expert drivers, but before they __ (drive) any of the buses, they __ (have to) pass a special test
 
 ### _d What will happen? What will be happening? What will have been happening?_
 
@@ -141,7 +141,7 @@ I tried to wake up my wife by __ (ring) the doorbell, but she was fast asleep, s
 
 3. When will you _dye_ this jacket?
 
-### _c_ Supply the conect form of _can_ or _able to_ in the following:
+### _c_ Supply the correct form of _can_ or _able to_ in the following:
 
 1. __ you show me the way to the station please?
 
@@ -151,17 +151,17 @@ I tried to wake up my wife by __ (ring) the doorbell, but she was fast asleep, s
 
 4. You __ not leave this room until you get permission.
 
-### E A and The.
+## E A and The.
 
 Put in _a(n)_ or _the_ where necessary.
 
 After reading  __  article entitled ' __ Cigarette Smoking and Your Health', I lit  __ ciga­rette to calm my nerves. I smoked with __ concentration and __ pleasure as I was sure that this would be my last cigarette. For __ whole week I did not smoke at all and during this time my wife suffered terribly. I had all __ usual symptoms of someone giving up __ smoking: __ bad temper and __ enormous appetite. My friends kept on offering me __ cigarettes and __ cigars. They made no effort to hide their amusement whenever I produced __ packet of __ sweets from my pocket.
 
-### F Supply the missing words in the following:
+## F Supply the missing words in the following:
 
 Perhaps the __ extraordinary building of the nineteenth century was the Crystal Palace which was built in Hyde Park for the Great Exhibition of 1851. The Crystal Palace was different __ all other buildings __ the world, for it was made of iron and glass. It was one of the __ (big) buildings __ all time and a __ of people from __ countries came to see it. A great __ goods were sent to the exhibition from various parts of the world.There was also a great __ of machinery on display.
 
-### G Supply the missing words in these sentences:
+## G Supply the missing words in these sentences:
 
 1.    There will be a dance tonight __ the Green Park Hotel.
 
@@ -195,7 +195,7 @@ Perhaps the __ extraordinary building of the nineteenth century was the Crystal 
 
 # Special difficulties
 
-A Words often confused.
+## A Words often confused.
 
 Choose the correct words in the following sentences:
 
@@ -225,4 +225,44 @@ Choose the correct words in the following sentences:
 
 13.    He is (enough old) (old enough) to know what is right.
 
-14.    You should use (petrol) (benzine) to get those stains off,
+14.    You should use (petrol) (benzine) to get those stains off.
+
+## B Write sentences using each of the following:
+
+1.   Get up, get over, gel away, get out.
+
+2.     Keep off, keep out. keep in, keep up.
+
+3.    Take in. take up, take off. take away.
+
+4.     Run into, run out of. run away, run after.
+
+5.     Make up, make for. make out, make up for.
+
+## C Write sentences using the following:
+
+1.   Turn yellow.
+
+2.     Go sour.
+
+3.     Grow dark.
+
+4.     Fall ill.
+
+5.     Come true.
+
+6.     Get angry.
+
+## D Complete the following sentences using so ... I or neither... I.
+
+1.    She reads a lot and                        
+
+2.     You shouldn't work so hard and                           
+
+3.     You are mistaken and                        
+
+4.     You will regret it and                        
+
+5.     Tom telephoned him yesterday and                        
+
+6.     She hasn't been well and

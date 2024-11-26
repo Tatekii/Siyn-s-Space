@@ -46,30 +46,42 @@ _b What happened? What was happening? What used to happen?_
 
 Give the correct form of the verbs in parentheses. Use _would_ in place of _used to_ where possible:
 
-I (travel) by air a great deal when I (be) a boy. My parents (live) in South   
+I (travel) by air a great deal when I (be) a boy. My parents (live) in South America and I (fly) there from Europe in the holidays. An air hostess (take) charge of me  and I never (have) an unpleasant experience. I am used to traveling by air and only on one occasion have I ever felt frightened. After taking off, we (fly) low over the city and slowly (gain) height, when the plane suddenly (turn) round and (fly) back to the airport. While we (wait) to land, an air hostess (tell) us to keep calm, and to get off the plane quietly as soon as it had touched down.
 
-America and I (fly) there from Europe in the holidays. An air hostess (take) charge of me  
-
-and I never                (have) an unpleasant experience. I am used to traveling by air and only on one occasion have I ever felt frightened. After taking off, we         (fly) low over the city and slowly         (gain)                                        
-
-height, when the plane suddenly              •      — (turn) round and                 (fly) back to the airport. While we
-(wait) to land, an air hostess                   (tell) us to keep calm, and to get off the plane quietly as soon as it had touched down.
-
-_c What w__沮 happen ?_
+_c What will happen ?_
 
 Give the correct form of the verbs in parentheses:
 
-Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it     (last). The busmen have stated that the strike    (continue) until general agreement               (reach) about pay and working conditions. Most people believe that the strike     (last) for a week. Many owners of private cars   (offer) 'free rides, to people on their way to work. This    (relieve) pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike (last). All the young men are expert drivers, but before they                       (drive) any of the buses, they      (have to) pass a special test
-
+Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it (last). The busmen have stated that the strike    (continue) until general agreement (reach) about pay and working conditions. Most people believe that the strike (last) for a week. Many owners of private cars  (offer) free rides, to people on their way to work. This (relieve) pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike (last). All the young men are expert drivers, but before they (drive) any of the buses, they (have to) pass a special test
 
 _d What will happen? What will be happening? What will have been happening?_
 
 Give the correct form of the verbs in parentheses:
 
-I have just received a letter from my old school informing me that my former headmaster, Mr. Reginald Page,             (retire) next week. Pupils of the school, old and new,    (send) him a present to mark the
+I have just received a letter from my old school informing me that my former headmaster, Mr. Reginald Page,__ (retire) next week. Pupils of the school, old and new,   __ (send) him a present to mark the occasion. All those who have contributed towards the gift __ (sign) their names in a large album which __ (send) to the headmaster's home. We all __ (remember) Mr. Page for his patience and understanding and for the kindly encouragement he gave us when we went so unwillingly to school. A great many former pupils __ (attend) a farewell dinner in his honour next Thursday. It is a curious coincidence that the day, before his retirement, Mr. Page __ (teach) for a total of forty years. After he __ (retire) he __ (devote) himself to gardening. For him, this __ be an entirely new hobby.
 
-occasion. All those who have contributed towards the gift           (sign) their names in a large album which                (send) to the headmaster's home. We all         (remember) Mr. Page for his patience and under­
+_e What happened? What had happened? What had been happening?_
 
-standing and for the kindly encouragement he gave us when we went so unwillingly to school. A great many former pupils       (attend) a farewell dinner in his honour next Thursday. It is a curious coincidence that the day        
+Give the correct form of the verbs in parentheses:
 
-, before his retirement, Mr. Page------------------- (teach) for a total of forty years. After he                          (retire) he
+As the man tried to swing the speedboat round, the steering wheel came away in his hands. He __  (wave) desperately to his companion who __ (water ski) for the last fifteen minutes. Both men hardly __ (have) time to realize what was happening when they __ (throw) violently into the sea. The speedboat __ (strike) a buoy, but it __ (continue) to move very quickly across the water. Both men just __ (begin) to swim towards the shore, when they __ (notice) with dismay that the speedboat was moving in a circle. It now __ (come) towards them at tremendous speed. In less than a minute, it __ (roar) past them only a few feet away.
+
+_f_ Give the correct form of the verbs in parentheses:
+
+1. Captain Scott __ (find) that Amundsen __ (reach) the South Pole before him.  
+
+2. We just __ (move) to a new house but we __ (be) dissatisfied with it.           
+
+3. When I __ (meet) him two weeks ago, he __ (tell) me that he just __ (return) from the south of France.
+
+4. Many new records __ (set up) in the next Olympic Games.
+
+5. He always __ (go) for a walk every morning before his illness.
+
+6. By next June, I __ (study) English for three years.
+
+7. While the two thieves __ (argue) someone __ (steal) their car.
+
+_g_ Give the correct form of the verbs in parentheses:
+
+Though people have often laughed at stories told by seamen, it now   (know) that many 'monsters' which at times      (sight) are simply strange fish. Occassionally, unusual creatures                                  (wash) to the shore, but they rarely            (catch) out at sea. Some time ago, however, a peculiar fish           (catch) near Madagascar. A small fishing boat                            (carry) miles out to sea by the powerful fish as it pulled on the line. When it eventually       (bring) to shore, it (find) to be over thirteen feet long. The fish, which since                  (send) to a museum where it                     (examine) by a scientist,                   (call) an oarfish. Such creatures rarely           (see) alive by man as they live at a depth of six hundred feet.

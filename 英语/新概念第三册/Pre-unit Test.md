@@ -34,39 +34,39 @@ Write two paragraphs in about 150 words using the ideas given below:
 1. The man returned to give a repeat performance ——tight-rope again ——he did a hand-stand on the one-wheel bicycle ——lost his balance ——the crowd gasped ——the man grabbed the tight-rope:— he was still holding on to the bicycle ——climbed on again and rode to the other side.
 	>The man returned for a second act, eager to astonish the crowd again. This time, he repeated the tightrope crossing on the one-wheel bicycle but added a daring twist. Halfway across, he performed a handstand on the bicycle, stunning the audience. Suddenly, he lost his balance, and the crowd gasped in alarm. However, the man quickly grabbed the tightrope with his hands, skillfully holding on to the bicycle as well. With extraordinary composure, he climbed back onto the bicycle and completed the act by riding to the other side. The crowd cheered louder than ever, amazed by his resilience and bravery.
 
-### C Verbs
+## C Verbs
 
-_a What happened? What has happened? What has been happening?_
+### _a What happened? What has happened? What has been happening?_
 
 Give the correct form of the verbs in parentheses:
 
 The mummy of an Egyptian woman who (die) in 800 B.C. just (have) an operation. As there (be) strange marks on the X-ray plates taken of the mummy, doctors (try) to find out whether the woman (die) of a rare disease. The only way to do this (be) to operate. The operation, which (last) for over four hours, (prove) to be very difficult. The doctors (remove) a section of the mummy and (send) it to a laboratory. They also (find) something which the X-ray plates not (show). The doctors not (decide) yet how the woman (die). They (fear) that the mummy would fall to pieces when they (cut) it open, but fortunately, this not (happen). The mummy successfully (survive) the opera­tion.
 
-_b What happened? What was happening? What used to happen?_
+### _b What happened? What was happening? What used to happen?_
 
 Give the correct form of the verbs in parentheses. Use _would_ in place of _used to_ where possible:
 
 I (travel) by air a great deal when I (be) a boy. My parents (live) in South America and I (fly) there from Europe in the holidays. An air hostess (take) charge of me  and I never (have) an unpleasant experience. I am used to traveling by air and only on one occasion have I ever felt frightened. After taking off, we (fly) low over the city and slowly (gain) height, when the plane suddenly (turn) round and (fly) back to the airport. While we (wait) to land, an air hostess (tell) us to keep calm, and to get off the plane quietly as soon as it had touched down.
 
-_c What will happen ?_
+### _c What will happen ?_
 
 Give the correct form of the verbs in parentheses:
 
 Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it (last). The busmen have stated that the strike    (continue) until general agreement (reach) about pay and working conditions. Most people believe that the strike (last) for a week. Many owners of private cars  (offer) free rides, to people on their way to work. This (relieve) pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike (last). All the young men are expert drivers, but before they (drive) any of the buses, they (have to) pass a special test
 
-_d What will happen? What will be happening? What will have been happening?_
+### _d What will happen? What will be happening? What will have been happening?_
 
 Give the correct form of the verbs in parentheses:
 
 I have just received a letter from my old school informing me that my former headmaster, Mr. Reginald Page,__ (retire) next week. Pupils of the school, old and new,   __ (send) him a present to mark the occasion. All those who have contributed towards the gift __ (sign) their names in a large album which __ (send) to the headmaster's home. We all __ (remember) Mr. Page for his patience and understanding and for the kindly encouragement he gave us when we went so unwillingly to school. A great many former pupils __ (attend) a farewell dinner in his honour next Thursday. It is a curious coincidence that the day, before his retirement, Mr. Page __ (teach) for a total of forty years. After he __ (retire) he __ (devote) himself to gardening. For him, this __ be an entirely new hobby.
 
-_e What happened? What had happened? What had been happening?_
+### _e What happened? What had happened? What had been happening?_
 
 Give the correct form of the verbs in parentheses:
 
 As the man tried to swing the speedboat round, the steering wheel came away in his hands. He __  (wave) desperately to his companion who __ (water ski) for the last fifteen minutes. Both men hardly __ (have) time to realize what was happening when they __ (throw) violently into the sea. The speedboat __ (strike) a buoy, but it __ (continue) to move very quickly across the water. Both men just __ (begin) to swim towards the shore, when they __ (notice) with dismay that the speedboat was moving in a circle. It now __ (come) towards them at tremendous speed. In less than a minute, it __ (roar) past them only a few feet away.
 
-_f_ Give the correct form of the verbs in parentheses:
+### _f_ Give the correct form of the verbs in parentheses:
 
 1. Captain Scott __ (find) that Amundsen __ (reach) the South Pole before him.  
 
@@ -82,11 +82,11 @@ _f_ Give the correct form of the verbs in parentheses:
 
 7. While the two thieves __ (argue) someone __ (steal) their car.
 
-_g_ Give the correct form of the verbs in parentheses:
+### _g_ Give the correct form of the verbs in parentheses:
 
 Though people have often laughed at stories told by seamen, it now  __ (know) that many 'monsters' which at times __ (sight) are simply strange fish. Occassionly, unusual creatures __ (wash) to the shore, but they rarely __ (catch) out at sea. Some time ago, however, a peculiar fish __ (catch) near Madagascar. A small fishing boat __ (carry) miles out to sea by the powerful fish as it pulled on the line. When it eventually __ (bring) to shore, it __ (find) to be over thirteen feet long. The fish, which since __ (send) to a museum where it __ (examine) by a scientist, __ (call) an oarfish. Such creatures rarely __ (see) alive by man as they live at a depth of six hundred feet.
 
-_h_ Write a report of this conversation as it might appear in a newspaper:
+### _h_ Write a report of this conversation as it might appear in a newspaper:
 
 'At the time the murder was committed, I was travelling on the 8.0 o'clock train to London,' said the man.
 
@@ -106,7 +106,7 @@ _h_ Write a report of this conversation as it might appear in a newspaper:
 
 'Of course not.'
 
-_i_ If.
+### _i_ If.
 
 Give the correct form of the verbs in parentheses:
 
@@ -116,16 +116,16 @@ Give the correct form of the verbs in parentheses:
 
 3. If there had not been a hard layer of rock beneath the soil, they __ (complete) the job in a few hours.
 
-_j_ Give the correct form of the verbs in parentheses:
+### _j_ Give the correct form of the verbs in parentheses:
 
 I tried to wake up my wife by __ (ring) the doorbell, but she was fast asleep, so I got a ladder from the shed in the garden, put it against the wall, and began __ (climb) towards the bedroom window. I was almost there when a sarcastic voice below said, 'I don't think the windows need __ (clean) at this time of the night.' I looked down and nearly fell off the ladder when I saw a policeman. I immediately regretted __ (answer) in the way I did, but I said, 'I enjoy __ (clean) windows at night.'
 'So do I,' answered the policeman in the same tone. 'Excuse my __ (interrupt) you. I hate __ (interrupt) a man when he's busy __ (work), but would you mind __ (come) with me to the station?'
 'Well, I'd prefer __ (stay) here,' I said. 'You see, I've forgotten my key.'
 
 
-### D Other verbs.
+## D Other verbs.
 
-_a_ Supply the correct form of _have to_ or _should_ in these sentences:
+### _a_ Supply the correct form of _have to_ or _should_ in these sentences:
 
 1.  I'm sorry 1 couldn't get here on time. I                          (go) to the bank.
 
@@ -133,7 +133,7 @@ _a_ Supply the correct form of _have to_ or _should_ in these sentences:
 
 3. We                     (begin) work at 9 o'clock but we never do.
 
-_b_ Write these sentences again using _have_ with the verbs in italics:
+### _b_ Write these sentences again using _have_ with the verbs in italics:
 
 1. '_I shall deliver_ _the parcel,' said the shop assistant.
 
@@ -141,12 +141,88 @@ _b_ Write these sentences again using _have_ with the verbs in italics:
 
 3. When will you _dye_ this jacket?
 
-_c_ Supply the conect form of _can_ or _able to_ in the following:
+### _c_ Supply the conect form of _can_ or _able to_ in the following:
 
-1                       you show me the way to the station please?
+1. __ you show me the way to the station please?
 
-2     I gave him a few lessons and he                         soon swim.
+2. I gave him a few lessons and he __ soon swim.
 
-3     They                     jump into the sea before the boat sank.
+3. They __ jump into the sea before the boat sank.
 
-4     You                     not leave this room until you get permission.
+4. You __ not leave this room until you get permission.
+
+### E A and The.
+
+Put in _a(n)_ or _the_ where necessary.
+
+After reading  __  article entitled ' __ Cigarette Smoking and Your Health', I lit  __ ciga­rette to calm my nerves. I smoked with __ concentration and __ pleasure as I was sure that this would be my last cigarette. For __ whole week I did not smoke at all and during this time my wife suffered terribly. I had all __ usual symptoms of someone giving up __ smoking: __ bad temper and __ enormous appetite. My friends kept on offering me __ cigarettes and __ cigars. They made no effort to hide their amusement whenever I produced __ packet of __ sweets from my pocket.
+
+### F Supply the missing words in the following:
+
+Perhaps the __ extraordinary building of the nineteenth century was the Crystal Palace which was built in Hyde Park for the Great Exhibition of 1851. The Crystal Palace was different __ all other buildings __ the world, for it was made of iron and glass. It was one of the __ (big) buildings __ all time and a __ of people from __ countries came to see it. A great __ goods were sent to the exhibition from various parts of the world.There was also a great __ of machinery on display.
+
+### G Supply the missing words in these sentences:
+
+1.    There will be a dance tonight __ the Green Park Hotel.
+
+2.     The players __ our team are all __ red shirts.
+
+3.     He returned __ England __ August 10th.
+
+4.     I'll meet you __ the corner __ Wednesday.
+
+5.     I always feel tired __ the end of the day.
+
+6.     As soon as he got __ the taxi, he asked the driver to take him                            the station.
+
+7.     We'll go for a walk __ the afternoon.
+
+8.     He's incapable __ controlling the class.
+
+9.     He is not interested __ anything outside his work.
+
+10.    I don't want to be involved __ this unpleasant affair.
+
+11.    He failed __ his attempt to reach the top of the mountain.
+
+12.    The surgeon decided to operate __ the patient.
+
+13.    I am not satisfied __ your explanation.
+
+14.    I think someone is knocking __ the door.
+
+15.    His debts amount __ £500.
+
+# Special difficulties
+
+A Words often confused.
+
+Choose the correct words in the following sentences:
+
+1.   You can divide this apple (among) (between) the two of you.
+
+2.     He arrived late as (usually) (usual).
+
+3.     Mr. Simpson has been appointed (director) (headmaster) of the school.
+
+4.     What shall we do with this old (clothing) (clothes)?
+
+5.     I always wear out (clothes) (cloths) quickly.
+
+6.     His instructions were not very (clear) (clean).
+
+7.     You should wait until the road is (clear) (clean) before crossing.
+
+8.     Did you (wash) (wash up) your hands?
+
+9.     I don't feel in the (mood) (temper) for a walk.
+
+10.    Whatever you do, don't lose your (temper) (mood).
+
+11.    This coffee is (too) (enough) hoi for me to drink.
+
+12.    The questions were (fairly) (enough) difficult, but I managed to answer them.
+
+13.    He is (enough old) (old enough) to know what is right.
+
+14.    You should use (petrol) (benzine) to get those stains off,

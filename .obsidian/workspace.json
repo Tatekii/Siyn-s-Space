@@ -83,7 +83,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -191,8 +192,8 @@
   },
   "active": "42365b54ca93639a",
   "lastOpenFiles": [
-    "Node/微服务/Skaffold.md",
     "英语/新概念第三册/Pre-unit Test.md",
+    "Node/微服务/Skaffold.md",
     "英语/新概念第三册",
     "英语",
     "Node/微服务/K8S.md",

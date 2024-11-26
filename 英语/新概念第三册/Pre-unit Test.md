@@ -42,17 +42,22 @@ Give the correct form of the verbs in parentheses:
 
 The mummy of an Egyptian woman who __ (die) in 800 B.C. just __ (have) an operation. As there __ (be) strange marks on the X-ray plates taken of the mummy, doctors (try) to find out whether the woman __ (die) of a rare disease. The only way to do this __ (be) to operate. The operation, which __ (last) for over four hours, __ (prove) to be very difficult. The doctors __ (remove) a section of the mummy and __ (send) it to a laboratory. They also __ (find) something which the X-ray plates not __ (show). The doctors not __ (decide) yet how the woman __ (die). They __ (fear) that the mummy would fall to pieces when they __ (cut) it open, but fortunately, this not __ (happen). The mummy successfully __ (survive) the opera­tion.
 
+>The mummy of an Egyptian woman who **died** in 800 B.C. just **had** an operation. As there **were** strange marks on the X-ray plates taken of the mummy, doctors **tried** to find out whether the woman **died** of a rare disease. The only way to do this **was** to operate. The operation, which **lasted** for over four hours, **proved** to be very difficult. The doctors **removed** a section of the mummy and **sent** it to a laboratory. They also **found** something which the X-ray plates **had not shown**. The doctors **have not decided** yet how the woman **died**. They **feared** that the mummy would fall to pieces when they **cut** it open, but fortunately, this **did not happen**. The mummy successfully **survived** the operation.
+
 ### _b What happened? What was happening? What used to happen?_
 
 Give the correct form of the verbs in parentheses. Use _would_ in place of _used to_ where possible:
 
 I __ (travel) by air a great deal when I __ (be) a boy. My parents __ (live) in South America and I __ (fly) there from Europe in the holidays. An air hostess __ (take) charge of me  and I never __ (have) an unpleasant experience. I am used to traveling by air and only on one occasion have I ever felt frightened. After taking off, we __ (fly) low over the city and slowly __ (gain) height, when the plane suddenly __ (turn) round and __ (fly) back to the airport. While we __ (wait) to land, an air hostess __ (tell) us to keep calm, and to get off the plane quietly as soon as it had touched down.
 
+>I **would travel** by air a great deal when I **was** a boy. My parents **lived** in South America, and I **would fly** there from Europe in the holidays. An air hostess **would take** charge of me, and I never **had** an unpleasant experience. I am used to traveling by air, and only on one occasion have I ever felt frightened. After taking off, we **were flying** low over the city and slowly **gaining** height, when the plane suddenly **turned** round and **flew** back to the airport. While we **were waiting** to land, an air hostess **told** us to keep calm and to get off the plane quietly as soon as it had touched down.
 ### _c What will happen ?_
 
 Give the correct form of the verbs in parentheses:
 
 Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it __ (last). The busmen have stated that the strike    __ (continue) until general agreement __ (reach) about pay and working conditions. Most people believe that the strike __ (last) for a week. Many owners of private cars  __ (offer) free rides, to people on their way to work. This __ (relieve) pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike __ (last). All the young men are expert drivers, but before they __ (drive) any of the buses, they __ (have to) pass a special test
+
+>Busmen have decided to go on strike next week. The strike is due to begin on Tuesday. No one knows how long it **will last**. The busmen have stated that the strike **will continue** until general agreement **is reached** about pay and working conditions. Most people believe that the strike **will last** for a week. Many owners of private cars **have offered** free rides to people on their way to work. This **will relieve** pressure on the trains to some extent. Meanwhile, a number of university students have volunteered to drive buses while the strike **lasts**. All the young men are expert drivers, but before they **drive** any of the buses, they **will have to** pass a special test.
 
 ### _d What will happen? What will be happening? What will have been happening?_
 
@@ -60,11 +65,15 @@ Give the correct form of the verbs in parentheses:
 
 I have just received a letter from my old school informing me that my former headmaster, Mr. Reginald Page,__ (retire) next week. Pupils of the school, old and new,   __ (send) him a present to mark the occasion. All those who have contributed towards the gift __ (sign) their names in a large album which __ (send) to the headmaster's home. We all __ (remember) Mr. Page for his patience and understanding and for the kindly encouragement he gave us when we went so unwillingly to school. A great many former pupils __ (attend) a farewell dinner in his honour next Thursday. It is a curious coincidence that the day, before his retirement, Mr. Page __ (teach) for a total of forty years. After he __ (retire) he __ (devote) himself to gardening. For him, this __ be an entirely new hobby.
 
+>I have just received a letter from my old school informing me that my former headmaster, Mr. Reginald Page, **will retire** next week. Pupils of the school, old and new, **are sending** him a present to mark the occasion. All those who have contributed towards the gift **have signed** their names in a large album which **will be sent** to the headmaster’s home. We all **remember** Mr. Page for his patience and understanding and for the kindly encouragement he gave us when we went so unwillingly to school. A great many former pupils **will attend** a farewell dinner in his honour next Thursday. It is a curious coincidence that the day before his retirement, Mr. Page **will have taught** for a total of forty years. After he **retires**, he **will devote** himself to gardening. For him, this **will be** an entirely new hobby.
+
 ### _e What happened? What had happened? What had been happening?_
 
 Give the correct form of the verbs in parentheses:
 
 As the man tried to swing the speedboat round, the steering wheel came away in his hands. He __  (wave) desperately to his companion who __ (water ski) for the last fifteen minutes. Both men hardly __ (have) time to realize what was happening when they __ (throw) violently into the sea. The speedboat __ (strike) a buoy, but it __ (continue) to move very quickly across the water. Both men just __ (begin) to swim towards the shore, when they __ (notice) with dismay that the speedboat was moving in a circle. It now __ (come) towards them at tremendous speed. In less than a minute, it __ (roar) past them only a few feet away.
+
+>As the man tried to swing the speedboat round, the steering wheel came away in his hands. He **waved** desperately to his companion, who **had been water skiing** for the last fifteen minutes. Both men hardly **had** time to realize what was happening when they **were thrown** violently into the sea. The speedboat **struck** a buoy, but it **continued** to move very quickly across the water. Both men had just **begun** to swim towards the shore, when they **noticed** with dismay that the speedboat was moving in a circle. It now **was coming** towards them at tremendous speed. In less than a minute, it **roared** past them only a few feet away.
 
 ### _f_ Give the correct form of the verbs in parentheses:
 
@@ -127,15 +136,15 @@ I tried to wake up my wife by __ (ring) the doorbell, but she was fast asleep, s
 
 ### _a_ Supply the correct form of _have to_ or _should_ in these sentences:
 
-1.  I'm sorry 1 couldn't get here on time. I                          (go) to the bank.
+1.  I'm sorry 1 couldn't get here on time. I __ (go) to the bank.
 
-2. I                     (go) to the dentist yesterday but I forgot all about it.
+2. I __ (go) to the dentist yesterday but I forgot all about it.
 
-3. We                     (begin) work at 9 o'clock but we never do.
+3. We __ (begin) work at 9 o'clock but we never do.
 
 ### _b_ Write these sentences again using _have_ with the verbs in italics:
 
-1. '_I shall deliver_ _the parcel,' said the shop assistant.
+1. 'I _shall deliver_ the parcel,' said the shop assistant.
 
 2. Are you going to _clean_ this suit?
 

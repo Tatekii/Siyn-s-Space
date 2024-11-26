@@ -84,4 +84,69 @@ _f_ Give the correct form of the verbs in parentheses:
 
 _g_ Give the correct form of the verbs in parentheses:
 
-Though people have often laughed at stories told by seamen, it now   (know) that many 'monsters' which at times      (sight) are simply strange fish. Occassionally, unusual creatures                                  (wash) to the shore, but they rarely            (catch) out at sea. Some time ago, however, a peculiar fish           (catch) near Madagascar. A small fishing boat                            (carry) miles out to sea by the powerful fish as it pulled on the line. When it eventually       (bring) to shore, it (find) to be over thirteen feet long. The fish, which since                  (send) to a museum where it                     (examine) by a scientist,                   (call) an oarfish. Such creatures rarely           (see) alive by man as they live at a depth of six hundred feet.
+Though people have often laughed at stories told by seamen, it now  __ (know) that many 'monsters' which at times __ (sight) are simply strange fish. Occassionly, unusual creatures __ (wash) to the shore, but they rarely __ (catch) out at sea. Some time ago, however, a peculiar fish __ (catch) near Madagascar. A small fishing boat __ (carry) miles out to sea by the powerful fish as it pulled on the line. When it eventually __ (bring) to shore, it __ (find) to be over thirteen feet long. The fish, which since __ (send) to a museum where it __ (examine) by a scientist, __ (call) an oarfish. Such creatures rarely __ (see) alive by man as they live at a depth of six hundred feet.
+
+_h_ Write a report of this conversation as it might appear in a newspaper:
+
+'At the time the murder was committed, I was travelling on the 8.0 o'clock train to London,' said the man.
+
+'Do you always catch such an early train?' asked the inspector.
+
+'Of course I do,' answered the man. 'I must be at work at 10.0 o'clock. My employer will confirm that I was there on time.'
+
+'Would a later train get you to work on time?' asked the inspector.
+
+'I suppose it would, but I never catch a later train.'
+
+'At what time did you arrive at the station?'
+
+'At ten to eight. I bought a paper and waited for the train.'
+
+'And you didn't notice anything unusual?'
+
+'Of course not.'
+
+_i_ If.
+
+Give the correct form of the verbs in parentheses:
+
+1. If they __ (not bring) to the surface soon they may lose their lives.
+
+2. If explosives are used, vibrations __ (cause) the roof of the mine to collapse.
+
+3. If there had not been a hard layer of rock beneath the soil, they __ (complete) the job in a few hours.
+
+_j_ Give the correct form of the verbs in parentheses:
+
+I tried to wake up my wife by __ (ring) the doorbell, but she was fast asleep, so I got a ladder from the shed in the garden, put it against the wall, and began __ (climb) towards the bedroom window. I was almost there when a sarcastic voice below said, 'I don't think the windows need __ (clean) at this time of the night.' I looked down and nearly fell off the ladder when I saw a policeman. I immediately regretted __ (answer) in the way I did, but I said, 'I enjoy __ (clean) windows at night.'
+'So do I,' answered the policeman in the same tone. 'Excuse my __ (interrupt) you. I hate __ (interrupt) a man when he's busy __ (work), but would you mind __ (come) with me to the station?'
+'Well, I'd prefer __ (stay) here,' I said. 'You see, I've forgotten my key.'
+
+
+### D Other verbs.
+
+_a_ Supply the correct form of _have to_ or _should_ in these sentences:
+
+1.  I'm sorry 1 couldn't get here on time. I                          (go) to the bank.
+
+2. I                     (go) to the dentist yesterday but I forgot all about it.
+
+3. We                     (begin) work at 9 o'clock but we never do.
+
+_b_ Write these sentences again using _have_ with the verbs in italics:
+
+1. '_I shall deliver_ _the parcel,' said the shop assistant.
+
+2. Are you going to _clean_ this suit?
+
+3. When will you _dye_ this jacket?
+
+_c_ Supply the conect form of _can_ or _able to_ in the following:
+
+1                       you show me the way to the station please?
+
+2     I gave him a few lessons and he                         soon swim.
+
+3     They                     jump into the sea before the boat sank.
+
+4     You                     not leave this room until you get permission.

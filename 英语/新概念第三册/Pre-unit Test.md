@@ -78,22 +78,25 @@ As the man tried to swing the speedboat round, the steering wheel came away in h
 ### _f_ Give the correct form of the verbs in parentheses:
 
 1. Captain Scott __ (find) that Amundsen __ (reach) the South Pole before him.  
-
+	>Captain Scott **found** that Amundsen **had reached** the South Pole before him.
 2. We just __ (move) to a new house but we __ (be) dissatisfied with it.           
-
+	>We just **moved** to a new house, but we **are** dissatisfied with it.
 3. When I __ (meet) him two weeks ago, he __ (tell) me that he just __ (return) from the south of France.
-
+	>When I **met** him two weeks ago, he **told** me that he **had just returned** from the south of France.
 4. Many new records __ (set up) in the next Olympic Games.
-
+	>Many new records **will be set up** in the next Olympic Games.
 5. He always __ (go) for a walk every morning before his illness.
-
+	>He always **went** for a walk every morning before his illness.
 6. By next June, I __ (study) English for three years.
-
+	>By next June, I **will have been studying** English for three years.
 7. While the two thieves __ (argue) someone __ (steal) their car.
+	>While the two thieves **were arguing**, someone **stole** their car.
 
 ### _g_ Give the correct form of the verbs in parentheses:
 
 Though people have often laughed at stories told by seamen, it now  __ (know) that many 'monsters' which at times __ (sight) are simply strange fish. Occassionly, unusual creatures __ (wash) to the shore, but they rarely __ (catch) out at sea. Some time ago, however, a peculiar fish __ (catch) near Madagascar. A small fishing boat __ (carry) miles out to sea by the powerful fish as it pulled on the line. When it eventually __ (bring) to shore, it __ (find) to be over thirteen feet long. The fish, which since __ (send) to a museum where it __ (examine) by a scientist, __ (call) an oarfish. Such creatures rarely __ (see) alive by man as they live at a depth of six hundred feet.
+
+>Though people have often laughed at stories told by seamen, it now **is known** that many ‘monsters’ which at times **are sighted** are simply strange fish. Occasionally, unusual creatures **are washed** to the shore, but they rarely **are caught** out at sea. Some time ago, however, a peculiar fish **was caught** near Madagascar. A small fishing boat **was carried** miles out to sea by the powerful fish as it pulled on the line. When it eventually **was brought** to shore, it **was found** to be over thirteen feet long. The fish, which since **has been sent** to a museum where it **is being examined** by a scientist, **is called** an oarfish. Such creatures rarely **are seen** alive by man as they live at a depth of six hundred feet.
 
 ### _h_ Write a report of this conversation as it might appear in a newspaper:
 
@@ -120,10 +123,11 @@ Though people have often laughed at stories told by seamen, it now  __ (know) t
 Give the correct form of the verbs in parentheses:
 
 1. If they __ (not bring) to the surface soon they may lose their lives.
-
+	>If they **are not brought** to the surface soon, they may lose their lives.
 2. If explosives are used, vibrations __ (cause) the roof of the mine to collapse.
-
+	>If explosives are used, vibrations **will cause** the roof of the mine to collapse.
 3. If there had not been a hard layer of rock beneath the soil, they __ (complete) the job in a few hours.
+	>If there had not been a hard layer of rock beneath the soil, they **would have completed** the job in a few hours.
 
 ### _j_ Give the correct form of the verbs in parentheses:
 
@@ -131,7 +135,17 @@ I tried to wake up my wife by __ (ring) the doorbell, but she was fast asleep, s
 'So do I,' answered the policeman in the same tone. 'Excuse my __ (interrupt) you. I hate __ (interrupt) a man when he's busy __ (work), but would you mind __ (come) with me to the station?'
 'Well, I'd prefer __ (stay) here,' I said. 'You see, I've forgotten my key.'
 
+>I tried to wake up my wife by **ringing** the doorbell, but she was fast asleep, so I got a ladder from the shed in the garden, put it against the wall, and began **climbing** towards the bedroom window. I was almost there when a sarcastic voice below said, ‘I don’t think the windows need **cleaning** at this time of the night.’ I looked down and nearly fell off the ladder when I saw a policeman. I immediately regretted **answering** in the way I did, but I said, ‘I enjoy **cleaning** windows at night.’
+‘So do I,’ answered the policeman in the same tone. ‘Excuse my **interrupting** you. I hate **interrupting** a man when he’s busy **working**, but would you mind **coming** with me to the station?’
+‘Well, I’d prefer **to stay** here,’ I said. ‘You see, I’ve forgotten my key.’
 
+**Key Notes:**
+
+1. **Gerund** (e.g., _ringing_, _climbing_, _cleaning_, _interrupting_, _working_) is used after prepositions, certain verbs (e.g., _regret_, _enjoy_), or expressions.
+
+2. **Infinitive** (e.g., _to stay_) is used after verbs like _prefer_ or expressions indicating a specific choice.
+
+3. The tone in the passage is conversational, so the correct forms fit naturally into the context.
 ## D Other verbs.
 
 ### _a_ Supply the correct form of _have to_ or _should_ in these sentences:

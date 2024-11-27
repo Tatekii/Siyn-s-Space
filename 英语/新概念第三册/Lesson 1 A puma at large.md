@@ -77,3 +77,28 @@ large cat-like animal was spotted many miles away from London Zoo
 5. extraordinary similar - remarkably alike
 6. immediately - instantly
 7. convinced - persuaded
+
+
+
+## Special difficulties 难 点
+instead of saying:
+1. About whom are you talking?
+2. That is the film about which I told you.
+It is better to say:
+1. Whom) are you talking about?
+2. That is the film I told you about.
+
+### Exercise
+#### A Complete these sentences by adding a suitable word to the end of each one:
+1. What are you looking _ ? [at]
+2. Where is your mother going _ ?[to]
+3. Whom has the letter been sent _ ?[to]
+4. This is the house I was born _ .[in]
+5. What does your decision depend _ ?[on]
+
+#### B Write these sentences again changing the position of the words in italics. Where possible, omit the words whom or which.
+1. He is the man _about_ whom we have heard so much.[He is the man we have heard so much about]
+2. The shelf _on_ which you put those books has collapsed.[The shelf you put those books on has collapsed]
+3. _From_ whom did you receive a letter?[Who did you rec]
+4. This is the road _by_ which we came.
+5. Where is the pencil _with_ which you were playing?

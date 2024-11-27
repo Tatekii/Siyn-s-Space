@@ -26,7 +26,29 @@ It is disturbing to think that a dangerous wild animal is still at large in the 
 ## NOTE
 1. `feel obliged to do sth`
 2. `at large`
-3. `sth cames into some`
+3. `come into` & `comes into`
+	1. **“Come into”**
+		• Used with plural subjects or the pronouns “I,” “we,” “you,” or “they.”
+		• Base form of the verb, used in the **present tense** (except for third-person singular subjects).
+		• Examples:
+			• _I come into the room every morning to open the windows._	
+			• _They come into the office early to finish their work._
+	2. **“Comes into”**
+		• Used with singular third-person subjects (he, she, it, or a singular noun).
+		• Third-person singular form of the verb in the **present tense**.
+		• Examples:
+			• _He comes into the room and starts playing the piano._
+			• _The cat comes into the house whenever it’s hungry._
+	1. **Common Meanings of “come into”**
+			1. **Enter a place**
+			• _She comes into the kitchen every afternoon._
+			• _They come into the hall to join the meeting._
+			2. **Inherit or acquire something (figuratively)**
+			• _He came into a large inheritance when his uncle passed away._
+			• _She comes into some money from her business profits._
+			3. 👉**Begin to be involved or have an effect**
+			• _Experience comes into play during difficult situations._
+			• _Hard work comes into the equation when achieving success._
 
 ## Summary
 large cat-like animal was spotted many miles away from London Zoo

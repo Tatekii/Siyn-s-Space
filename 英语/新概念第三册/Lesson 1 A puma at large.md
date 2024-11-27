@@ -70,10 +70,10 @@ large cat-like animal was spotted many miles away from London Zoo
 
 ## Vocabulary
 近义词
-1. spotted
-2. accumulate
-3. obliged to
+1. spotted - noticed/observed/detected/witnessed/catch sight of
+2. accumulate - gathered
+3. obliged to - must to ?
 4. claimed - asserted
-5. extraordinary similar - remarkabley
-6. immediately
-7. convinced
+5. extraordinary similar - remarkably alike
+6. immediately - instantly
+7. convinced - persuaded

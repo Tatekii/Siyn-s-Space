@@ -39,7 +39,7 @@ It is disturbing to think that a dangerous wild animal is still at large in the 
 		1. feel obliged
 		2. much obliged
 			-  a formal way to say 'thank you'.(**Much obliged for your assistance!**)
-		3. oblige someone with something👆
+		3. oblige someone with something👆👆
 1. `at large`
 2. `come into` & `comes into`
 	1. **“Come into”**

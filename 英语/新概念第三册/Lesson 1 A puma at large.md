@@ -93,6 +93,7 @@ they ...
 instead of saying:
 1. About whom are you talking?
 2. That is the film about which I told you.
+
 It is better to say:
 1. Whom) are you talking about?
 2. That is the film I told you about.

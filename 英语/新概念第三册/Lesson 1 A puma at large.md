@@ -99,6 +99,6 @@ It is better to say:
 #### B Write these sentences again changing the position of the words in italics. Where possible, omit the words whom or which.
 1. He is the man _about_ whom we have heard so much.[He is the man we have heard so much about]
 2. The shelf _on_ which you put those books has collapsed.[The shelf you put those books on has collapsed]
-3. _From_ whom did you receive a letter?[Who did you rec]
-4. This is the road _by_ which we came.
-5. Where is the pencil _with_ which you were playing?
+3. _From_ whom did you receive a letter?[Who did you receive a letter from?]
+4. This is the road _by_ which we came.[This is the road we came by]
+5. Where is the pencil _with_ which you were playing?[Where is the pencil you were playing with?]

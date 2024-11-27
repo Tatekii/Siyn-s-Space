@@ -78,7 +78,15 @@ large cat-like animal was spotted many miles away from London Zoo
 6. immediately - instantly
 7. convinced - persuaded
 
+## Composition 作文
+Describe the occasion when the woman picking blackberries saw the puma. Expand the following into a paragraph of about 150 words.
 
+Mrs. Stone had spent the whole morning... It was nearly lunch time, so she decided ... She was just ... when she heard
+a noise in . Then she saw an animal which . She knew it was not a cat because . The animal suddenly ... and she thought it was going to ... She dropped her basket and ... Hearing the sound, the animal .. after which, Mrs. Stone ... and
+ran all the way home. She told her neighbours that ... but they did not believe her. She also telephoned the police but
+they ...
+
+>Mrs Stone had already spent the whole morning to pick blackberry, It was nearly lunch time when she heared
 
 ## Special difficulties 难 点
 instead of saying:

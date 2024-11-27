@@ -68,3 +68,12 @@ It is disturbing to think that a dangerous wild animal is still at large in the 
 ## Summary
 large cat-like animal was spotted many miles away from London Zoo
 
+## Vocabulary
+近义词
+1. spotted
+2. accumulate
+3. obliged to
+4. claimed - asserted
+5. extraordinary similar - remarkabley
+6. immediately
+7. convinced

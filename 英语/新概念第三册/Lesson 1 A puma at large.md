@@ -5,3 +5,29 @@ The hunt for the puma began in a small village where a woman picking blackberrie
 The search proved difficult, for the puma was often observed at one place in the morning and at another place twenty miles away in the evening. Wherever it went, it left behind it a trail of dead deer and small animals like rabbits. Paw prints were seen in a number of places and puma fur was found clinging to bushes. Several people complained of 'cat-like noises' at night and a businessman on a fishing trip saw the puma up a tree. The experts were now fully convinced that the animal was a puma, but where had it come from ? As no pumas had been reported missing from any zoo in the country, this one must have been in the possession of a private collector and somehow managed to escape. The hunt went on for several weeks, but the puma was not caught.
 
 It is disturbing to think that a dangerous wild animal is still at large in the quiet countryside.
+
+## Words
+- puma
+- corner
+- spot
+- trail
+- evidence
+- print
+- accumulate
+- cling
+- oblige
+- convince
+- hunt
+- somehow
+- blackberry
+- human being
+- disturb
+
+## NOTE
+1. `feel obliged to do sth`
+2. `at large`
+3. `sth cames into some`
+
+## Summary
+large cat-like animal was spotted many miles away from London Zoo
+

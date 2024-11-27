@@ -86,7 +86,7 @@ a noise in . Then she saw an animal which . She knew it was not a cat because . 
 ran all the way home. She told her neighbours that ... but they did not believe her. She also telephoned the police but
 they ...
 
->Mrs Stone had already spent the whole morning to pick blackberry, It was nearly lunch time when she heared
+>Mrs Stone had already spent the whole morning to pick blackberry, It was nearly lunch time when she heard a noise in the bush, so she decide to get closer to find out what animal is that.Hearing the sound , the animal suddenly  jump out shown itself as a giant 'cat' and she thought it was going to attack her so she dropped her basket and ran all the way home.After which,Mrs Stone make she back to  house in safe , she told her neighbours that it was not a cat because the size was really big , she also telephoned the police but they did not believe her.
 
 ## Special difficulties 难 点
 instead of saying:

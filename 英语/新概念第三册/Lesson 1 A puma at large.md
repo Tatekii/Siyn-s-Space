@@ -24,9 +24,24 @@ It is disturbing to think that a dangerous wild animal is still at large in the 
 - disturb
 
 ## NOTE
-1. `feel obliged to do sth`
-2. `at large`
-3. `come into` & `comes into`
+1. `oblige`
+	1. To compel somebody to do something(formal)
+		1. To make someone feel that they must do something, often due to laws, rules, or expectations.
+		2. examples:
+			- _The law obliges employers to provide safe working conditions_._
+			- _I felt obliged to apologize for my mistake._
+	2. to do someone a favor or help them
+		1. to do something because it's kind or helpful
+		2. examples:
+			-  _Could you oblige me by lending me your pen?_
+			- _The host obliged the guests by preparing a special meal._
+	3. Common Expression
+		1. feel obliged
+		2. much obliged
+			-  a formal way to say 'thank you'.(**Much obliged for your assistance!**)
+		3. oblige someone with something👆
+1. `at large`
+2. `come into` & `comes into`
 	1. **“Come into”**
 		• Used with plural subjects or the pronouns “I,” “we,” “you,” or “they.”
 		• Base form of the verb, used in the **present tense** (except for third-person singular subjects).

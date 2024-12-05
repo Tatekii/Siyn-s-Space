@@ -11,10 +11,14 @@
             "id": "2d89b0a9a5a7ad20",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Node/微服务/K8S.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "K8S"
             }
           }
         ]
@@ -83,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b4fb401750063676",
@@ -186,10 +191,10 @@
   },
   "active": "2d89b0a9a5a7ad20",
   "lastOpenFiles": [
-    "英语/新概念第三册/Lesson 1 A puma at large.md",
     "Node/微服务/Micro Service.md",
-    "Node/微服务/K8S.md",
     "Node/微服务/Skaffold.md",
+    "英语/新概念第三册/Lesson 1 A puma at large.md",
+    "Node/微服务/K8S.md",
     "notebook/Programming/VIM/BASIC.md",
     "英语/新概念第三册/Lesson 2 Thirteen equals one.md",
     "英语/新概念第三册/Pre-unit Test.md",

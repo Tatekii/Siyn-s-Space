@@ -12,6 +12,17 @@
 - Ingress-nginx
 	- 映射endpoint到clusterIP的name
 
+### ExternalName Service
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  namespace: prod
+spec:
+  type: ExternalName
+  externalName: my.database.example.com
+```
 ### cluster内
 ClusterService
 - 同namespace
@@ -23,4 +34,6 @@ ClusterService
 
 ### cluster外
 NodeService
+
+
 

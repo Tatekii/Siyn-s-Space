@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "英语/XDF_IELTS语法/简单句.md",
+                "file": "英语/XDF_IELTS语法/时态.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "简单句"
+              "title": "时态"
             }
           }
         ]
@@ -87,8 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -191,8 +190,9 @@
   },
   "active": "73c8bbe852d51acb",
   "lastOpenFiles": [
-    "英语/XDF_IELTS词汇/短单词拼写法.md",
     "英语/XDF_IELTS语法/简单句.md",
+    "英语/XDF_IELTS语法/时态.md",
+    "英语/XDF_IELTS词汇/短单词拼写法.md",
     "英语/XDF_IELTS语法",
     "Pasted image 20250102171209.png",
     "Pasted image 20250102171151.png",
@@ -235,7 +235,6 @@
     "面试/ESSENTIONAL/Generator.md",
     "面试/ESSENTIONAL/变量声明.md",
     "面试/ESSENTIONAL/严格模式.md",
-    "面试/发散性题目/ES6及以后新特性.md",
     "面试/发散性题目",
     "通信加密流程.canvas"
   ]

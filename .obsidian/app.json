@@ -1,5 +1,9 @@
 {
   "showLineNumber": true,
   "spellcheck": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "root",
+  "newFileFolderPath": "assets",
+  "attachmentFolderPath": "assets"
 }

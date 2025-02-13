@@ -1,5 +1,4 @@
 # AsyncFunction
-
 **`async function`** 声明创建一个[绑定](https://developer.mozilla.org/zh-CN/docs/Glossary/Binding)到给定名称的新异步函数。函数体内允许使用 `await` 关键字，这使得我们可以更简洁地编写基于 promise 的异步代码，并且避免了显式地配置 promise 链的需要。
 
 ## 特性

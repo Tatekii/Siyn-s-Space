@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/技术上的挑战.md",
+                "file": "面试/三面&HR问题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "技术上的挑战"
+              "title": "三面&HR问题"
             }
           }
         ]
@@ -191,9 +191,10 @@
   },
   "active": "20cf99d0e2a9f0c8",
   "lastOpenFiles": [
-    "面试/当下了解的新技术.md",
     "面试/职业规划.md",
+    "面试/三面&HR问题.md",
     "面试/技术上的挑战.md",
+    "面试/当下了解的新技术.md",
     "英语/XDF_IELTS语法/复合句.md",
     "面试/Untitled",
     "英语/XDF_IELTS语法/非谓语动词.md",
@@ -235,7 +236,6 @@
     "面试/TYPESCRIPT",
     "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
-    "面试/REACT/ReactFiber.md",
     "laoP",
     "通信加密流程.canvas"
   ]

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/CSS/CSS3新属性.md",
+                "file": "面试/CSS/像素.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CSS3新属性"
+              "title": "像素"
             }
           }
         ]
@@ -191,8 +191,9 @@
   },
   "active": "f724ea681745296a",
   "lastOpenFiles": [
-    "面试/页面渲染流程.md",
     "面试/CSS/CSS3新属性.md",
+    "面试/CSS/像素.md",
+    "面试/页面渲染流程.md",
     "面试/CSS",
     "面试/性能优化/运行时性能优化.md",
     "面试/性能优化/构建性能优化.md",
@@ -218,7 +219,6 @@
     "英语/XDF_IELTS语法/非谓语动词.md",
     "英语/XDF_IELTS语法/简单句.md",
     "英语/XDF_IELTS语法/并列句.md",
-    "英语/XDF_IELTS语法/时态.md",
     "assets/Pasted image 20241115111733.png",
     "assets/Pasted image 20240712170330.png",
     "assets/Pasted image 20250102171209.png",

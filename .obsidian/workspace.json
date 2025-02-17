@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/页面渲染流程.md",
+                "file": "面试/网络/HTTP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "页面渲染流程"
+              "title": "HTTP"
             }
           }
         ]
@@ -191,6 +191,13 @@
   },
   "active": "76f6b07bd822be21",
   "lastOpenFiles": [
+    "面试/网络/HTTPS.md",
+    "面试/网络/HTTP.md",
+    "面试/网络/网络分层模型.md",
+    "面试/页面渲染流程.md",
+    "面试/Untitled.md",
+    "面试/网络",
+    "assets/Pasted image 20250217135755.png",
     "assets/Pasted image 20250217135117.png",
     "assets/Pasted image 20250217135000.png",
     "assets/Pasted image 20250217134237.png",
@@ -199,7 +206,6 @@
     "面试/CSS/IFC.md",
     "面试/CSS/像素.md",
     "面试/CSS/CSS3新属性.md",
-    "面试/页面渲染流程.md",
     "面试/CSS",
     "面试/性能优化/运行时性能优化.md",
     "面试/性能优化/构建性能优化.md",
@@ -219,9 +225,6 @@
     "面试/ESSENTIONAL/异步迭代器AsyncIterator.md",
     "面试/反问.md",
     "面试/职业规划.md",
-    "面试/技术上的挑战.md",
-    "面试/当下了解的新技术.md",
-    "英语/XDF_IELTS语法/复合句.md",
     "assets/Pasted image 20241115111733.png",
     "assets/Pasted image 20240712170330.png",
     "assets/Pasted image 20250102171209.png",
@@ -232,11 +235,8 @@
     "英语/新概念第三册",
     "英语",
     "assets/Pasted image 20241125223229.png",
-    "assets/Pasted image 20241125222923.png",
-    "assets/Pasted image 20241125103819.png",
     "Node/微服务",
     "Node",
-    "面试/TYPESCRIPT",
     "通信加密流程.canvas"
   ]
 }

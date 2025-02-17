@@ -45,7 +45,18 @@
 	2. 服务端Finish消息
 	3. 之后的数据传输使用对称加密
 
-#### 
+#### TLS1.3
+在 **TLS 1.3** 中，为了提高性能和安全性：
+
+**握手次数减少**
+• 取消 **RSA 密钥交换**，默认使用 **ECDHE（椭圆曲线 Diffie-Hellman）**。
+• 默认开启 **前向安全性（Forward Secrecy）**，即使私钥泄露也无法解密过去的数据。
+
+**移除不安全算法**
+• 移除了 MD5、SHA-1、RC4、DES 等不安全的加密算法。
+
+**更快的 TLS 握手**
+• 支持 **0-RTT（Zero Round Trip Time）**，在第二次访问相同服务器时可跳过部分握手步骤，提高加载速度。
 
 ### 数据传输
 TLS 通过 **HMAC（Hash-based Message Authentication Code）** 或 **AEAD（Authenticated Encryption with Associated Data）** 来验证数据完整性。

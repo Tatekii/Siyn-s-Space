@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/三面&HR问题.md",
+                "file": "面试/SEO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "三面&HR问题"
+              "title": "SEO"
             }
           }
         ],
@@ -103,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -206,6 +206,7 @@
   },
   "active": "f86245a96a18c844",
   "lastOpenFiles": [
+    "面试/三面&HR问题.md",
     "面试/SEO.md",
     "面试/项目/Tree拖拽.md",
     "面试/项目/通信加密.md",
@@ -219,7 +220,6 @@
     "面试/JAVASCRIPT/迭代器.md",
     "面试/ESSENTIONAL/异步迭代器AsyncIterator.md",
     "面试/反问.md",
-    "面试/三面&HR问题.md",
     "面试/职业规划.md",
     "面试/技术上的挑战.md",
     "面试/当下了解的新技术.md",

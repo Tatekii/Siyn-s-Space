@@ -2,23 +2,34 @@
 
 ## 随便列举
 ### 选择器
-### 
-
-
-- 边框属性`border-radius`，`box-shadow`，`border-image`
-
-- 背景控制`background-size,background-origin`
-
-- 文字效果和自动换行`text-shadow,word-wrap`
-
-- 自定义字体`@font-face`
-
-- 2d/3d 变换，过渡和动画` transition``animation `
-
-- CSS 多列布局`CSS Multi-column Layout`
-
-- 盒模型属性`box-sizing`
-
-- 弹性盒子`flex`
-
-- 更强大的多媒体查询
+1. 属性选择器
+	1. `[attribute]`
+	2. `[attr^=${value}]`
+	3. `[attr$="value"]`
+2. 结构性伪类
+	1. `:nth-child`
+	2. `:nth-last-child`
+	3. `:first-of-type`
+	
+### 圆角/阴影/透明度
+3. border-radius
+4. box-shadow
+5. text-shadow
+6. opacity
+### 字体增强
+7. 自定义字体@font-face
+### 背景增强
+8. background-size
+9. background-image
+10. background-origin`
+### 布局
+11. flex
+12. grid
+### 2d/3d变换&动画
+13. transition
+14. animation
+15. @keyframes
+### 盒模型控制
+16. box-sizing
+### 媒体查询
+17. @media

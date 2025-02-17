@@ -36,11 +36,8 @@ BFC 使得其中的元素 **独立于外部的布局影响**，即该区域内�
 - `display` 为 `flow-root`
 
 ### 用途
-1. 清除浮动
-	1. 使用 BFC 可以清除浮动元素的影响。为了清除浮动，我们常常会在父容器上应用 overflow: hidden 或 display: flow-root 来启用 BFC，进而保证浮动元素不影响其他元素的布局。
+1. 清除浮动（浮动高度塌陷）
+	1. [10.6.7 'Auto' heights for block formatting context roots](https://www.w3.org/TR/CSS2/visudet.html#root-height)
+	2. 在父容器上应用 overflow: hidden 或 display: flow-root 来启用 BFC，(⚠️同时需要父元素height为'auto'默认值)
 2. 防止外边距折叠
 	1. BFC 还可以避免外边距折叠的问题，尤其是在垂直方向上，非同一个BFC内部的元素之间的外边距会独立存在，不会因为折叠而导致布局不正确。
-3. 控制元素溢出（浮动高度塌陷）
-	1. 使用 overflow: hidden 等属性触发 BFC 时，可以避免子元素的内容溢出父元素的边界。这样可以确保容器不会被子元素的溢出内容所破坏。
-4. 阻止外部元素的影响
-	2. 例如避免外部浮动元素干扰到该区域内的内容布局。

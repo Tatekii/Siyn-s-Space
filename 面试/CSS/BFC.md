@@ -6,9 +6,9 @@
 
 - BFC内盒子之间会发生外边距合并
 
-- BFC内浮动元素参与高度计算（高度塌陷）
+- BFC内浮动元素参与高度计算（fix高度塌陷）
 
-- BFC内盒子不会超出BFC边界（浮动覆盖）
+- BFC内盒子不会超出BFC边界（fix浮动覆盖）
 
 ## 创建BFC：
 
@@ -28,4 +28,4 @@
 
 - 网格元素`display` 为 `grid` 或 `inline-grid` 元素的直接子元素
 
-- 表格元素`display` 为 `table``table-cell`或`table-xxx`等匿名表格元素
+- 表格元素`display` 为 `table`,`inline-table``table-cell`或`table-xxx`等匿名表格元素

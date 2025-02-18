@@ -1,6 +1,3 @@
-
-
-
 ## `[[Scope]]`
 js中的每个函数都有一个内置属性scope，决定了函数可访问哪些变量。
 - `[[scope]]`在函数被定义时就生成
@@ -15,19 +12,14 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 3. 在全局作用域后终止
 
 ## 全局对象 Global Object(`GO`)
-在任何执行上下文创建之前，在堆内存中创建全局对象，包含以下属性：
+在任何执行上下文创建之前，在[[堆]]内存中创建全局对象，包含以下属性：
 - 内置对象：`Math`,`Date`,`String`,`parsInt`等。
 - 宿主定义的属性：相当于全局对象本身的属性，对于浏览器来说就是`window`对象本身。
 该对象对于所有作用域(`[[scope]]`)均可访问。
 
-## 全局执行上下文Global Execution Context(GEC))
 
-## 全局词法环境**Global Lexical Environment (GLE)**
-
-## 执行环境栈 ECStack - execution context stack(`ESC`)
+## 🪣执行环境栈 ECStack - execution context stack(`ESC`)
 javascript 引擎执行代码的栈结构。
-
-
 
 ## 执行上下文 Execution Context(`EC`)
 javascript 代码执行的环境，包含执行所需的变量和属性：
@@ -49,6 +41,7 @@ VE是词法环境LE的一部份。
 - 暂时性死区（**Temporal Dead Zone**TDZ）
 注意：
 - ⚠️词法环境在书写代码时就确定。
+- ⚠️代替了ES5之前的VO对象。
 
 ### 绑定Banding
 - 变量绑定
@@ -70,5 +63,9 @@ VE是词法环境LE的一部份。
 	- 函数声明: `function myFunc(){}`取决于函数如何被执行
 	- 箭头函数: 绑定在函数所书写的处上下文
 	- 对象方法: `obj.method()`绑定到`.`之前的对象
-	- 函数构造器: `new MyFunc()`
+	- 函数构造器: `new MyFunc()`绑定到`new`出来的对象
 - 作用域链绑定
+
+
+## 全局执行上下文Global Execution Context(GEC)
+代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。

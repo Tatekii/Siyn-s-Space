@@ -1,8 +1,4 @@
-## 词法环境**Lexical Environment**
-每个js执行上下文都有其词法环境，包括：
-1. 环境记录**Environment Record**: 存储所有变量和函数声明.
-2. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
-🔥词法环境在代码编写时就已经确定🔥。
+
 
 
 ## `[[Scope]]`
@@ -10,8 +6,9 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 - `[[scope]]`在函数被定义时就生成
 - 存储了函数声明位置词法环境的引用（指针）
 
-## 作用域链Scope Chain
->自由变量：
+## 作用域链`Scope Chain`
+>自由变量：当前作用域没有定义的变量，这成为`自由变量`（既不是局部变量也不是函数参数）
+
 作用域链决定了变量查找的规则：
 1. 查看当前作用域
 2. 往上依次访问上级作用域
@@ -27,10 +24,19 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 
 ## 全局词法环境**Global Lexical Environment (GLE)**
 
-
 ## 执行环境栈 ECStack - execution context stack(`ESC`)
+javascript 引擎执行代码的栈结构。
 
 
 
 ## 执行上下文 Execution Context(`EC`)
-javascript 引擎内部
+javascript 代码执行的环境，包含执行所需的变量和属性：
+
+### 变量环境Variable Environment(`VE`)
+存储变量和函数声明。
+
+### 词法环境Lexical Environment(`LE`)
+每个js执行上下文都有其词法环境，包括：
+1. 环境记录**Environment Record**: 存储所有变量和函数声明.
+2. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
+🔥词法环境负责处理作用域与闭包。

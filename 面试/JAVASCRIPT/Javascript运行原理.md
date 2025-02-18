@@ -1,11 +1,4 @@
-
-
-## 全局对象 Global Object(`GO`)
-在任何执行上下文创建之前，在[[堆]]内存中创建全局对象，包含以下属性：
-- 内置对象：`Math`,`Date`,`String`,`parsInt`等。
-- 宿主定义的属性：相当于全局对象本身的属性，对于浏览器来说就是`window`对象本身。
-- ⚠️：**全局上下文中的var声明和function声明也会存储在GO中**。
-该对象对于所有作用域(`[[scope]]`)均可访问。
+作用域决定变量在哪，执行上下文决定运行规则。
 
 
 
@@ -62,7 +55,7 @@ VE是词法环境LE的一部份。
 代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。包含：
 6. 全局词法环境`GLE`
 	1. 全局变量环境`GVE`
-7. `this`绑定到全局对象`GO`
+7. `this`绑定到[[#全局对象 Global Object(`GO`)]]
 	- In browsers → window
 	- In Node.js → global
 	
@@ -95,19 +88,28 @@ GlobalExecutionContext = {
   }
 };
 ```
+### 全局对象 Global Object(`GO`)
+在任何执行上下文创建之前，在[[堆]]内存中创建全局对象，包含以下属性：
+- 内置对象：`Math`,`Date`,`String`,`parsInt`等。
+- 宿主定义的属性：相当于全局对象本身的属性，对于浏览器来说就是`window`对象本身。
+- ⚠️：**全局上下文中的var声明和function声明也会存储在GO中**。
+该对象对于所有作用域(`[[scope]]`)均可访问。
+
+
 ## 函数执行上下文**Function Execution Context (FEC)**
 - 函数执行时创建
 - 略
-## eval执行上下文**Eval Execution Context**
+## eval执行上下文**Eval Execution Context(EEC)**
 - `eval()`执行时创建
 
 # 作用域
 作用域决定了变量和函数在代码中的可访问性，在编辑阶段就已经确定（书写时）。
 - 全局作用域Global Scope
 	- 全局声明的变量
-	- zhi x全局执行上下文
+	- 指向[[#执行上下文 Execution Context(`EC`)#全局执行上下文Global Execution Context(GEC)|全局执行上下文]]
 - 函数作用域Function Scope
 	- 函数内部声明的变量
+	- 对外部环境的引用
 - 块级作用域Block Scope
 	- let /const声明的作用域在代码块`{}`中
 - 词法作用域Lexical Scope(Static Scope)

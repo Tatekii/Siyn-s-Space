@@ -33,10 +33,19 @@ javascript 引擎执行代码的栈结构。
 javascript 代码执行的环境，包含执行所需的变量和属性：
 
 ### 变量环境Variable Environment(`VE`)
-存储变量和函数声明。
+- 是词法环境LE的一部份
+- 存储*var，函数声明*
+- 处理变量提升
+⚠️历史包袱：
+	ES5和之前版本，只有var和function两种声明，所以之前也只有`VE`
 
 ### 词法环境Lexical Environment(`LE`)
 每个js执行上下文都有其词法环境，包括：
-1. 环境记录**Environment Record**: 存储所有变量和函数声明.
+1. 环境记录**Environment Record**: *存储let/const*，函数表达式，箭头函数声明.
 2. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
-🔥词法环境负责处理作用域与闭包。
+作用：
+- 🔥负责处理作用域与闭包。
+注意：
+- ⚠️词法环境在书写代码时就确定。
+
+### 绑定

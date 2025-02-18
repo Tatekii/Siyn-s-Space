@@ -22,7 +22,7 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 javascript 引擎执行代码的栈结构。
 
 ## 执行上下文 Execution Context(`EC`)
-javascript 代码执行的环境，包含执行所需的变量和属性：
+javascript 代码执行的环境，包含执行所需的变量和属性👇：
 
 ### 变量环境Variable Environment(`VE`)
 VE是词法环境LE的一部份。
@@ -68,4 +68,37 @@ VE是词法环境LE的一部份。
 
 
 ## 全局执行上下文Global Execution Context(GEC)
-代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。
+代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。包含：
+1. 全局词法环境`GLE`
+	1. 全局变量环境`GVE`
+2. `this`
+	• In browsers → window
+	• In Node.js → global
+```javascript
+var x = 10;
+let y = 20;
+const z = 30;
+
+function foo() {
+  console.log("Inside foo");
+}
+
+// ==>
+
+GlobalExecutionContext = {
+  this: window,  // In browsers
+  LexicalEnvironment: {
+    EnvironmentRecord: {
+      VariableEnvironment: {
+        x: undefined,  // `var` is hoisted but not initialized
+        foo: function() { console.log("Inside foo"); } // Function is hoisted
+      },
+      LexicalEnvironment: {
+        y: uninitialized, // `let` in Temporal Dead Zone (TDZ)
+        z: uninitialized  // `const` in Temporal Dead Zone (TDZ)
+      }
+    },
+    Outer: null  // Global has no parent scope
+  }
+};
+```

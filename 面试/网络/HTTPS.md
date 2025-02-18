@@ -1,6 +1,6 @@
-## HTTPS
-
-### TLS/SSL
+# HTTPS
+**When you visit a website via HTTPS**, you’re actually using HTTP over a TLS-secured connection.
+## TLS/SSL
 
 - HTTPS（**HyperText Transfer Protocol Secure**）是 HTTP 的安全版本，依赖 **TLS（Transport Layer Security）** 或 **SSL（Secure Sockets Layer）** 协议对数据进行加密和保护。TLS 1.2 及 TLS 1.3 是目前常用的版本，而 SSL 已经被淘汰。
 

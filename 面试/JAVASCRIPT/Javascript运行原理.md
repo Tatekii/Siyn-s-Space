@@ -120,10 +120,229 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 - `[[scope]]`在函数被定义时就生成
 - 存储了函数声明位置词法环境的引用（指针）
 
+### 自由变量
+当前作用域没有定义的变量，这成为`自由变量`（既不是局部变量也不是函数参数）
 ### 作用域链`Scope Chain`
->自由变量：当前作用域没有定义的变量，这成为`自由变量`（既不是局部变量也不是函数参数）
-
 作用域链决定了变量查找的规则：
 1. 查看当前作用域
 2. 往上依次访问上级作用域
 3. 到全局作用域后终止
+随着程序的执行，会将当前的活动对象链接到`[scope chain]`的最前端。
+```json
+[[Scope]]:[GO,...,me]
+```
+
+# 闭包
+
+- 函数与其`词法环境`共同构成 _闭包（closure）_
+- `lexical environment`词法环境 = 代码内变量标识符与值之间的关联关系（环境记录`[[Environment]]`）+ 对外部词法环境的引用
+
+- `new`操作函数的`[[Environment]]`指向全局对象,所以只能显式传递参数
+
+- js中的函数声明时天然闭包(可以访问外部外部词法环境)
+
+  
+
+## 闭包的用途
+
+  
+
+- 实现数据(变量和方法)私有化
+
+- 函数柯里化
+
+  
+
+```javascript
+
+function curry(func,...args1){
+
+const fnLen = func.length
+
+const argsArr = [...args1]
+
+function _curry(...args2){
+
+argsArr = [...argsArr,...args2]
+
+return argsArr.length >= fnLen ? func.apply(func,argsArr) : _curry
+
+}
+
+return _curry
+
+}
+
+  
+
+// 传世经典累加函数add
+
+function add(...args1){
+
+let res = [...args1].reduce((a,b)=>a+b)
+
+function innerAdd(...args2){
+
+res = [...res,...args2].reduce((a,b)=>a+b)
+
+return innerAdd
+
+}
+
+innerAdd.toString = () => res
+
+// 打印方法会调用toString
+
+return innerAdd
+
+}
+
+```
+
+  
+
+## 效果
+
+  
+
+```javascript
+
+function addCounter() {
+
+let counter = 0; // 执行结束后不会被清除
+
+const myFunction = function () {
+
+counter = counter + 1; // myFunction函数可以读取add函数内部的变量
+
+return counter;
+
+};
+
+return myFunction;
+
+}
+
+  
+
+const increment = addCounter();
+
+const c1 = increment();
+
+const c2 = increment();
+
+const c3 = increment();
+
+console.log("increment:", c1, c2, c3);
+
+// increment: 1 2 3
+
+```
+
+## 面试题
+
+- 老生常谈的for循环setTimeout打印问题
+
+```javascript
+
+for (var i = 1; i < 7; i++) {
+
+setTimeout(function () {
+
+console.log(i)
+
+}, 1000 * i)
+
+}
+
+// 6 6 6 6 6 6
+
+// 创建的6个setTimeout闭包共享一个词法作用域
+
+  
+
+**闭包只能取得包含函数中任何变量赋值最后一个值** // 6
+
+  
+  
+
+for (var i = 1; i < 7; i++) {
+
+((j) => {
+
+setTimeout(function(){
+
+console.log(j)
+
+}, 1000 * j)
+
+})(i)
+
+}
+
+// 1 2 3 4 5 6
+
+// 6个setTimeout闭包有自己独立的词法环境
+
+// 闭包读取到不同的i值
+
+  
+  
+
+for(var i = 1 ;i<7;i++){
+
+setTimeout(function(j){
+
+console.log(j);
+
+},1000*i,i)
+
+}
+
+// setTimeout 可以接受一个参数当函数调用时传入
+
+  
+
+for(let i = 1 ;i<7;i++){
+
+setTimeout(function(){
+
+console.log(i);
+
+},1000*i)
+
+}
+
+```
+
+-
+
+```javascript
+
+function fn(num2) {
+
+var num = 15;
+
+function abc() { // 函数作为返回值
+
+num++;
+
+return(num + num2);
+
+}
+
+return abc;
+
+}
+
+var aa = fn(20); // 没有引用？？
+
+aa(); //16+20
+
+aa(); //17+20
+
+fn(20)(); //36
+
+fn(20)(); //36
+
+```

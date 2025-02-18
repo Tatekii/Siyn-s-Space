@@ -1,20 +1,30 @@
+# 作用域
+作用域决定了变量和函数在代码中的可访问性。
+## 全局作用域Global Scope
+## 函数作用域Function Scope
+## 块级作用域Block Scope
+## 词法作用域Lexical Scope(Static Scope)
+
+
+
 ## `[[Scope]]`
 js中的每个函数都有一个内置属性scope，决定了函数可访问哪些变量。
 - `[[scope]]`在函数被定义时就生成
 - 存储了函数声明位置词法环境的引用（指针）
 
-## 作用域链`Scope Chain`
+### 作用域链`Scope Chain`
 >自由变量：当前作用域没有定义的变量，这成为`自由变量`（既不是局部变量也不是函数参数）
 
 作用域链决定了变量查找的规则：
 1. 查看当前作用域
 2. 往上依次访问上级作用域
-3. 在全局作用域后终止
+3. 到全局作用域后终止
 
 ## 全局对象 Global Object(`GO`)
 在任何执行上下文创建之前，在[[堆]]内存中创建全局对象，包含以下属性：
 - 内置对象：`Math`,`Date`,`String`,`parsInt`等。
 - 宿主定义的属性：相当于全局对象本身的属性，对于浏览器来说就是`window`对象本身。
+- ⚠️：**全局上下文中的var声明和function声明也会存储在GO中**。
 该对象对于所有作用域(`[[scope]]`)均可访问。
 
 
@@ -34,8 +44,8 @@ VE是词法环境LE的一部份。
 
 ### 词法环境Lexical Environment(`LE`)
 每个js执行上下文都有其词法环境，包括：
-1. 环境记录**Environment Record**: *存储let/const*，函数表达式，箭头函数声明.
-2. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
+4. 环境记录**Environment Record**: *存储let/const*，函数表达式，箭头函数声明.
+5. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
 作用：
 - 🔥负责处理作用域与闭包。
 - 暂时性死区（**Temporal Dead Zone**TDZ）
@@ -69,11 +79,13 @@ VE是词法环境LE的一部份。
 
 ## 全局执行上下文Global Execution Context(GEC)
 代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。包含：
-1. 全局词法环境`GLE`
+6. 全局词法环境`GLE`
 	1. 全局变量环境`GVE`
-2. `this`
-	• In browsers → window
-	• In Node.js → global
+7. `this`绑定到全局对象`GO`
+	- In browsers → window
+	- In Node.js → global
+	
+8. 外部引用: null
 ```javascript
 var x = 10;
 let y = 20;

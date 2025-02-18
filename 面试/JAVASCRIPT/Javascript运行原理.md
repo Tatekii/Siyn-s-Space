@@ -115,6 +115,13 @@ GlobalExecutionContext = {
 - 词法作用域Lexical Scope(Static Scope)
 	- [[#作用域链`Scope Chain`]]
 
+
+## `[[Enviroment]]`
+每个执行上下文具有一个内置属性`[[Enviroment]]`,指向当前的词法环境[[#词法环境Lexical Environment(`LE`)|LE]]。
+注意：
+- ⚠️`new`操作函数的`[[Environment]]`指向全局对象,所以只能显式传递参数
+
+
 ## `[[Scope]]`
 js中的每个函数都有一个内置属性scope，决定了函数可访问哪些变量。
 - `[[scope]]`在函数被定义时就生成
@@ -133,26 +140,46 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 ```
 
 # 闭包
-
 - 函数与其`词法环境`共同构成 _闭包（closure）_
-- `lexical environment`词法环境 = 代码内变量标识符与值之间的关联关系（环境记录`[[Environment]]`）+ 对外部词法环境的引用
-
-- `new`操作函数的`[[Environment]]`指向全局对象,所以只能显式传递参数
-
-- js中的函数声明时天然闭包(可以访问外部外部词法环境)
-
-  
-
+- 闭包使内层函数可访问外部的作用域
+- js中的函数声明时天然闭包
 ## 闭包的用途
+- 实现数据(变量和方法)私有化并缓存
+```javascript
+
+function addCounter() {
+
+let counter = 0; // 执行结束后不会被清除
+
+const myFunction = function () {
+
+counter = counter + 1; // myFunction函数可以读取add函数内部的变量
+
+return counter;
+
+};
+
+return myFunction;
+
+}
 
   
 
-- 实现数据(变量和方法)私有化
+const increment = addCounter();
 
-- 函数柯里化
+const c1 = increment();
 
-  
+const c2 = increment();
 
+const c3 = increment();
+
+console.log("increment:", c1, c2, c3);
+
+// increment: 1 2 3
+
+```
+
+- 函数柯里化(变量收集和延迟调用)
 ```javascript
 
 function curry(func,...args1){
@@ -199,45 +226,6 @@ return innerAdd
 
 ```
 
-  
-
-## 效果
-
-  
-
-```javascript
-
-function addCounter() {
-
-let counter = 0; // 执行结束后不会被清除
-
-const myFunction = function () {
-
-counter = counter + 1; // myFunction函数可以读取add函数内部的变量
-
-return counter;
-
-};
-
-return myFunction;
-
-}
-
-  
-
-const increment = addCounter();
-
-const c1 = increment();
-
-const c2 = increment();
-
-const c3 = increment();
-
-console.log("increment:", c1, c2, c3);
-
-// increment: 1 2 3
-
-```
 
 ## 面试题
 

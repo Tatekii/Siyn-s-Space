@@ -11,22 +11,42 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 ## 词法环境Lexical Environment(`LE`)
 每个js执行上下文都有其词法环境，包括：
 1. 环境记录**Environment Record**: *存储let/const*，函数表达式，箭头函数声明.
+	1. 提供暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
+	2. 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
 2. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
+	1. 🔥作用域与闭包机制
 
-作用：
-- 🔥负责处理作用域与闭包。
-- 暂时性死区（**Temporal Dead Zone**TDZ）
 注意：
 - ⚠️词法环境在书写代码时就确定。
 - ⚠️代替了ES5之前的VO对象。
 
-## 变量环境Variable Environment(`VE`)
+### 变量环境Variable Environment(`VE`)
 VE是词法环境LE的一部份。
 作用：
 - 存储*var，函数声明*
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
-⚠️历史包袱：
-- ES5和之前版本，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`VO`
+
+### EcamScript版本差异
+- ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
+- ES<5，函数执行上下中的VO被称为`Activation Object (AO)`
+```javascript
+function example(x) {
+  console.log(y);  // undefined
+  var y = 20;
+  function inner() {
+    return "Hello";
+  }
+}
+
+example(5);
+
+
+AO = {
+  arguments: { 0: 5, length: 1 },  // Arguments object created
+  x: 5,       // Function parameter stored in AO
+  y: undefined,   // 'var' is hoisted but not assigned
+  inner: function () { return "Hello"; }  // Function is fully ho
+```
 
 ## 绑定Banding
 - 变量绑定
@@ -55,12 +75,12 @@ VE是词法环境LE的一部份。
 ## 全局执行上下文Global Execution Context(GEC)
 代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。包含：
 
-1. 全局词法环境`GLE`
+3. 全局词法环境`GLE`
 	1. 全局变量环境`GVE`
-2. `this`绑定到[[#全局对象 Global Object(`GO`)]]
+4. `this`绑定到[[#全局对象 Global Object(`GO`)]]
 	- In browsers → window
 	- In Node.js → global
-3. 外部引用: null
+5. 外部引用: null
 ```javascript
 var x = 10;
 let y = 20;
@@ -130,9 +150,9 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 
 ### 作用域链`Scope Chain`
 作用域链决定了变量查找的规则：
-1. 查看当前作用域
-2. 往上依次访问上级作用域
-3. 到全局作用域后终止
+6. 查看当前作用域
+7. 往上依次访问上级作用域
+8. 到全局作用域后终止
 
 随着程序的执行，会将当前的活动对象链接到`[scope chain]`的最前端。
 ```json

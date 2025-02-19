@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "file": "面试/JAVASCRIPT/V8引擎.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Javascript运行原理"
+              "title": "V8引擎"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228.5,
-    "collapsed": true
+    "width": 228.5
   },
   "right": {
     "id": "b4fb401750063676",
@@ -202,13 +201,13 @@
   },
   "active": "17ff08b818e4c0fc",
   "lastOpenFiles": [
+    "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/网络/HTTPS.md",
     "面试/网络/网络分层模型.md",
     "面试/网络/TCP.md",
     "面试/网络/HTTP.md",
     "READEME.md",
     "面试/性能优化/运行时性能优化.md",
-    "面试/JAVASCRIPT/Javascript运行原理.md",
     "全局执行上下文.md",
     "堆.md",
     "面试/JAVASCRIPT/V8引擎.md",

@@ -11,7 +11,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 ## 词法环境Lexical Environment(`LE`)
 每个js执行上下文都有其词法环境，a new Lexical Environment is created each time such code is evaluated.其中包括两部份：
 ### 环境记录**Environment Record**
-存储当前作用域中创建的变量绑定，包括*存储let/const*，函数表达式，箭头函数声明。
+- 存储当前作用域中可变变量绑定，包括`let`,`const`。
 - 处理暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
 - 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
 
@@ -25,10 +25,10 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 
 ## 变量环境Variable Environment(`VE`)
 ### 环境记录**Environment Record**
-存储当前执行上下文中的var声明和函数声明
+- `CreateMutableBinding`存储当前作用域中可变变量绑定,包括`var`,`funciton`
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 
-### EcamScript版本差异
+### ECMAScript版本差异
 - ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
 - ES<5，函数执行上下中的VO被称为`Activation Object (AO)`
 ```javascript
@@ -49,6 +49,7 @@ AO = {
   y: undefined,   // 'var' is hoisted but not assigned
   inner: function () { return "Hello"; }  // Function is fully ho
 ```
+- 💡新的ECMA标准中又改成环境记录的一套理论
 
 ## This绑定ThisBanding
 - 函数声明: `function myFunc(){}`取决于函数如何被执行

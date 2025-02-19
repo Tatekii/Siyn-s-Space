@@ -20,8 +20,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - ⚠️词法环境在书写代码时就确定。
 - ⚠️代替了ES5之前的VO对象。
 
-### 变量环境Variable Environment(`VE`)
-VE是词法环境LE的一部份。
+## 变量环境Variable Environment(`VE`)
 作用：
 - 存储*var，函数声明*
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中

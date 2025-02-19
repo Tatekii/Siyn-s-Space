@@ -1,5 +1,5 @@
 作用域决定变量在哪，执行上下文决定运行规则。
-
+[https://262.ecma-international.org/5.1/#sec-10.2.1](https://262.ecma-international.org/5.1/#sec-10.2.1)
 
 
 # 🪣执行环境栈 ECStack - execution context stack(`ESC`)
@@ -9,19 +9,22 @@ javascript ✈️引擎执行代码的栈结构。
 javascript 代码执行时所需所需的变量和属性👇，在代码执行阶段动态生成：
 
 ## 词法环境Lexical Environment(`LE`)
-每个js执行上下文都有其词法环境，包括：
-1. 环境记录**Environment Record**: *存储let/const*，函数表达式，箭头函数声明.
+每个js执行上下文都有其词法环境，a new Lexical Environment is created each time such code is evaluated.其中包括两部份：
+### 环境记录**Environment Record**
+存储当前作用域中创建的变量绑定，包括*存储let/const*，函数表达式，箭头函数声明。
 	1. 提供暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
 	2. 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
-2. 外部词法环境引用**Outer Lexical Environment Reference**: 指向外部词法环境的指针。
-	1. 🔥作用域与闭包机制
+
+### 外部词法环境引用**Outer Lexical Environment Reference**
+指向外部词法环境的指针。
+🔥作用域与闭包机制
 
 注意：
 - ⚠️词法环境在书写代码时就确定。
 - ⚠️代替了ES5之前的VO对象。
 
 ## 变量环境Variable Environment(`VE`)
-作用：
+存储当前执行上下文中的var声明和函数声明
 - 存储*var，函数声明*
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 
@@ -47,39 +50,22 @@ AO = {
   inner: function () { return "Hello"; }  // Function is fully ho
 ```
 
-## 绑定Banding
-- 变量绑定
-	变量声明 => 绑定到内存
-	```javascript
-	function outer() {
-	  let a = 10;  // Variable 'a' is bound in the execution context of 'outer'
-	  function inner() {
-	    let b = 20;  // Variable 'b' is bound in the execution context of 'inner'
-	    console.log(a + b);  // Accessing outer variable through scope chain binding
-	  }
-	  inner();
-	}
-	outer();
-	```
-- 词法绑定
-	代码书写时就绑定词法环境
-- ⭐️`this`绑定
-	- 函数声明: `function myFunc(){}`取决于函数如何被执行
-	- 箭头函数: 绑定在函数所书写的处上下文
-	- 对象方法: `obj.method()`绑定到`.`之前的对象
-	- 函数构造器: `new MyFunc()`绑定到`new`出来的对象
-- 作用域链绑定
+## This绑定ThisBanding
+- 函数声明: `function myFunc(){}`取决于函数如何被执行
+- 箭头函数: 绑定在函数所书写的处上下文
+- 对象方法: `obj.method()`绑定到`.`之前的对象
+- 函数构造器: `new MyFunc()`绑定到`new`出来的对象
 
 
 ## 全局执行上下文Global Execution Context(GEC)
 代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。包含：
 
-3. 全局词法环境`GLE`
+2. 全局词法环境`GLE`
 	1. 全局变量环境`GVE`
-4. `this`绑定到[[#全局对象 Global Object(`GO`)]]
+3. `this`绑定到[[#全局对象 Global Object(`GO`)]]
 	- In browsers → window
 	- In Node.js → global
-5. 外部引用: null
+4. 外部引用: null
 ```javascript
 var x = 10;
 let y = 20;
@@ -149,9 +135,9 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 
 ### 作用域链`Scope Chain`
 作用域链决定了变量查找的规则：
-6. 查看当前作用域
-7. 往上依次访问上级作用域
-8. 到全局作用域后终止
+5. 查看当前作用域
+6. 往上依次访问上级作用域
+7. 到全局作用域后终止
 
 随着程序的执行，会将当前的活动对象链接到`[scope chain]`的最前端。
 ```json

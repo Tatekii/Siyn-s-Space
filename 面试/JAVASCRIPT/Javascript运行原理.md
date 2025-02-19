@@ -12,8 +12,8 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 每个js执行上下文都有其词法环境，a new Lexical Environment is created each time such code is evaluated.其中包括两部份：
 ### 环境记录**Environment Record**
 存储当前作用域中创建的变量绑定，包括*存储let/const*，函数表达式，箭头函数声明。
-	1. 提供暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
-	2. 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
+- 处理暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
+- 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
 
 ### 外部词法环境引用**Outer Lexical Environment Reference**
 指向外部词法环境的指针。
@@ -24,8 +24,8 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - ⚠️代替了ES5之前的VO对象。
 
 ## 变量环境Variable Environment(`VE`)
+### 环境记录**Environment Record**
 存储当前执行上下文中的var声明和函数声明
-- 存储*var，函数声明*
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 
 ### EcamScript版本差异

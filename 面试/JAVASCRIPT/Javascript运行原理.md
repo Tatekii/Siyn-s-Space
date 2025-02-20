@@ -35,7 +35,8 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 ## 变量环境Variable Environment(`VE`)
 ### 环境记录
 - 存储当前作用域中可变变量绑定,包括`var`,`funciton`
-- 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
+- 处理变量提升(`Hoisting`)
+- 全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 - `CreateMutableBinding`
 
 ## This绑定ThisBanding

@@ -28,7 +28,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - `CreateMutableBinding`存储当前作用域中可变变量绑定,包括`var`,`funciton`
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 
-### 😵‍💫ECMAScript版本差异
+## 😵‍💫ECMAScript版本差异
 - ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
 - ES<5，函数执行上下中的VO被称为`Activation Object (AO)`
 ```javascript
@@ -49,7 +49,7 @@ AO = {
   y: undefined,   // 'var' is hoisted but not assigned
   inner: function () { return "Hello"; }  // Function is fully ho
 ```
-- 💡新的ECMA标准中又改成环境记录的一套理论
+- 💡新的ECMA标准中又改成环境记录的一套理论，`Variable Environment -> Enviroment Record -> `
 
 ## This绑定ThisBanding
 - 函数声明: `function myFunc(){}`取决于函数如何被执行

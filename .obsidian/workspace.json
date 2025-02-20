@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/原型与原型链.md",
+                "file": "面试/REACT/ConcurrrentMode.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "原型与原型链"
+              "title": "ConcurrrentMode"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "堆",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -201,9 +202,11 @@
   },
   "active": "d26ff12c233622ae",
   "lastOpenFiles": [
-    "assets/Pasted image 20250220114942.png",
     "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/JAVASCRIPT/原型与原型链.md",
+    "堆.md",
+    "全局执行上下文.md",
+    "assets/Pasted image 20250220114942.png",
     "面试/JAVASCRIPT/V8引擎.md",
     "面试/网络/HTTPS.md",
     "面试/网络/网络分层模型.md",
@@ -211,8 +214,6 @@
     "面试/网络/HTTP.md",
     "READEME.md",
     "面试/性能优化/运行时性能优化.md",
-    "全局执行上下文.md",
-    "堆.md",
     "面试/JAVASCRIPT/事件循环.md",
     "面试/数据结构/栈.md",
     "数据结构/栈.md",
@@ -241,7 +242,6 @@
     "面试/CSS/BFC.md",
     "面试/CSS",
     "面试/性能优化",
-    "assets/Pasted image 20241115111733.png",
     "assets",
     "英语/XDF_IELTS语法",
     "英语/XDF_IELTS词汇",

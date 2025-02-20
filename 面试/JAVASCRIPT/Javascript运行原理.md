@@ -44,8 +44,13 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 对象方法: `obj.method()`绑定到`.`之前的对象
 - 函数构造器: `new MyFunc()`绑定到`new`出来的对象
 
-## 😵‍💫ECMAScript版本差异
-- ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
+### 😵‍💫按照环境记录的维度解释
+LE和VE都是环境记录，环境记录可以理解为一个抽象类，有两个子类：
+- 声明环境记录`Declarative Environment Records`
+- 对象环境记录`Object Environment Records`
+
+### 😵‍💫ECMAScript版本差异
+- ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中环境记录也称为`Variable Object (VO)`
 - ES<5，函数执行上下中的VO被称为`Activation Object (AO)`
 - 👀`AO = VO + arguments`
 ```javascript
@@ -66,7 +71,6 @@ AO = {
   y: undefined,   // 'var' is hoisted but not assigned
   inner: function () { return "Hello"; }  // Function is fully ho
 ```
-- 💡最新的ECMA标准中又改成环境记录抽象类的一套描述
 
 
 

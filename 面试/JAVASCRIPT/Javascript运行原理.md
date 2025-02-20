@@ -40,7 +40,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - `CreateMutableBinding`
 
 ## This绑定ThisBanding
-- 函数声明: `function myFunc(){}`取决于函数运行时上下文
+- 函数声明: `function myFunc(){}`取决于函数运行时上下文，未制定则指向`global`
 - 箭头函数: 绑定在函数所书写的处上下文
 - 对象方法: `obj.method()`绑定到`.`之前的对象
 - 函数构造器: `new MyFunc()`绑定到`new`出来的对象

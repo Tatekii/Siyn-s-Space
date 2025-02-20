@@ -9,7 +9,15 @@ javascript ✈️引擎执行代码的栈结构。
 javascript 代码执行时所需所需的变量和属性👇，在代码执行阶段动态生成：
 
 ## 词法环境Lexical Environment(`LE`)
-每个js执行上下文都有其词法环境，a new Lexical Environment is created each time such code is evaluated.其中包括两部份：
+每个js执行上下文都有其词法环境，a new Lexical Environment is created each time such code is evaluated.其结构为：
+```json
+- Execution Context
+	- Lexical Enviroment
+		- Enviroment Record
+		
+	- Outer Reference
+```
+
 ### 环境记录**Environment Record**
 - 存储当前作用域中可变变量绑定，包括`let`,`const`。
 - 处理暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
@@ -24,8 +32,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - ⚠️词法环境在书写代码时就确定。
 - ⚠️代替了ES5之前的VO对象。
 
-## 变量环境Variable Environment(`VE`)
-### 环境记录**Environment Record**
+### 变量环境Variable Environment(`VE`)
 - 存储当前作用域中可变变量绑定,包括`var`,`funciton`
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 - 最新ECMA版本 => `CreateMutableBinding`
@@ -33,6 +40,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 ## 😵‍💫ECMAScript版本差异
 - ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
 - ES<5，函数执行上下中的VO被称为`Activation Object (AO)`
+- 👀`AO = VO + arguments`
 ```javascript
 function example(x) {
   console.log(y);  // undefined

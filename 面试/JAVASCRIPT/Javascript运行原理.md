@@ -14,6 +14,7 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 存储当前作用域中可变变量绑定，包括`let`,`const`。
 - 处理暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
 - 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
+- 最新ECMA版本 => `CreateImMutableBinding`
 
 ### 外部词法环境引用**Outer Lexical Environment Reference**
 指向外部词法环境的指针。
@@ -25,8 +26,9 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 
 ## 变量环境Variable Environment(`VE`)
 ### 环境记录**Environment Record**
-- `CreateMutableBinding`存储当前作用域中可变变量绑定,包括`var`,`funciton`
+- 存储当前作用域中可变变量绑定,包括`var`,`funciton`
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
+- 最新ECMA版本 => `CreateMutableBinding`
 
 ## 😵‍💫ECMAScript版本差异
 - ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
@@ -49,7 +51,7 @@ AO = {
   y: undefined,   // 'var' is hoisted but not assigned
   inner: function () { return "Hello"; }  // Function is fully ho
 ```
-- 💡新的ECMA标准中又改成环境记录的一套理论，`Variable Environment -> Enviroment Record -> `
+- 💡最新的ECMA标准中又改成环境记录抽象类的一套描述
 
 ## This绑定ThisBanding
 - 函数声明: `function myFunc(){}`取决于函数如何被执行

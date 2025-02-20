@@ -163,8 +163,8 @@ GlobalExecutionContext = {
 	- 对外部环境的引用
 - 块级作用域Block Scope
 	- let /const声明的作用域在代码块`{}`中
-- 词法作用域Lexical Scope(Static Scope)
-	- [[#作用域链`Scope Chain`]]
+- 模块作用域Module Scope
+	- 各个ESModule中的作用域独立
 
 
 ## `[[Enviroment]]`

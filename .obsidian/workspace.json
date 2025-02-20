@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "file": "面试/JAVASCRIPT/原型与原型链.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Javascript运行原理"
+              "title": "原型与原型链"
             }
           }
         ]
@@ -202,6 +202,7 @@
   "active": "d26ff12c233622ae",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/Javascript运行原理.md",
+    "面试/JAVASCRIPT/原型与原型链.md",
     "面试/JAVASCRIPT/V8引擎.md",
     "面试/网络/HTTPS.md",
     "面试/网络/网络分层模型.md",
@@ -211,7 +212,6 @@
     "面试/性能优化/运行时性能优化.md",
     "全局执行上下文.md",
     "堆.md",
-    "面试/JAVASCRIPT/Untitled.md",
     "面试/JAVASCRIPT/事件循环.md",
     "面试/数据结构/栈.md",
     "数据结构/栈.md",

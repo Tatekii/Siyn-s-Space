@@ -5,10 +5,6 @@ javascript ✈️引擎执行代码的栈结构。
 
 # 执行上下文 Execution Context(`EC`)
 [https://262.ecma-international.org/5.1/#sec-10.3](https://262.ecma-international.org/5.1/#sec-10.3)
-javascript 代码执行时所需所需的变量和属性👇，在代码执行阶段动态生成，其包括两部份：环境记录（[[#词法环境Lexical Environment(`LE`)]]+[[#变量环境Variable Environment(`VE`)]]）+[[#外部词法环境引用`Outer Reference`]]：
-
-## 词法环境Lexical Environment(`LE`)
-
 ```json
 - Execution Context
 	- Lexical Envirnoment
@@ -18,8 +14,12 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 		- Enviroment Record
 	- ThisBinding
 ```
-作用：
-- 存储当前作用域中可变变量绑定，包括`let`,`const`。
+
+javascript 代码执行时所需所需的变量和属性👇，在代码执行阶段动态生成，其包括：
+
+## 词法环境Lexical Environment(`LE`)
+### 环境记录
+存储当前作用域中可变变量绑定，包括`let`,`const`。
 - 处理暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
 - 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
 - 最新ECMA版本 => `CreateImMutableBinding`
@@ -32,10 +32,11 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - ⚠️词法环境在书写代码时就确定。
 - ⚠️代替了ES5之前的VO对象。
 
-### 变量环境Variable Environment(`VE`)
+## 变量环境Variable Environment(`VE`)
+### 环境记录
 - 存储当前作用域中可变变量绑定,包括`var`,`funciton`
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
-- 最新ECMA版本 => `CreateMutableBinding`
+- `CreateMutableBinding`
 
 ## This绑定ThisBanding
 - 函数声明: `function myFunc(){}`取决于函数如何被执行

@@ -44,10 +44,37 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 对象方法: `obj.method()`绑定到`.`之前的对象
 - 函数构造器: `new MyFunc()`绑定到`new`出来的对象
 
-### 😵‍💫按照环境记录的维度解释
+## 💡按照环境记录的维度解释
 LE和VE都是环境记录，环境记录可以理解为一个抽象类，有两个子类：
-- 声明环境记录`Declarative Environment Records`
 - 对象环境记录`Object Environment Records`
+	- 存储为对象的一个属性
+	- 场景
+		- 全局作用域下的`var`,`function`声明
+		- `with`语句
+- 声明环境记录`Declarative Environment Records`
+	- 直接存储在内存中而非对象的属性
+	- 场景
+		- 函数作用域
+		- 块级作用域
+```javascript
+const obj = { name: "Alice", age: 25 };
+
+with (obj) {
+    console.log(name); // ✅ "Alice" (Looks inside `obj`)
+    console.log(age); // ✅ 25
+}
+
+{
+    let blockVar = "Inside block";
+    const blockConst = "Me too";
+    function blockFunc() {}
+    console.log(blockVar); // ✅ "Inside block"
+}
+
+console.log(window.blockVar); // ❌ undefined
+console.log(window.blockFunc); // ❌ undefined
+```
+
 
 ### 😵‍💫ECMAScript版本差异
 - ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中环境记录也称为`Variable Object (VO)`

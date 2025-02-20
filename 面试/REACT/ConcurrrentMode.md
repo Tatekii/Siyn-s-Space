@@ -56,7 +56,7 @@ processTaskQueue()
 每一次react更新代表一次协调过程，每个更新都会作为回调添加到react得taskQueue中。
 
 ### 判断优先级
-react内部使用最小堆识别出目前taskQueue中最高优先级的task。
+react内部使用最小[[堆]]识别出目前taskQueue中最高优先级的task。
 
 
 ### 协调调度

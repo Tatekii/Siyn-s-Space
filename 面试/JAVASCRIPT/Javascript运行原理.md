@@ -1,30 +1,27 @@
 作用域决定变量在哪，执行上下文决定运行规则。
-[https://262.ecma-international.org/5.1/#sec-10.2.1](https://262.ecma-international.org/5.1/#sec-10.2.1)
-
 
 # 🪣执行环境栈 ECStack - execution context stack(`ESC`)
 javascript ✈️引擎执行代码的栈结构。
 
 # 执行上下文 Execution Context(`EC`)
-javascript 代码执行时所需所需的变量和属性👇，在代码执行阶段动态生成：
+[https://262.ecma-international.org/5.1/#sec-10.3](https://262.ecma-international.org/5.1/#sec-10.3)
+javascript 代码执行时所需所需的变量和属性👇，在代码执行阶段动态生成，其包括两部份：环境记录（[[#词法环境Lexical Environment(`LE`)]]+[[#变量环境Variable Environment(`VE`)]]）+[[#外部词法环境引用`Outer Reference`]]：
 
 ## 词法环境Lexical Environment(`LE`)
-每个js执行上下文都有其词法环境，a new Lexical Environment is created each time such code is evaluated.其结构为：
+
 ```json
 - Execution Context
 	- Lexical Enviroment
-		- Enviroment Record
-		
-	- Outer Reference
+	- Variable Enviroment
+	- ThisBinding
 ```
-
-### 环境记录**Environment Record**
+作用：
 - 存储当前作用域中可变变量绑定，包括`let`,`const`。
 - 处理暂时性死区（**Temporal Dead Zone**TDZ）机制，let/const声明位置之前无法读取
 - 全局作用域下的let/const声明不会加入[[#全局对象 Global Object(`GO`)|GO]]
 - 最新ECMA版本 => `CreateImMutableBinding`
 
-### 外部词法环境引用**Outer Lexical Environment Reference**
+### 外部词法环境引用`Outer Reference`
 指向外部词法环境的指针。
 🔥作用域与闭包机制
 
@@ -36,6 +33,12 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 存储当前作用域中可变变量绑定,包括`var`,`funciton`
 - 处理变量提升，全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 - 最新ECMA版本 => `CreateMutableBinding`
+
+## This绑定ThisBanding
+- 函数声明: `function myFunc(){}`取决于函数如何被执行
+- 箭头函数: 绑定在函数所书写的处上下文
+- 对象方法: `obj.method()`绑定到`.`之前的对象
+- 函数构造器: `new MyFunc()`绑定到`new`出来的对象
 
 ## 😵‍💫ECMAScript版本差异
 - ES<5，只有var和function两种声明，所以之前也只有`VE`，老版本中称为`Variable Object (VO)`
@@ -61,11 +64,6 @@ AO = {
 ```
 - 💡最新的ECMA标准中又改成环境记录抽象类的一套描述
 
-## This绑定ThisBanding
-- 函数声明: `function myFunc(){}`取决于函数如何被执行
-- 箭头函数: 绑定在函数所书写的处上下文
-- 对象方法: `obj.method()`绑定到`.`之前的对象
-- 函数构造器: `new MyFunc()`绑定到`new`出来的对象
 
 
 ## 全局执行上下文Global Execution Context(GEC)

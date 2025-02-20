@@ -11,8 +11,11 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 
 ```json
 - Execution Context
-	- Lexical Enviroment
+	- Lexical Envirnoment
+		- Enviroment Record
+		- Outer Reference
 	- Variable Enviroment
+		- Enviroment Record
 	- ThisBinding
 ```
 作用：

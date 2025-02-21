@@ -45,7 +45,8 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 箭头函数: 绑定在函数所书写的处上下文
 - 对象方法: `obj.method()`绑定到`.`之前的对象
 - 函数构造器: `new MyFunc()`绑定到`new`出来的对象
-### 改变this指向的方法
+### 改变this指向的api
+- `call,apply,bind`
 ```javascript
 const MyFunc = Object.create(Function.prototype)
 
@@ -76,7 +77,7 @@ MyFunc.prototype._bind = function(context,...args1){
 
 	function boundFn (...args2){
 	// 如果正常调用 this指向context
-	// 如果被new调用
+	// 如果被new调用 this 会是新创建的对象
 		return func.apply(this instanceof boundFn ? this : context,[...args1,...args2])
 	}
 	

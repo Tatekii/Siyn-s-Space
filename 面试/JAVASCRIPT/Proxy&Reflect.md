@@ -1,4 +1,4 @@
-# `Class Proxy `
+# `Proxy `
 ```javascript
 const p = new Proxy(target, handler)
 
@@ -53,30 +53,45 @@ handler.apply()
 handler.construct()
 ```
 ### `receiver`参数
-- `receiver`指向将会是handler实际被执行的上下文(`this`)
+- `handler的receiver`参数指向将会是handler实际被执行的上下文(`this`)
+	```javascript
+	
+	const proxy = new Proxy({}, {
+	// proxy 拦截了对 name 属性的赋值操作，因此 proxy 上的 set 处理器被触发。
+	  set: function(target, prop, value, receiver) {
+	
+	    console.log(`set handler: Setting ${prop} to ${value}`);
+	
+	    console.log(`Receiver is:`, receiver); // receiver will be obj
+	
+	    target[prop] = value;
+	
+	    return true;
+	
+	  }
+	
+	});
+	
+	const obj = Object.create(proxy);  // obj 的原型是 proxy
+	
+	obj.name = "jen";  // 给 obj 设置 name 属性
+	```
+- [[#`Reflect`]]中的`receiver`将指定对象操作时的`this`指向
 ```javascript
+const info = {
+	_height:190
+	get height(){
+		return this._height + 'cm'
+	}
+}
 
-const proxy = new Proxy({}, {
-// proxy 拦截了对 name 属性的赋值操作，因此 proxy 上的 set 处理器被触发。
-  set: function(target, prop, value, receiver) {
-
-    console.log(`set handler: Setting ${prop} to ${value}`);
-
-    console.log(`Receiver is:`, receiver); // receiver will be obj
-
-    target[prop] = value;
-
-    return true;
-
-  }
-
-});
-
-const obj = Object.create(proxy);  // obj 的原型是 proxy
-
-obj.name = "jen";  // 给 obj 设置 name 属性
+const proxyInfo = new Proxy(info,{
+	get(target,key,receiver){
+		return target[key]
+		return Reflect.get(target,key,receiver)
+	}
+})
 ```
-- 
 ## Object.defineProperty
 ```javascript
 Object.defineProperty(obj/* 对象*/, prop/* 属性*/, descriptor/*描述符*/){
@@ -107,4 +122,29 @@ get() { ... },
 set(newValue) { ... },
 
 }
+```
+
+# `Reflect`
+操作对象的API
+早起ECMA规范中没有考虑对对象本身的操作的API设计，就放在了`Object`上，而`Object`作为构造函数并不合适。
+- 对象操作能返回布尔值
+- `Object`未来可期能变得整洁
+- 将命令式对象操作函数化，能抛出错误并返回执行结果
+>	某些Object操作是命令式，比如name in obj和delete obj[name]，而Reflect.has(obj, name)和Reflect.deleteProperty(obj, name)让它们变成了函数行为。
+- api与[[Proxy&Reflect]]中方法均对应，能做到不直接操作原对象
+```javascript
+const handlerWithReflect = {
+  get: function (target, prop, receiver) {
+    console.log("get handler with Reflect called");
+    return Reflect.get(...arguments);
+  },
+
+  set: function (target, prop, value, receiver) {
+    console.log("set handler with Reflect called");
+    return Reflect.set(...arguments);
+  },
+};
+
+const proxyWithReflect = new Proxy(target, handlerWithReflect);
+
 ```

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/Reflect.md",
+                "file": "面试/JAVASCRIPT/Proxy&Reflect.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reflect"
+              "title": "Proxy&Reflect"
             }
           }
         ]
@@ -201,7 +201,8 @@
   },
   "active": "46256e09c023887f",
   "lastOpenFiles": [
-    "面试/JAVASCRIPT/Proxy.md",
+    "面试/JAVASCRIPT/Promise.md",
+    "面试/JAVASCRIPT/Proxy&Reflect.md",
     "面试/JAVASCRIPT/Reflect.md",
     "面试/SEO.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
@@ -233,7 +234,6 @@
     "assets/Pasted image 20250218125318.png",
     "assets/Pasted image 20250218095926.png",
     "面试/数据结构",
-    "面试/同源策略.md",
     "面试/网络",
     "assets/Pasted image 20250217135755.png",
     "assets/Pasted image 20250217135117.png",

@@ -39,11 +39,23 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 - `CreateMutableBinding`
 
-## This绑定ThisBanding
+## This绑定 ThisBanding
+制定函数执行时的上下文，在运行时才能确定。
 - 函数声明: `function myFunc(){}`取决于函数运行时上下文，未制定则指向`global`
 - 箭头函数: 绑定在函数所书写的处上下文
 - 对象方法: `obj.method()`绑定到`.`之前的对象
 - 函数构造器: `new MyFunc()`绑定到`new`出来的对象
+### 改变this指向的方法
+```javascript
+const MyFunc = Object.create(Function.prototype)
+
+MyFunc.prototype.call = function(_this,...args){
+	
+}
+
+
+
+```
 
 ## 💡按照环境记录的维度解释
 LE和VE都是环境记录，环境记录可以理解为一个抽象类，有两个子类：

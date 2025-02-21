@@ -3,11 +3,11 @@
 - 键为强引用
 ## API
 - size
-- set(key,value)
-- get(key)
-- has(key)
-- delete(key)
-- c
+- set: (key, value) => this
+- get: (key) => any
+- has: (key) => boolean
+- delete: (key) => boolean
+- clear: ()=>void
 # `WeakMap`
 - 键只能为对象类型
 - 键为弱引用，没有别人引用将会被[[V8引擎#垃圾回收]]

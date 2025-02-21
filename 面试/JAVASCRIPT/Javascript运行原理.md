@@ -49,8 +49,13 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 ```javascript
 const MyFunc = Object.create(Function.prototype)
 
-MyFunc.prototype.call = function(_this,...args){
-	
+MyFunc.prototype.call = function(context,...args){
+	const func = this
+	context = context || window
+	const caller = Symbol('caller')
+	context[caller] = func
+	const res = context[caller](...args)
+	Reflect.dele
 }
 
 

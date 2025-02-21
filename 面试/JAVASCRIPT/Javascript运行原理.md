@@ -49,16 +49,40 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 ```javascript
 const MyFunc = Object.create(Function.prototype)
 
-MyFunc.prototype.call = function(context,...args){
+MyFunc.prototype._call = function(context,...args){
 	const func = this
 	context = context || window
 	const caller = Symbol('caller')
 	context[caller] = func
 	const res = context[caller](...args)
-	Reflect.dele
+	Reflect.deleteProperty(context,caller)
+	return res
+}
+
+MyFunc.prototype._apply = function(context,args){
+	const func = this
+	context = context || window
+	const caller = Symbol('caller')
+	context[caller] = func
+	const res = context[caller](...args)
+	Reflect.deleteProperty(context,caller)
+	return res
 }
 
 
+MyFunc.prototype._bind = function(context,...args1){
+	const func = this
+	context = context || window
+
+	function boundFn (...args2){
+	// 如果正常调用 this指向context
+	// 如果被new调用
+		return func.apply(this instanceof boundFn ? this : context,[...args1,...args2])
+	}
+	
+	boundFn.prototype = object.create(func.prototype)
+	return boundFn
+}
 
 ```
 

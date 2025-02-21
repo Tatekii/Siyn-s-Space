@@ -1,4 +1,5 @@
 # `Proxy `
+**Proxy** 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。
 ```javascript
 const p = new Proxy(target, handler)
 
@@ -87,12 +88,13 @@ const info = {
 
 const proxyInfo = new Proxy(info,{
 	get(target,key,receiver){
-		return target[key]
-		return Reflect.get(target,key,receiver)
+		return target[key]// 只触发一次get handler 读取height
+		return Reflect.get(target,key,receiver)// 会触发第二次get handler 读取_height
 	}
 })
 ```
 ## Object.defineProperty
+`Object.defineProperty()` 允许精确地添加或修改对象上的属性。控制属性的可写、枚举和配置性的。
 ```javascript
 Object.defineProperty(obj/* 对象*/, prop/* 属性*/, descriptor/*描述符*/){
 //对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。

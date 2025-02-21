@@ -1,4 +1,4 @@
-# Proxy类
+# `Class Proxy `
 ```javascript
 const p = new Proxy(target, handler)
 

@@ -1,4 +1,5 @@
 # `Proxy `
+> 不兼容ie
 **Proxy** 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。
 ```javascript
 const p = new Proxy(target, handler)
@@ -94,6 +95,7 @@ const proxyInfo = new Proxy(info,{
 })
 ```
 ## Object.defineProperty
+> es5
 `Object.defineProperty()` 允许精确地添加或修改对象上的属性。控制属性的可写、枚举和配置性的。
 ```javascript
 Object.defineProperty(obj/* 对象*/, prop/* 属性*/, descriptor/*描述符*/){

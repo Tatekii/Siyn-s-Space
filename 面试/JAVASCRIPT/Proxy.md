@@ -53,10 +53,11 @@ handler.apply()
 handler.construct()
 ```
 ### `receiver`参数
-考虑将Proxy实例作为构造函数使用时，`receiver`指向将会是handler实际被执行的上下文(`this`)
+- `receiver`指向将会是handler实际被执行的上下文(`this`)
 ```javascript
-const proxy = new Proxy({}, {
 
+const proxy = new Proxy({}, {
+// proxy 拦截了对 name 属性的赋值操作，因此 proxy 上的 set 处理器被触发。
   set: function(target, prop, value, receiver) {
 
     console.log(`set handler: Setting ${prop} to ${value}`);
@@ -71,13 +72,11 @@ const proxy = new Proxy({}, {
 
 });
 
-  
-
 const obj = Object.create(proxy);  // obj 的原型是 proxy
 
 obj.name = "jen";  // 给 obj 设置 name 属性
 ```
-
+- 
 ## Object.defineProperty
 ```javascript
 Object.defineProperty(obj/* 对象*/, prop/* 属性*/, descriptor/*描述符*/){

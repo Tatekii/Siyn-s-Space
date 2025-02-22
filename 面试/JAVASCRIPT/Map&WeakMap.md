@@ -69,3 +69,28 @@ new WeakMap(iterable)
 - Map.prototype.get: (key) => any
 - Map.prototype.has: (key) => boolean
 - Map.prototype.set: (key, value) => this
+## 用途
+模拟私有成员，将似有属性挂在对象身外。
+```javascript
+let Thing;
+
+{
+  const privateScope = new WeakMap();
+
+  Thing = function () {
+    this.someProperty = "foo";
+
+    privateScope.set(this, {
+      hidden: ++counter,
+    });
+  };
+
+  Thing.prototype.showPublic = function () {
+    return this.someProperty;
+  };
+
+  Thing.prototype.showPrivate = function () {
+    return privateScope.get(this).hidden;
+  };
+}
+```

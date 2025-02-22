@@ -23,6 +23,10 @@
 	- `Object.getOwnPropertySymbols`遍历包括不可枚举的自有Symbol键属性
 - Object没有长度属性
 - Object频繁插入删除性能没有Map好
+- Object遍历key的顺序会有一定规则
+	- **整数键**（"0", "1", "2", …）按**数值升序**排列。
+	- **字符串键**（非整数）**按插入顺序**排列。
+	- **Symbol 键** 需要用 Object.getOwnPropertySymbols() 或 Reflect.ownKeys() 遍历，**按插入顺序**。
 ### 注意
 - 使用类object的操作方法不会报错但数据不会插入到Map中
 	```javascript
@@ -121,6 +125,4 @@ thing.showPrivate();
 
 type KeyToDepMap = Map<any, Dep>
 export const targetMap: WeakMap<object, KeyToDepMap> = new WeakMap()
-
-
 ```

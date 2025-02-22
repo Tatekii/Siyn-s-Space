@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/Map&WeakMap.md",
+                "file": "面试/JAVASCRIPT/Generator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Map&WeakMap"
+              "title": "Generator"
             }
           }
         ]
@@ -201,8 +201,10 @@
   },
   "active": "46256e09c023887f",
   "lastOpenFiles": [
-    "面试/JAVASCRIPT/Proxy&Reflect.md",
+    "面试/JAVASCRIPT/Async函数.md",
+    "面试/JAVASCRIPT/Generator.md",
     "面试/JAVASCRIPT/Map&WeakMap.md",
+    "面试/JAVASCRIPT/Proxy&Reflect.md",
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/Reflect.md",
     "面试/SEO.md",
@@ -226,8 +228,6 @@
     "面试/网络/HTTP.md",
     "READEME.md",
     "面试/性能优化/运行时性能优化.md",
-    "数据结构/栈.md",
-    "面试/页面渲染流程.md",
     "数据结构",
     "assets/Pasted image 20250218125604.png",
     "assets/Pasted image 20250218125437.png",

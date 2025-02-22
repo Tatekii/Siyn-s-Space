@@ -6,23 +6,17 @@
 async function fun2 (){
 	return 2;
 }
-
 // 等价于
-
 function fun2 () {
 	return Promise.resolve(2);
 }
 
 
 
-
-
 async function fun1 () {
 	await 1;
 }
-
 // 等价于
-
 function fun1 () {
 	return Promise.resolve(1).then(() => undefined)
 }

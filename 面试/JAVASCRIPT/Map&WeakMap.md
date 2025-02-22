@@ -1,15 +1,19 @@
 # `Map`
+- 保存键值对
 - 键能为任何类型
-- 键为强引用
+- 记住键的原始插入顺序
 ## 和Object的区别
 - Object键只能为基本类型
-- Object类型的数据会访问到原型上的键
+-  Map 不会把键值对存储为自身的属性，而是使用**内部数据结构**（如哈希表），可以杜绝与原型上的属性相互影响
+	```javascript
+	
+	```
+- Object没有迭代器
+	- 无法`for...of`
 	- `for...in`遍历所有可枚举的字符串属性
 	- `Object.keys()`遍历可枚举的自有字符串键属性
 	- `Object.getOwnPropertyNames`遍历包括不可枚举的自有字符串键属性
-	- `Object.getOwnPropertySymbols遍历包括不可枚举的自有Symbol键属性
-- Object没有迭代器
-	- 无法`for...of`
+	- `Object.getOwnPropertySymbols`遍历包括不可枚举的自有Symbol键属性
 - Object没有长度属性
 - Object频繁插入删除性能没有Map好
 ### 注意

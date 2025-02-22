@@ -191,271 +191,144 @@ function resolvePromise(x, promise2, resolve, reject) {
 	if (isComplex(x)) {
 		let hasRes = false;
 		try {
-			const then = x.then;
+			const _then = x.then;
 			// 如果x是promise，继续判断
-			if (typeof then === "function") {
-				then.call(
+			if (typeof _then === "function") {
+				_then.call(
 				x,
-			(v) => {
-			
-			if (hasRes) return;
-			
-			hasRes = true;
-			
-			resolvePromise(v, promise2, resolve, reject);
-			
-			},
-			
-			(r) => {
-			
-			if (hasRes) return;
-			
-			hasRes = true;
-			
-			reject(r);
-			
-			}
-			
-			);
-			
+				(v) => {
+					if (hasRes) return;
+					hasRes = true;
+					resolvePromise(v, promise2, resolve, reject);
+				},
+				(r) => {
+					if (hasRes) return;
+					hasRes = true;
+					reject(r);
+				}
 			} else {
-			// 如果x是个对象
 			resolve(x);
 			}
-		
 		} catch (e) {
-		
 			if (hasRes) return;
-			
 			hasRes = true;
-			
 			reject(e);
-		
 		}
-	
 	} else {
-	
 		resolve(x);
-	
 	}
-
 }
-
-  
-
-// 通用常量
-
-const PENDING = Symbol('PENDING');
-
-const FULFILLED = Symbol('FULFILLED');
-
-const REJECTED = Symbol('REJECTED');
-
 ```
 - function 版
 ```javascript
-
+const PENDING = Symbol('PENDING');
+const FULFILLED = Symbol('FULFILLED');
+const REJECTED = Symbol('REJECTED');
 function MyPromise(executor) {
 
-this.status = PENDING;
+	this.status = PENDING;
+	this.data = undefined;
+	this.onFulfilledCb = [];
+	this.onRejectedCd = [];
 
-this.data = undefined;
+	const resolve = (value) => {
+		setTimeout(() => {
+		// 放在下个宏任务等promise2都执行得出状态
+			if (this.status === PENDING) {
+				this.status = FULFILLED;
+				this.data = value;
+				this.onFulfilledCb.forEach((cb) => cb());
+			}
+		});
+	};
 
-this.onFulfilledCb = [];
-
-this.onRejectedCd = [];
-
-  
-
-const resolve = (value) => {
-
-setTimeout(() => {
-
-// 放在下个宏任务等promise2都执行得出状态
-
-if (this.status === PENDING) {
-
-this.status = FULFILLED;
-
-this.data = value;
-
-this.onFulfilledCb.forEach((cb) => cb());
-
-}
-
-});
-
-};
-
-const reject = (reason) => {
-
-setTimeout(() => {
-
-// 放在下个宏任务等promise2都执行得出状态
-
-if (this.status === PENDING) {
-
-this.status = REJECTED;
-
-this.data = reason;
-
-this.onRejectedCd.forEach((cb) => cb());
-
-}
-
-});
-
-};
+	const reject = (reason) => {
+		setTimeout(() => {
+		// 放在下个宏任务等promise2都执行得出状态
+			if (this.status === PENDING) {
+				this.status = REJECTED;
+				this.data = reason;
+				this.onRejectedCd.forEach((cb) => cb());
+			}
+		});
+	};
 
   
-
-try {
-
-executor(resolve, reject);
-
-} catch (e) {
-
-reject(e);
-
-}
-
+	// 首先将resolve和reject传入executor中立即执行
+	try {
+		executor(resolve, reject);
+	} catch (e) {
+		reject(e);
+	}
 }
 
   
 
 MyPromise.prototype.then = function (onFulfill, onReject) {
-
-onFulfill = typeof onFulfill === "function" ? onFulfill : (value) => value;
-
-onReject =
-
-typeof onReject === "function"
-
-? onReject
-
-: (err) => {
-
-throw err;
-
-};
-
-let promise2 = new Promise((resolve, reject) => {
-
-if (this.status === PENDING) {
-
-// push进去的时候promise2还没有执行完
-
-this.onFulfilledCb.push(() => {
-
-try {
-
-let x = onFulfill(this.data);
-
-resolvePromise(x, promise2, resolve, reject);
-
-} catch (e) {
-
-reject(e);
-
-}
-
-});
-
-this.onRejectedCd.push(() => {
-
-try {
-
-let x = onReject(this.data);
-
-resolvePromise(x, promise2, resolve, reject);
-
-} catch (e) {
-
-reject(e);
-
-}
-
-});
-
-// 由于new Promise构造函数逻辑
-
-// 可以简写
-
-} else if (this.status === FULFILLED) {
-
-// 如果返回一个promise，依然需要判断他后续的状态,交给下一个then时去判断👆的代码
-
-setTimeout(() => onFulfill(this.data));
-
-// setTimeout(()=>{
-
-// try{
-
-// let x = onFulfill(this.data)
-
-// resolvePromise(x,promise2,resolve,reject)
-
-// }catch(e){
-
-// reject(e)
-
-// }
-
-// })
-
-} else if (this.status === REJECTED) {
-
-setTimeout(() => onReject(this.data));
-
-}
-
-});
-
-  
-
-return promise2;
-
+	onFulfill = typeof onFulfill === "function" ? onFulfill : (value) => value;
+	onReject = typeof onReject === "function" ? onReject : (err) => {
+		throw err;
+	};
+	
+	const  promise2 = new Promise((resolve, reject) => {
+		if (this.status === PENDING) {
+			// push进去的时候promise2还没有执行完
+			// 由于Promise构造函数中已经使用settimeout执行了就可以简写
+			this.onFulfilledCb.push(() => {
+				try {
+				let x = onFulfill(this.data);
+					resolvePromise(x, promise2, resolve, reject);
+				} catch (e) {
+					reject(e);
+				}
+			});
+			
+			this.onRejectedCd.push(() => {
+				try {
+				let x = onReject(this.data);
+					resolvePromise(x, promise2, resolve, reject);
+				} catch (e) {
+					reject(e);
+				}
+			});
+		} else if (this.status === FULFILLED) {
+			// 如果返回一个promise，依然需要判断他后续的状态,交给下一个then时去判断👆的代码
+			setTimeout(() => onFulfill(this.data));
+		// setTimeout(()=>{
+		// try{
+		// let x = onFulfill(this.data)
+		// resolvePromise(x,promise2,resolve,reject)
+		// }catch(e){
+		// reject(e)
+		// }
+		// })	
+		} else if (this.status === REJECTED) {
+			setTimeout(() => onReject(this.data));
+		}
+	});
+	return promise2;
 };
 
 ```
-
-  
-
 - class 版
-
-  
-
 ```javascript
 
 class MyPromise {
+	constructor(executor) {
+		try {
+			executor(this.resolve, this.reject)
+		} catch (err) {
+			this.reject(err)
+		}
+	}
 
-constructor(executor) {
-
-try {
-
-executor(this.resolve, this.reject)
-
-} catch (err) {
-
-this.reject(err)
-
-}
-
-}
-
-// 状态
-
-status = PENDING
-
-// 返回成功结果或者失败结果
-
-data = null
-
-// 成功与失败的回调
-
-fulfilledCd = []
-
-rejectedCb = []
+	// 状态
+	status = PENDING
+	// 返回成功结果或者失败结果
+	data = null
+	// 成功与失败的回调
+	fulfilledCd = []
+	rejectedCb = []
 
   
 

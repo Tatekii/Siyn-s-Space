@@ -315,155 +315,105 @@ MyPromise.prototype.then = function (onFulfill, onReject) {
 
 class MyPromise {
 	constructor(executor) {
+		this.status = PENDING
+		this.data = null
+		this.fulfilledCd = []
+		this.rejectedCb = []
+
+		resolve = (value) => {
+			setTimeout(() => {
+				if (this.status === PENDING) {
+					this.data = value
+					this.status = FULFILLED
+					this.fulfilledCd.forEach((cb) => cb())
+				}
+			})
+		}
+		
+		  
+		reject = (reason) => {
+			setTimeout(() => {
+				if (this.status === PENDING) {
+					this.data = reason
+					this.status = REJECTED
+					this.rejectedCb.forEach((cb) => cb())
+				}
+			})
+		}
+
 		try {
-			executor(this.resolve, this.reject)
+			executor(resolve, reject)
 		} catch (err) {
-			this.reject(err)
+			reject(err)
 		}
 	}
 
-	// 状态
-	status = PENDING
-	// 返回成功结果或者失败结果
-	data = null
-	// 成功与失败的回调
-	fulfilledCd = []
-	rejectedCb = []
-
-  
-
-resolve = (value) => {
-
-setTimeout(() => {
-
-if (this.status === PENDING) {
-
-this.data = value
-
-this.status = FULFILLED
-
-this.fulfilledCd.forEach((cb) => cb())
-
-}
-
-})
-
-}
-
-  
-
-reject = (reason) => {
-
-setTimeout(() => {
-
-if (this.status === PENDING) {
-
-this.data = reason
-
-this.status = REJECTED
-
-this.rejectedCb.forEach((cb) => cb())
-
-}
-
-})
-
-}
-
-  
-
-then = (onResolve, onReject) => {
-
-onResolve = typeof onResolve === "function" ? onResolve : (val) => val
-
-onReject =
-
-typeof onReject === "function"
-
-? onReject
-
-: (err) => {
-
-throw err
-
-}
-
-  
-
-// then 返回一个promise
-
-const promise2 = new MyPromise((resolve, reject) => {
-
-if (this.status === PENDING) {
-
-this.fulfilledCd.push(() => {
-
-try {
-
-const x = onResolve(this.data)
-
-resolvePromise(x, promise2, resolve, reject)
-
-} catch (err) {
-
-reject(err)
-
-}
-
-})
-
-  
-
-this.rejectedCb.push(() => {
-
-try {
-
-const x = onReject(this.data)
-
-resolvePromise(x, promise2, resolve, reject)
-
-} catch (err) {
-
-reject(err)
-
-}
-
-})
-
-} else if (this.status === FULFILLED) {
-
-setTimeout(() => onResolve(this.data))
-
-} else if ((this.status = REJECTED)) {
-
-setTimeout(() => onReject(this.data))
-
-}
-
-})
-
-  
-
-return promise2
-
-}
-
+	then = (onResolve, onReject) => {
+		onResolve = typeof onResolve === "function" ? onResolve : (val) => val
+		onReject =	
+		typeof onReject === "function" ? onReject : (err) => {
+			throw err
+		}
+		
+		// then 返回一个promise
+		const promise2 = new MyPromise((resolve, reject) => {
+		
+			if (this.status === PENDING) {
+				this.fulfilledCd.push(() => {
+					try {
+						const x = onResolve(this.data)
+						resolvePromise(x, promise2, resolve, reject)
+					} catch (err) {
+						reject(err)
+					}
+				})
+				this.rejectedCb.push(() => {
+					try {
+						const x = onReject(this.data)
+						resolvePromise(x, promise2, resolve, reject)
+					} catch (err) {
+						reject(err)
+					}
+				})
+			} else if (this.status === FULFILLED) {
+				setTimeout(() => onResolve(this.data))
+			} else if ((this.status = REJECTED)) {
+				setTimeout(() => onReject(this.data))
+			}
+		})
+		return promise2
+	}
 }
 
 ```
+- 静态方法
+```javascript
+Promise.resolve = (value) => {
+	if(value instanceof Promise){
+		return value
+	}
+	return new Promise((resolve, reject) => {
+		resolve(value))
+	};
+}
 
-  
+Promise.reject = (reason) => new Promise((resolve, reject) => {
+	reject(reason));
+}
 
-- API
+Promise.all = (promises) => new Promise((resolve,reject) => {
+	const result = []
+	let resolveCount = 0
+	
+	promises.forEach((p,index)=>{})
 
-  
+})
+
+```
+
+
 
 ```javascript
-
-Promise.resolve = (value) => new Promise((resolve, reject) => resolve(value));
-
-Promise.reject = (reason) => new Promise((resolve, reject) => reject(reason));
-
 // catch
 
 Promise.prototype.catch = (onReject) => {

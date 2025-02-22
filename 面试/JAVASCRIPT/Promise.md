@@ -3,59 +3,14 @@ Promise 对象用于处理异步操作，它表示一个尚未完成且预计在
 
 ## 特性
 - 有限状态机，状态只能改变一次，只能在有限的状态中选则
-- 链式调用
+- 支持链式调用
 - 返回值穿透（onFulfilled 不是 function 时，上一步的执行结果 value 将继续向后传递）
 - 错误冒泡，错误会一直往外冒泡到catch直至显示有未handle的异步错误
 
-> 回调地狱  
-
-```javascript
-
-function f1(){
-
-//f2的执行需要等待f1的结果
-
-return f2(){
-
-f3(){
-
-f4(){
-
-f5(){
-
-...
-
-}
-
-...
-
-}
-
-}
-
-}
-
-}
-
-  
-
-```
-
-  
-  
-
 ## 原型方法
-
-  
-
 ### Promise.prototype.then()
-
-  
-
 - 为 Promise 实例添加状态改变时的回调函数
-
 - then 方法的第一个参数是`resolved`状态的回调函数，第二个参数（可选）是`rejected`状态的回调函数
-
 - then 方法返回的是一个新的 Promise 实例,可以 then 方法后面再调用另一个 then 方法
 
   
@@ -90,98 +45,48 @@ console.log("rejected: ", err);
 
 ```
 
-  
-
 ### Promise.prototype.catch()
-
-  
-
 - 指定发生错误时的回调函数
-
-  
-
 - Promise 对象的错误具有“冒泡”性质，会一直向后传递，直到被捕获为止。也就是说，错误总是会被下一个`catch`语句捕获
-
-  
-
 ```javascript
 
 // 一般来说，不要在then方法里面定义 Reject 状态的回调函数（即then的第二个参数），总是使用catch方法。
 
 // bad
-
 promise.then(
-
-function (data) {
-
-// success
-
-},
-
-function (err) {
-
-// error
-
-}
-
+	function (data) {
+	// success
+	},
+	function (err) {
+	// error
+	}
 );
 
   
 
 // good
-
 promise
-
 .then(function (data) {
-
 //cb
-
 // success
-
 })
-
 .catch(function (err) {
-
 // error
-
 });
 
 ```
-
-  
-
 > 跟传统的`try/catch`代码块不同的是，如果没有使用`catch`方法指定错误处理的回调函数，Promise 对象抛出的错误不会传递到外层代码，即不会有任何反应
-
-  
-
 - catch 方法返回的还是一个 Promise 对象，因此后面还可以接着调用 then 方法
 
-  
-
 ### Promise.prototype.finally()
-
-  
-
 - finally 方法用于指定不管 Promise 对象最后状态如何，都会执行的操作
-
-  
-
 - finally 方法的回调函数不接受任何参数，这意味着没有办法知道，前面的 Promise 状态到底是 fulfilled 还是 rejected。这表明，finally 方法里面的操作，应该是与状态无关的，不依赖于 Promise 的执行结果。
 
   
 
 ## 静态方法
-
-  
-
 ### Promise.all()
-
-  
-
 - Promise.all 方法用于将多个 Promise 实例，包装成一个新的 Promise 实例
-
-  
-
 `const p = Promise.all([p1, p2, p3]);`
 
   
@@ -941,9 +846,6 @@ resolve(res);
   
 
 ## 同步函数 promise 化
-
-  
-
 ```javascript
 
 const promisify =
@@ -992,50 +894,49 @@ reject(err)
 
 ```
 
-  
-
 ## 面试题
-
-  
-
-- promise的状态由另一个promise决定
-
-  
-
+- 同步函数 promise 化
 ```javascript
+const promisify = (func) => (...args) => new Promise((resolve, reject) => {
+	args.push(function (err, value) {
 
-const p1 = new Promise(function (resolve, reject) {
+		if (err) reject(err);
+		
+		else resolve(value);
 
-// ...
+	});
+
+	func.apply(null, args);
 
 });
 
   
 
-const p2 = new Promise(function (resolve, reject) {
+```
+- promise的状态由另一个promise决定
+```javascript
 
+const p1 = new Promise(function (resolve, reject) {
 // ...
+});
 
+  
+
+const p2 = new Promise(function (resolve, reject) {
+// ...
 resolve(p1);
-
 });
 
 //p1的状态决定了p2的状态。如果p1的状态是pending，那么p2的回调函数就会等待p1的状态改变；如果p1的状态已经是resolved或者rejected，那么p2的回调函数将会立刻执行。
 
-  
-
 const p1 = new Promise(function (resolve, reject) {
-
-setTimeout(() => reject(new Error("3000s fail")), 3000);
-
+	setTimeout(() => reject(new Error("3000s fail")), 3000);
 });
 
   
 
 const p2 = new Promise(function (resolve, reject) {
-
-setTimeout(() => resolve(p1), 1000);
-
+	setTimeout(() => resolve(p1), 1000);
 });
 
   
@@ -1049,18 +950,15 @@ p2.then((result) => console.log(result)).catch((error) => console.log(error));
 ```
 
 - 在then中打印Promise
-
-  
-
 ```javascript
 
 const p1 = new Promise((resolve,reject) => {
 
-setTimeout(()=>{
-
-resolve('resolve3')
-
-console.log('timer1')
+	setTimeout(()=>{
+	
+	resolve('resolve3')
+	
+	console.log('timer1')
 
 })
 
@@ -1070,19 +968,19 @@ resolve('resolve2')
 
 }).then(res=>{
 
-console.log(res)
+	console.log(res)
+	
+	setTimeout(()=>{
+	
+		console.log(p1)
 
-setTimeout(()=>{
-
-console.log(p1)
-
-},1000)
+	},1000)
 
   
 
 }).finally(res=>{
 
-console.log(res)
+	console.log(res)
 
 })
 
@@ -1095,7 +993,5 @@ console.log(res)
 // timer1
 
 // Promise {fulfilled} !!! ⭐️被then调用后，返回了新的Promise,但是没有return为undefined
-
-  
 
 ```

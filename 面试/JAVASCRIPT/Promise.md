@@ -177,80 +177,67 @@ module.exports = MyPromise
 ```
 - resolvePromise
 ```javascript
-
-const isComplex = (obj) => obj !== null && (typeof obj === "function" || typeof obj === "object");
+const isComplex = (obj) => obj !== null && ["function", "object"].includes(typeof obj);
 
 // 判断then之后的状态
-
 function resolvePromise(x, promise2, resolve, reject) {
 
-if (x === promise2) {
+	if (x === promise2) {
+		reject(new TypeError("Chaining cycle detected for promise"));
+	}
 
-reject(new TypeError("Chaining cycle detected for promise"));
+// 其实省掉了一步是否x是promise2实例，下面的逻辑能实现这个继续then的逻辑
 
-}
-
-if (isComplex(x)) {
-
-let hasRes = false;
-
-try {
-
-const then = x.then;
-
-// 如果x是promise，继续判断
-
-if (typeof then === "function") {
-
-then.call(
-
-x,
-
-(v) => {
-
-if (hasRes) return;
-
-hasRes = true;
-
-resolvePromise(v, promise2, resolve, reject);
-
-},
-
-(r) => {
-
-if (hasRes) return;
-
-hasRes = true;
-
-reject(r);
-
-}
-
-);
-
-} else {
-
-// 如果x是个对象
-
-resolve(x);
-
-}
-
-} catch (e) {
-
-if (hasRes) return;
-
-hasRes = true;
-
-reject(e);
-
-}
-
-} else {
-
-resolve(x);
-
-}
+	if (isComplex(x)) {
+		let hasRes = false;
+		try {
+			const then = x.then;
+			// 如果x是promise，继续判断
+			if (typeof then === "function") {
+				then.call(
+				x,
+			(v) => {
+			
+			if (hasRes) return;
+			
+			hasRes = true;
+			
+			resolvePromise(v, promise2, resolve, reject);
+			
+			},
+			
+			(r) => {
+			
+			if (hasRes) return;
+			
+			hasRes = true;
+			
+			reject(r);
+			
+			}
+			
+			);
+			
+			} else {
+			// 如果x是个对象
+			resolve(x);
+			}
+		
+		} catch (e) {
+		
+			if (hasRes) return;
+			
+			hasRes = true;
+			
+			reject(e);
+		
+		}
+	
+	} else {
+	
+		resolve(x);
+	
+	}
 
 }
 

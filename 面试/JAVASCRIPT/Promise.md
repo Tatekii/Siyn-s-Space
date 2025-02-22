@@ -482,7 +482,7 @@ Promise.prototype.catch = function(onReject) {
 };
 
 // finally
-// 回调执行完后ran r
+// 回调执行完后仍然保证原有的promise结果
 Promise.prototype.finally = function (callback) {
 	return this.then(
 		(value) => {
@@ -501,25 +501,15 @@ Promise.prototype.finally = function (callback) {
 - 同步函数 promise 化
 ```javascript
 function promisify<T>(fn: (...args: any[]) => T): (...args: any[]) => Promise<T> {
-
 	return (...args) => {
-	
 		return new Promise((resolve, reject) => {
-		
-		try {
-		
-			resolve(fn.apply(null, args))
-		
-		} catch (err) {
-		
-			reject(err)
-		
-		}
-		
+			try {
+				resolve(fn.apply(null, args))
+			} catch (err) {
+				reject(err)
+			}
 		})
-	
 	}
-
 }
 ```
 - promise的状态由另一个promise决定
@@ -532,8 +522,8 @@ const p1 = new Promise(function (resolve, reject) {
   
 
 const p2 = new Promise(function (resolve, reject) {
-// ...
-resolve(p1);
+	// ...
+	resolve(p1);
 });
 
 //p1的状态决定了p2的状态。如果p1的状态是pending，那么p2的回调函数就会等待p1的状态改变；如果p1的状态已经是resolved或者rejected，那么p2的回调函数将会立刻执行。
@@ -550,7 +540,7 @@ const p2 = new Promise(function (resolve, reject) {
 
   
 
-p2.then((result) => console.log(result)).catch((error) => console.log(error));
+p2.then((result) => console.log('p2 fulfilled',result)).catch((error) => console.log('p2 rejected',error));
 
 // Error: fail
 

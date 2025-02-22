@@ -24,19 +24,27 @@
 	wrongMap.has("bla"); // false
 	wrongMap.delete("bla"); // false
 	```
-- size
-- set: (key, value) => this
-- get: (key) => any
-- has: (key) => boolean
-- delete: (key) => boolean
-- clear: ()=>void
 ## 构造函数
 ```javascript
 new Map(iterator)
-Map.groupBy()
+// 使用常规的 Map 构造函数可以将一个二维的键值对数组转换成一个 Map 对象
 ```
-- 使用常规的 Map 构造函数可以将一个二维的键值对数组转换成一个 Map 对象
-`const myMap = new Map(kvArray);`
+### 静态方法
+- Map.groupBy :() => any
+实例方法/属性
+- Map.prototype.size
+- Map.prototype.set: (key, value) => this
+- Map.prototype.get: (key) => any
+- Map.prototype.has: (key) => boolean
+- Map.prototype.delete: (key) => boolean
+- Map.prototype.clear: ()=> undefined
+- Map.prototype.forEach: ((value, key, map)=>undefined, thisArg) => undefined
+#### 返回迭代器
+- Map.prototype.keys : () =>  Iterator
+- Map.prototype.values: () => Iterator
+- Map.prototype.entries: ()=> Iterator
+
 # `WeakMap`
-- 键只能为对象类型
-- 键为弱引用，没有别人引用将会被[[V8引擎#垃圾回收]]
+- 键只能为对象或**非全局Symbol**
+- 键为弱引用，[[V8引擎#垃圾回收]]
+- 不允许枚举，没有迭代器

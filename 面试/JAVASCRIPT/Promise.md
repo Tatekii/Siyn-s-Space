@@ -142,7 +142,9 @@ Promise.try(() => database.users.get({id: userId}))
 
 ```
 
-  
+  ### promise.any
+**`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 `Promise`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 [`AggregateError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) 拒绝
+
 
 ## 手写 Promise
 - 测试通过 A+规范
@@ -404,15 +406,57 @@ Promise.reject = (reason) => new Promise((resolve, reject) => {
 Promise.all = (promises) => new Promise((resolve,reject) => {
 	const result = []
 	let resolveCount = 0
+	const len = promises.length
 	
-	promises.forEach((p,index)=>{})
+	promises.forEach((p,index) => {
+		Promise.resolve(p).then(v => {
+			result[index] = v
+			resolveCount ++;
+			if(resolveCount === len){
+				resolve(result)
+			}
+		},reason => {
+			reject(reason)
+		})
+	})
+})
+
+
+Promise.race = (promises) => new Promise((resolve,reject) => {
+	promises.forEach(p => {
+		Promise.resolve(p).then(resolve,reject)
+	})
+})
+
+Promise.allSettled = (promises) => new Promise((resolve,reject) => {
+	const result = []
+	let resolveCount = 0
+	const len = promises.length
+
+	promises.forEach((p,index) => {
+		Promise.resolve(p).then(v => {
+			result[index] = {status:'fulfilled',v}
+			resolveCount ++;
+			if(resolveCount === len){
+				resolve(result)
+			}
+		},reason => {
+			result[index] = {status:'rejected',reason}
+			resolveCount ++;
+			if(resolveCount === len){
+				resolve(result)
+			}
+		})
+	})
+})
+
+Promise.any = (promises) => new Promise((resolve,reject) => {
+	
 
 })
 
 ```
-
-
-
+- 实例方法
 ```javascript
 // catch
 

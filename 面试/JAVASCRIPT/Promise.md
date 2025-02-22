@@ -391,9 +391,22 @@ class MyPromise {
 - 静态方法
 ```javascript
 Promise.resolve = (value) => {
+	// 如果value是promise的实例
 	if(value instanceof Promise){
 		return value
 	}
+	// 如果value是thenable对象
+	if(value.then && typeof value.then === 'function'){
+		return new Promise((resolve,reject) => {
+			try{
+				value.then(resolve,reject)
+			}catch(err){
+				reject(err)
+			}
+		})
+
+	}
+	// 否则直接resolve
 	return new Promise((resolve, reject) => {
 		resolve(value))
 	};

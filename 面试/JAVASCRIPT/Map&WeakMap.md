@@ -76,6 +76,7 @@ let Thing;
 
 {
   const privateScope = new WeakMap();
+  let counter = 0;
 
   Thing = function () {
     this.someProperty = "foo";
@@ -93,4 +94,33 @@ let Thing;
     return privateScope.get(this).hidden;
   };
 }
+
+console.log(typeof privateScope);
+// "undefined"
+
+const thing = new Thing();
+
+console.log(thing);
+// Thing {someProperty: "foo"}
+
+thing.showPublic();
+// "foo"
+
+thing.showPrivate();
+// 1
+```
+
+# 使用场景
+- vue3源码中订阅依赖管理部份使用Map+WeakMap组合关联组件对象与其依赖
+```javascript
+// /packages/reactivity/src/dep.ts
+// The main WeakMap that stores {target -> key -> dep} connections.
+// Conceptually, it's easier to think of a dependency as a Dep class
+// which maintains a Set of subscribers, but we simply store them as
+// raw Maps to reduce memory overhead.
+
+type KeyToDepMap = Map<any, Dep>
+export const targetMap: WeakMap<object, KeyToDepMap> = new WeakMap()
+
+
 ```

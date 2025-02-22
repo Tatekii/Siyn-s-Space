@@ -13,15 +13,13 @@ Promise 对象用于处理异步操作，它表示一个尚未完成且预计在
 - then 方法的第一个参数是`resolved`状态的回调函数，第二个参数（可选）是`rejected`状态的回调函数
 - then 方法返回的是一个新的 Promise 实例,可以 then 方法后面再调用另一个 then 方法
 
-  
-
 ```javascript
 
 getJSON("/post/1.json")
 
 .then(function (post) {
 
-return getJSON(post.commentURL);
+	return getJSON(post.commentURL);
 
 })
 
@@ -29,13 +27,13 @@ return getJSON(post.commentURL);
 
 function funcA(comments) {
 
-console.log("resolved: ", comments);
+	console.log("resolved: ", comments);
 
 },
 
 function funcB(err) {
 
-console.log("rejected: ", err);
+	console.log("rejected: ", err);
 
 }
 
@@ -82,46 +80,23 @@ promise
 - finally 方法用于指定不管 Promise 对象最后状态如何，都会执行的操作
 - finally 方法的回调函数不接受任何参数，这意味着没有办法知道，前面的 Promise 状态到底是 fulfilled 还是 rejected。这表明，finally 方法里面的操作，应该是与状态无关的，不依赖于 Promise 的执行结果。
 
-  
-
 ## 静态方法
 ### Promise.all()
-- Promise.all 方法用于将多个 Promise 实例，包装成一个新的 Promise 实例
+Promise.all 方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
+
 `const p = Promise.all([p1, p2, p3]);`
 
-  
-
-- p 的状态由 p1、p2、p3 决定，分成两种情况。
-
-  
-
-1. 只有 p1、p2、p3 的状态都变成`fulfilled`，p 的状态才会变成`fulfilled`，此时 p1、p2、p3 的返回值组成一个数组，传递给 p 的回调函数。
-
-  
-
+  p 的状态由 p1、p2、p3 决定，分成两种情况。
+1. 只有 p1、p2、p3 的状态都变成`fulfilled`，p 的状态才会变成`fulfilled`，此时 p1、p2、p3 的返回值组成一个数组，传递给 p 的回调函数。  
 2. 只要 p1、p2、p3 之中有一个被`rejected`，p 的状态就变成`rejected`，此时第一个被`reject`的实例的返回值，会传递给 p 的回调函数
-
-  
-
 > 如果作为参数的 Promise 实例，自己定义了 catch 方法，那么它一旦被 rejected，并不会触发 Promise.all()的 catch 方法
 
-  
-
 ### Promise.race()
-
-  
-
 Promise.race 方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
 
-  
-
 `const p = Promise.race([p1, p2, p3]);`
-
   
-
 上面代码中，只要 p1、p2、p3 之中有一个实例率先改变状态，p 的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给 p 的回调函数。
-
-  
 
 ```javascript
 
@@ -145,40 +120,24 @@ p.then(console.log).catch(console.error);
 
 ```
 
-  
-
 ### promise.try()
-
-  
-
 不想区分，函数 f 是同步函数还是异步操作，但是想用 Promise 来处理它
-
-  
 
 ```javascript
 
 try {
-
-database.users.get({id: userId})
-
-.then(...)
-
-.catch(...) // promise错误
-
+	database.users.get({id: userId})
+	.then(...)
+	.catch(...) // promise错误
 } catch (e) { // 同步错误
-
 // ...
-
 }
 
-// try catch捕获同步错误
-
+// try catch只能捕获同步错误
 // 用promise.try改写
 
 Promise.try(() => database.users.get({id: userId}))
-
 .then(...)
-
 .catch(...)
 
 ```
@@ -186,13 +145,7 @@ Promise.try(() => database.users.get({id: userId}))
   
 
 ## 手写 Promise
-
-  
-
-- 测试 a+规范
-
-  
-
+- 测试通过 A+规范
 ```javascript
 
 promises-aplus-tests
@@ -222,13 +175,7 @@ return dfd;
 module.exports = MyPromise
 
 ```
-
-  
-
 - resolvePromise
-
-  
-
 ```javascript
 
 const isComplex = (obj) => obj !== null && (typeof obj === "function" || typeof obj === "object");
@@ -318,13 +265,7 @@ const FULFILLED = Symbol('FULFILLED');
 const REJECTED = Symbol('REJECTED');
 
 ```
-
-  
-
 - function 版
-
-  
-
 ```javascript
 
 function MyPromise(executor) {
@@ -843,75 +784,30 @@ resolve(res);
 
 ```
 
-  
-
-## 同步函数 promise 化
-```javascript
-
-const promisify =
-
-(func) =>
-
-(...args) =>
-
-new Promise((resolve, reject) => {
-
-args.push(function (err, value) {
-
-if (err) reject(err);
-
-else resolve(value);
-
-});
-
-func.apply(null, args);
-
-});
-
-  
-
-function promisify<T>(fn:(...args:any[]) => T) :(...args:any[]) => Promise<T> {
-
-return (...args) => {
-
-return new Promise((resolve,reject) => {
-
-try{
-
-resolve(fn.apply(null,args))
-
-}catch(err){
-
-reject(err)
-
-}
-
-})
-
-}
-
-}
-
-```
-
 ## 面试题
 - 同步函数 promise 化
 ```javascript
-const promisify = (func) => (...args) => new Promise((resolve, reject) => {
-	args.push(function (err, value) {
+function promisify<T>(fn: (...args: any[]) => T): (...args: any[]) => Promise<T> {
 
-		if (err) reject(err);
+	return (...args) => {
+	
+		return new Promise((resolve, reject) => {
 		
-		else resolve(value);
+		try {
+		
+			resolve(fn.apply(null, args))
+		
+		} catch (err) {
+		
+			reject(err)
+		
+		}
+		
+		})
+	
+	}
 
-	});
-
-	func.apply(null, args);
-
-});
-
-  
-
+}
 ```
 - promise的状态由另一个promise决定
 ```javascript

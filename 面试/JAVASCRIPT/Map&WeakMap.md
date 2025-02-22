@@ -24,13 +24,19 @@
 	wrongMap.has("bla"); // false
 	wrongMap.delete("bla"); // false
 	```
-## API
 - size
 - set: (key, value) => this
 - get: (key) => any
 - has: (key) => boolean
 - delete: (key) => boolean
 - clear: ()=>void
+## 构造函数
+```javascript
+new Map(iterator)
+Map.groupBy()
+```
+- 使用常规的 Map 构造函数可以将一个二维的键值对数组转换成一个 Map 对象
+`const myMap = new Map(kvArray);`
 # `WeakMap`
 - 键只能为对象类型
 - 键为弱引用，没有别人引用将会被[[V8引擎#垃圾回收]]

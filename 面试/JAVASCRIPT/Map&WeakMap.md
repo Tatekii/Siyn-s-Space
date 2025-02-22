@@ -3,10 +3,17 @@
 - 键能为任何类型
 - 记住键的原始插入顺序
 ## 和Object的区别
-- Object键只能为基本类型
+- Object键只能为`String`,`Symbol`
 -  Map 不会把键值对存储为自身的属性，而是使用**内部数据结构**（如哈希表），可以杜绝与原型上的属性相互影响
 	```javascript
+	const map = new Map();
+	map.set("toString", "Hello");
 	
+	console.log(map.get("toString")); // "Hello"
+	
+	console.log(map.toString); // [Function: toString]，不会受影响
+	
+	map.toString === Map.prototype.toString // true
 	```
 - Object没有迭代器
 	- 无法`for...of`
@@ -51,4 +58,14 @@ new Map(iterator)
 # `WeakMap`
 - 键只能为对象或**非全局Symbol**
 - 键为弱引用，[[V8引擎#垃圾回收]]
-- 不允许枚举，没有迭代器
+- 键不允许枚举，不可计数
+## 构造函数
+```javascript
+new WeakMap(iterable)
+// 一个数组者其他实现了[Symbol.iterator]方法的可迭代对象
+```
+### 实例方法
+- WeakMap.prototype.delete : () => true
+- Map.prototype.get: (key) => any
+- Map.prototype.has: (key) => boolean
+- Map.prototype.set: (key, value) => this

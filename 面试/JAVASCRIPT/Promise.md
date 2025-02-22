@@ -143,7 +143,7 @@ Promise.try(() => database.users.get({id: userId}))
 ```
 
   ### promise.any
-**`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 `Promise`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 [`AggregateError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) 拒绝
+**`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 `Promise`。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 [`AggregateError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) 拒绝
 
 
 ## 手写 Promise
@@ -451,8 +451,25 @@ Promise.allSettled = (promises) => new Promise((resolve,reject) => {
 })
 
 Promise.any = (promises) => new Promise((resolve,reject) => {
-	
+	const errors = []
+	let errorCount = 0
+	const len = promsies.length
 
+   // 如果 promises 数组为空，直接 reject
+   if (len.length === 0) {
+     reject(new AggregateError('No promises passed', []));
+     return
+   }
+
+	promises.forEach((p,index) => {
+		Promise.resolve(p).then(resolve).catch(err=>{
+			errors[index] = err
+			errorCount ++
+			if(errorCount === len){
+				reject(new AggregateError(errors))
+			}
+		})
+	})
 })
 
 ```
@@ -460,182 +477,24 @@ Promise.any = (promises) => new Promise((resolve,reject) => {
 ```javascript
 // catch
 
-Promise.prototype.catch = (onReject) => {
-
-return this.then(null, onReject);
-
+Promise.prototype.catch = function(onReject) {
+	return this.then(null, onReject);
 };
 
 // finally
-
+// 回调执行完后ran r
 Promise.prototype.finally = function (callback) {
-
-return this.then(
-
-(value) => {
-
-Promise.resolve(callback()).then(() => value);
-
-},
-
-(reason) => {
-
-Promise.resolve(callback()).then(() => {
-
-throw reason;
-
-});
-
-}
-
-);
-
+	return this.then(
+		(value) => {
+			Promise.resolve(callback()).then(() => value);
+		},
+		(reason) => {
+			Promise.resolve(callback()).then(() => {
+			throw reason;
+		});
+		}
+	);
 };
-
-// race
-
-Promise.race = function (pArr) {
-
-// 抛出第一个改变的状态
-
-return new Promise((resolve, reject) => {
-
-pArr.forEach((pItem) => pItem.then(resolve, reject));
-
-});
-
-};
-
-// any
-
-Promise.any = function (pArr) {
-
-// 有resolve就resolve
-
-// 都没有resolve则返回一个由所有err组成的AggregateError对象
-
-return new Promise((resolve, reject) => {
-
-if (!pArr.length) return reject(new AggregateError([]));
-
-const res = [];
-
-pArr.forEach((pItem, index) => {
-
-pItem.then(
-
-(v) => {
-
-resolve(v);
-
-},
-
-(e) => {
-
-res[index] = e;
-
-}
-
-);
-
-});
-
-reject(new AggregateError(res));
-
-});
-
-};
-
-  
-
-// all
-
-Promise.all = function (pArr) {
-
-// resolve全部value
-
-// 有err就reject
-
-return new Promise((resolve, reject) => {
-
-if (!pArr.length) return resolve([]);
-
-const res = [];
-
-pArr.forEach((pItem, index) => {
-
-pItem.then(
-
-(v) => {
-
-res[index] = v;
-
-},
-
-(e) => {
-
-reject(e);
-
-}
-
-);
-
-});
-
-resolve(res);
-
-});
-
-};
-
-  
-
-// allSettled
-
-Promise.allSettled = function (pArr) {
-
-// 记录每个promise的状态
-
-return new Promise((resolve, reject) => {
-
-if (!pArr.length) return resolve([]);
-
-const res = [];
-
-pArr.forEach((pItem, index) => {
-
-// if (pItem instanceof Promise) {
-
-pItem.then(
-
-(v) => {
-
-res[index] = { status: "resolve", value: v };
-
-},
-
-(e) => {
-
-res[index] = { status: "reject", reason: e };
-
-}
-
-);
-
-// } else {
-
-// res[index] = { status: "resolve", value: pItem };
-
-// }
-
-});
-
-resolve(res);
-
-});
-
-};
-
 ```
 
 ## 面试题

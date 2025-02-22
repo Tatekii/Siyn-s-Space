@@ -2,6 +2,7 @@
 - 键能为任何类型
 - 键为强引用
 ## 和Object的区别
+- Object键只能为基本类型
 - Object类型的数据会访问到原型上的键
 	- `for...in`遍历所有可枚举的字符串属性
 	- `Object.keys()`遍历可枚举的自有字符串键属性
@@ -10,6 +11,7 @@
 - Object没有迭代器
 	- 无法`for...of`
 - Object没有长度属性
+- Object频繁插入删除性能没有Map好
 ### 注意
 - 使用类object的操作方法不会报错但数据不会插入到Map中
 	```javascript

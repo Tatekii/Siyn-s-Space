@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/事件循环.md",
+                "file": "面试/JAVASCRIPT/Promise.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "事件循环"
+              "title": "Promise"
             }
           }
         ]
@@ -201,6 +201,7 @@
   },
   "active": "46256e09c023887f",
   "lastOpenFiles": [
+    "面试/JAVASCRIPT/事件循环.md",
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/Async函数.md",
     "面试/JAVASCRIPT/Generator.md",
@@ -213,7 +214,6 @@
     "面试/JAVASCRIPT/严格模式.md",
     "面试/JAVASCRIPT/箭头函数.md",
     "面试/JAVASCRIPT/变量声明.md",
-    "面试/JAVASCRIPT/事件循环.md",
     "面试/网络/TCP.md",
     "面试/REACT/ReactFiber.md",
     "面试/REACT/ConcurrrentMode.md",

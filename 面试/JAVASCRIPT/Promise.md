@@ -512,9 +512,8 @@ function promisify<T>(fn: (...args: any[]) => T): (...args: any[]) => Promise<T>
 	}
 }
 ```
-- promise的状态由另一个promise决定
+- promise之间状态传递
 ```javascript
-
 const p1 = new Promise(function (resolve, reject) {
 // ...
 });

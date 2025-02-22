@@ -1,6 +1,27 @@
 # `Map`
 - 键能为任何类型
 - 键为强引用
+## 和Object的区别
+- Object类型的数据会访问到原型上的键
+	- `for...in`遍历所有可枚举的字符串属性
+	- `Object.keys()`遍历可枚举的自有字符串键属性
+	- `Object.getOwnPropertyNames`遍历包括不可枚举的自有字符串键属性
+	- `Object.getOwnPropertySymbols遍历包括不可枚举的自有Symbol键属性
+- Object没有迭代器
+	- 无法`for...of`
+- Object没有长度属性
+### 注意
+- 使用类object的操作方法不会报错但数据不会插入到Map中
+	```javascript
+	const wrongMap = new Map();
+	wrongMap["bla"] = "blaa";
+	wrongMap["bla2"] = "blaaa2";
+	
+	console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
+
+	wrongMap.has("bla"); // false
+	wrongMap.delete("bla"); // false
+	```
 ## API
 - size
 - set: (key, value) => this

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/原型与原型链.md",
+                "file": "面试/JAVASCRIPT/Generator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "原型与原型链"
+              "title": "Generator"
             }
           }
         ]
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -202,8 +201,10 @@
   },
   "active": "46256e09c023887f",
   "lastOpenFiles": [
-    "面试/JAVASCRIPT/Javascript运行原理.md",
+    "面试/JAVASCRIPT/Iterator.md",
     "面试/JAVASCRIPT/Generator.md",
+    "面试/JAVASCRIPT/原型与原型链.md",
+    "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/事件循环.md",
     "面试/JAVASCRIPT/Async函数.md",
@@ -211,7 +212,6 @@
     "面试/JAVASCRIPT/Proxy&Reflect.md",
     "面试/JAVASCRIPT/Reflect.md",
     "面试/SEO.md",
-    "面试/JAVASCRIPT/原型与原型链.md",
     "面试/JAVASCRIPT/严格模式.md",
     "面试/JAVASCRIPT/箭头函数.md",
     "面试/JAVASCRIPT/变量声明.md",
@@ -228,7 +228,6 @@
     "面试/网络/网络分层模型.md",
     "面试/网络/HTTP.md",
     "READEME.md",
-    "面试/性能优化/运行时性能优化.md",
     "数据结构",
     "assets/Pasted image 20250218125604.png",
     "assets/Pasted image 20250218125437.png",

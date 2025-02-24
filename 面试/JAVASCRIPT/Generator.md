@@ -1,8 +1,15 @@
 # 生成器
-生成器是一种更简便创建迭代器的方法。通过 `function*` 语法定义，生成器函数返回一个生成器对象，该对象同时实现了迭代器协议和可迭代协议[⏭️Iterator](迭代器.md)。
+生成器是一种更简便创建迭代器的方法。通过 `function*` 语法定义，生成器函数返回一个生成器对象，该对象同时实现了[[Iterator#迭代协议|迭代器协议和可迭代协议]]。
 
-特性：
+`Generator` 是隐藏类 [[Iterator]]的子类。
+
+## 特性：
 - 灵活的控制函数的每一步执行和终止
+
+## 实例方法
+- Generator.prototype.next
+- Generator.prototype.return
+- Generator.prototype.throw
 
 ### 面试题
 - 实现自执行generator函数

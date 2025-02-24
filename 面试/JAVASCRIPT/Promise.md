@@ -485,6 +485,20 @@ Promise.any = (promises) => new Promise((resolve,reject) => {
 	})
 })
 
+Promise.try = callback => new Promise((resolve,reject) => {
+	try{
+		const result = resolve
+	// 如果 callback 返回的值是一个 Promise，我们会等待这个 Promise 的结果，并将 resolve 和 reject 传递给它
+		if(result && typeof result.then === 'function'){
+			result.then(resolve,reject)
+		}else{
+// 如果 callback 返回的是一个非 Promise 值，我们会用 resolve 直接返回这个值。
+			resolve(result)
+		}
+	}catch(e){
+		catch(e)
+	}
+})
 ```
 - 实例方法
 ```javascript

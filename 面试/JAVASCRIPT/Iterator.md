@@ -41,7 +41,7 @@ for (const value of array) {
 其他例如...展开运算符，解构赋值，Array.From等均是调用了这个接口。
 
 # 异步迭代器对象
-**`AsyncIterator`** 对象是符合[异步迭代器协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%BC%82%E6%AD%A5%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E5%BC%82%E6%AD%A5%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%8D%8F%E8%AE%AE)的对象，其提供了 `next()` 方法用以返回一个兑现为迭代器结果对象的 promise。`AsyncIterator.prototype` 对象是一个隐藏的全局对象，所有内置的异步迭代器都继承自它。其提供了 [`@@asyncIterator`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[异步可迭代](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%BC%82%E6%AD%A5%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E5%BC%82%E6%AD%A5%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%8D%8F%E8%AE%AE)。
+**`AsyncIterator`** 对象是符合异步迭代器协议的对象，其提供了 `next()` 方法用以返回一个兑现为迭代器结果对象的 promise。`AsyncIterator.prototype` 对象是一个隐藏的全局对象，所有内置的异步迭代器都继承自它。其提供了 `@@asyncIterator`方法，该方法返回异步迭代器对象本身，使异步迭代器也异步可迭代。
 
 ## 异步可迭代协议
 当对象实现以下方法时，它会实现异步可迭代协议：
@@ -65,5 +65,19 @@ for (const value of array) {
 
 > 目前只有异步生成器函数返回的`AsyncGenerator`对象内置了`AsyncIterator`对象。
 
-## 使用
+
+```bash
+[][Symbol.iterator]()
+
+Array Iterator {}
+  [[Prototype]]: Array Iterator 
+    next: ƒ next()
+    Symbol(Symbol.toStringTag): "Array Iterator"
+    [[Prototype]]: Object
+      Symbol(Symbol.iterator): ƒ [Symbol.iterator]()
+      [[Prototype]]: Object
+```
+
+
+## 作用
 所有内置异步迭代器都可以异步迭代，因此可在 `for await...of` 循环中调用。

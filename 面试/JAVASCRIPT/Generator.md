@@ -7,9 +7,10 @@
 - 灵活的控制函数的每一步执行和终止
 
 ## 实例方法
-- Generator.prototype.next
-- Generator.prototype.return
-- Generator.prototype.throw
+- Generator.prototype.next()
+	- 返回`yeild`表达式return的值
+- Generator.prototype.return()
+- Generator.prototype.throw()
 
 ### 面试题
 - 实现自执行generator函数
@@ -59,11 +60,11 @@ co(gen1).then((v) => console.log(v)) // 1
 ```
 
 # 异步生成器
-`AsyncGenerator`对象由异步生成器函数返回，符合[异步可迭代协议和异步迭代器协议](异步迭代器AsyncIterator.md#异步可迭代协议)。
+`AsyncGenerator`对象由异步生成器函数返回，符合异步[[Iterator#迭代协议|迭代器协议和可迭代协议]]。
 
 异步生成器方法总是产生 [`Promise`](Promise.md) 对象。
 
-AsyncGenerator是[异步迭代器AsyncIterator](异步迭代器AsyncIterator.md)的子类。
+AsyncGenerator是[[Iterator#异步迭代器对象]]的子类。
 
 ## 异步生成器函数
 ```javascript

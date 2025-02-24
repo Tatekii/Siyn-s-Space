@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "thenable",
+                "query": "宏任务",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +99,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -214,7 +215,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e4ef5f49690d6632",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/Generator.md",

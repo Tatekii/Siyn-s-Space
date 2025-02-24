@@ -7,41 +7,42 @@
 ### 面试题
 - 实现自执行generator函数
 ```javascript
-function co(generator) {
-	const gen = generator()
-	let ret
-	
-	function step(res) {
-		if (res.done) {
-			return Promise.resolve(res.value)
-		}
 
-		// promise化
-		if (!(res.value instanceof Promise)) {
-			res.value = Promise.resolve(res.value)
-		}
+function co<T>(genFunc: () => Generator<Promise<T>, T, T>): Promise<T> {
+  return new Promise((resolve, reject) => {
+	// generator
+    const generator = genFunc();
+    
+    function step(nextFn: (value?: any) => IteratorResult<Promise<T>, T>, arg?: any) {
+      let result;
+      
+      try {
+        result = nextFn(arg);
+      } catch (error) {
+        return reject(error);
+      }
 
-		return res.value.then(
-			(v) => step(gen.next(v)),
-			(e) => step(gen.throw(e))
-		)
-	}
-	
-	try {
-		ret = gen.next()
-	} catch (e) {
-		ret = gen.throw(e)
-	}
-	return step(ret)
+      if (result.done) {
+        return resolve(result.value);
+      }
 
+      Promise.resolve(result.value)
+        .then(val => step(generator.next.bind(generator), val))
+        .catch(err => step(generator.throw.bind(generator), err));
+    }
+
+    step(generator.next.bind(generator));
+  });
 
 }
-
   
 
 // test
 const gen1 = function* () {
 	const res = yield Promise.resolve(1)
+	const res = yield new Promise(resolve=>{
+		setTimeout(resolve,20000)
+	})
 	const ret = yield Promise.resolve(res)
 	return ret
 }

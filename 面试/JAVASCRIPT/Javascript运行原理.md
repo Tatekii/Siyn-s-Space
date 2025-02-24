@@ -73,7 +73,6 @@ MyFunc.prototype._apply = function(context,args){
 
 MyFunc.prototype._bind = function(context,...args1){
 	const func = this
-	context = context || window
 
 	function boundFn (...args2){
 	// 如果正常调用 this指向context

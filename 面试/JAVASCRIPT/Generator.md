@@ -10,13 +10,7 @@
 function co(generator) {
 	const gen = generator()
 	let ret
-	try {
-		ret = gen.next()
-	} catch (e) {
-		ret = gen.throw(e)
-	}
-	return step(ret)
-
+	
 	function step(res) {
 		if (res.done) {
 			return Promise.resolve(res.value)
@@ -32,6 +26,15 @@ function co(generator) {
 			(e) => step(gen.throw(e))
 		)
 	}
+	
+	try {
+		ret = gen.next()
+	} catch (e) {
+		ret = gen.throw(e)
+	}
+	return step(ret)
+
+
 }
 
   

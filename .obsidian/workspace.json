@@ -99,8 +99,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -215,7 +214,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e4ef5f49690d6632",
+  "active": "328a4439f200cf35",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/Generator.md",

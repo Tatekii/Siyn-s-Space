@@ -7,7 +7,18 @@ JavaScript 中的迭代协议由两个部分组成：
 1. **可迭代协议（Iterable Protocol）**：
     
     - 一个对象实现了可迭代协议，就说明这个对象可以被迭代。
-    - 对象需要实现一个名为 `@@iterator` 的方法，也就是对象上存在一个 `[Symbol.iterator]` 属性，可通过常量 `Symbol.iterator` 访问该属性：。
+    - 对象需要实现一个名为 `@@iterator` 的方法，也就是对象上存在一个 `[Symbol.iterator]` 属性，可通过常量 `Symbol.iterator` 访问该属性。
+		```bash
+		[][Symbol.iterator]()
+		
+		Array Iterator {}
+		  [[Prototype]]: Array Iterator 
+		    next: ƒ next()
+		    Symbol(Symbol.toStringTag): "Array Iterator"
+		    [[Prototype]]: Object
+		      Symbol(Symbol.iterator): ƒ [Symbol.iterator]()
+		      [[Prototype]]: Object
+		```
     - 这个方法无参数，返回一个符合迭代器协议的对象。
 
 2. **迭代器协议（Iterator Protocol）**：
@@ -64,19 +75,6 @@ for (const value of array) {
 无参数或者接受一个参数的函数，并返回 promise。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
 
 > 目前只有异步生成器函数返回的`AsyncGenerator`对象内置了`AsyncIterator`对象。
-
-
-```bash
-[][Symbol.iterator]()
-
-Array Iterator {}
-  [[Prototype]]: Array Iterator 
-    next: ƒ next()
-    Symbol(Symbol.toStringTag): "Array Iterator"
-    [[Prototype]]: Object
-      Symbol(Symbol.iterator): ƒ [Symbol.iterator]()
-      [[Prototype]]: Object
-```
 
 
 ## 作用

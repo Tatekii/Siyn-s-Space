@@ -1,5 +1,4 @@
 # Fiber的协调
-> [ref:掘金/百应前端团队](https://juejin.cn/post/7012961682938920967)
 ## 双缓存
 内存中同时会有两棵Fiber树，一个为对应此时真实DOM的currentFiberTree，一个是协调过程中操作的workInProgressFiberTree。
 ### 协调的执行

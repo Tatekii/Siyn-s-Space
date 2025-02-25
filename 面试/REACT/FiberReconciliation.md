@@ -52,8 +52,10 @@ C->B->A->D
 ![[Pasted image 20240712170330.png]][掘金/百应技术团队博客](https://juejin.cn/post/7012961682938920967#heading-9)
 
 
-## 更新潜拷贝节点
-diff结束后新建的节点存在完全新建和潜拷贝两种情况，潜拷贝的节点需要更进一步的更新逻辑去更新他的奇遇属性。
+## 更新节点
+- 新建的节点 -> 需要更新->执行mount
+- 克隆的节点-> 比较props ->执行update
+- 克隆的组件节点 -> 比较props -> 比较state -> 执行update
 ### props
 通过对比**pendingProps** 和 memoizedProps就知道属性的改变；
 - `pengindProps`
@@ -66,6 +68,8 @@ diff结束后新建的节点存在完全新建和潜拷贝两种情况，潜拷�
 - **HostComponent**
 - **Fragment**
 - **SuspenseComponent**
+### 组件
+组件类型的tag时，还需要比较组件内部状态的不同。
 
 ## 副作用
 协调结束过程中，会收集更新时产生的所有副作用(`effect`)，协调结束进入提交阶段会处理这些effect。

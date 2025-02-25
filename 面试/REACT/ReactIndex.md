@@ -1,10 +1,5 @@
-# React Fiber
-> - reconciliation
-> 	The algorithm React uses to diff one tree with another to determine which parts need to be changed.
-> - scheduling
-> 	the process of determining when work should be performed.
-## Fiber架构
-### <16.8 旧架构
+## React的架构演变
+## <16.8 旧架构
 - `Stack Reconciler`
 	- 数据保存在递归的调用[[栈]] 中
 	- 递归更新不可中断
@@ -17,7 +12,7 @@
 	- 更新任务可区分优先级
 - `Renderer`
 
-
+## Fiber架构组成
 ### 运行流程
 ```mermaid
 stateDiagram-v2

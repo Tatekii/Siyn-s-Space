@@ -87,7 +87,6 @@ export const ChildDeletion = 0b0001000;
 `completeWork` 阶段会向上冒泡组件的副作用，并在更新过程中使用位运算符存储，合并，删除每个节点的副作用记录。
 
 
-
 整颗 **fiber tree** 完成**协调**以后，所有被标记 **effect** 的 **fiber node** 都被收集到一起使用**单链表**结构存储，**firstEffect** 指向第一个标记 **effect** 的 **fiber node**，**lastEffect** 标记最后一个 **fiber node**，节点之间通过 **nextEffect** 指针连接。
 
 由于协调的顺序为子->兄->父，副作用执行的顺序也为子->兄->父。

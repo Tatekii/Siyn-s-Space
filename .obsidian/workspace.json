@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/ReactIndex.md",
+                "file": "面试/REACT/FiberReconciliation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ReactIndex"
+              "title": "FiberReconciliation"
             }
           }
         ],
@@ -216,8 +216,8 @@
   },
   "active": "e4ef5f49690d6632",
   "lastOpenFiles": [
+    "面试/REACT/ReactFiber.md",
     "面试/REACT/FiberReconciliation.md",
-    "面试/REACT/ReactIndex.md",
     "面试/REACT/ConcurrrentMode.md",
     "面试/JAVASCRIPT/手写题.md",
     "面试/JAVASCRIPT/事件循环.md",

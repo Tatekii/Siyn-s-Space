@@ -1,11 +1,11 @@
-# Fiber的协调
-## 双缓存
+## Fiber的协调
+## 双缓存机制
 内存中同时会有两棵Fiber树，一个为对应此时真实DOM的currentFiberTree，一个是协调过程中操作的workInProgressFiberTree。
 ### 协调的执行
 fiber树中执行协调的顺序类似中序遍历，先walk child，然后walk sibling，再返回上层（return）。
 
-## workInProgressFiberTree的构建
-### 生成fiberNode的方式
+
+## fiberNode的生成
 1. 浅拷贝currentFiberNode
 	- 只需要进行DOM属性的更新或移动
 2. 新建fiberNode(createFiberNodeFromXXX)
@@ -14,11 +14,10 @@ fiber树中执行协调的顺序类似中序遍历，先walk child，然后walk 
 	2. 关联的API:`shouldComponentUpdate`,`React.memo()`
 
 ## ⭐️diff计算
-已匹配的直接子节点和currentFiberNode的直接子节点进行比较。不进行跨父节点比较。
+### 同级比较
+workinProgressFiberNode的直接子节点和currentFiberNode的直接子节点进行比较。不进行跨父节点比较。
 
-除了组件的渲染压根没有执行，其余情况都需要根据新建节点，区别是新建的节点是否由currentFiberTree中克隆而来。
-
-### 判断逻辑
+### 节点复用（key的作用）
 > key：元素上的key = reactElement的key = fiber节点上的key
 > type：div,input,component,fragemt等
 
@@ -30,8 +29,7 @@ fiber树中执行协调的顺序类似中序遍历，先walk child，然后walk 
 
 新旧子节点的比较会出现两种情况：
 1. 单个新子节点 vs 旧子节点list
-2. 新子节点list vs 旧子节点list
-复杂的部分发生在2。
+2. ⭐️新子节点list vs 旧子节点list
 
 ### 最长递增索引算法
 lastPlacedIndex，定位未发生移动的currentFiberNode
@@ -42,19 +40,17 @@ A->B->C->D
 // workingInProgressTree
 C->B->A->D
 ```
-1. 从直接子节点（DOM结构中的首个子节点）开始
-2. C的newIndex为0,oldIndex为2,lastPlacedIndex初始化=2
-3. B的newIndex为1，oldIndex为1，oldIndex<lastPlacedIndex,B发生了移动
-4. A的newIndex为2，oldIndex为0，oldIndex<lastPlacedIndex,A发生了移动
-5. D的newIndex为3，oldIndex为3，oldIndex>lastPlacedIndex,D没有移动，并且重新赋值lastPlacedIndex = 3
-
-在fiber tree中的运用
+3. 从直接子节点（DOM结构中的首个子节点）开始
+4. C的newIndex为0, oldIndex为2, lastPlacedIndex初始化=2
+5. B的newIndex为1，oldIndex为1，oldIndex<lastPlacedIndex,B发生了移动
+6. A的newIndex为2，oldIndex为0，oldIndex<lastPlacedIndex,A发生了移动
+7. D的newIndex为3，oldIndex为3，oldIndex>lastPlacedIndex,D没有移动，并且重新赋值lastPlacedIndex = 3
 ![[Pasted image 20240712170330.png]][掘金/百应技术团队博客](https://juejin.cn/post/7012961682938920967#heading-9)
 
 
 ## 更新节点
-- 新建的节点 -> 需要更新->执行mount
-- 克隆的节点-> 比较props ->执行update
+- 新建的节点 -> 执行mount
+- 克隆的节点-> 比较props -> 执行update
 - 克隆的组件节点 -> 比较props -> 比较state -> 执行update
 ### props
 通过对比**pendingProps** 和 memoizedProps就知道属性的改变；

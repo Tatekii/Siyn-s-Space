@@ -12,8 +12,7 @@
 	- 更新任务可区分优先级
 - `Renderer`
 
-## Fiber架构组成
-### 运行流程
+## Fiber架构
 ```mermaid
 stateDiagram-v2
 state if_noPriority <<choice>>
@@ -139,6 +138,7 @@ window.requestIdleCallback(callback:Function, options:{timeout:number})
 ```
 
 ## `Fiber Reconciler`
+[[FiberReconciliation]]
 执行fiber树的协调，虚拟dom的diff，打上更新标记，并收集副作用。
 
 

@@ -54,21 +54,39 @@ C->B->A->D
 - 克隆的组件节点 -> 比较props -> 比较state -> 执行update
 ### props
 通过对比**pendingProps** 和 memoizedProps就知道属性的改变；
-- `pengindProps`
-	jsx上的所有参数除了key都会直接作为react element的props，react element执行渲染函数后这些props将作为workingProgress fiber node 下`pendingProps`的值。
-- `memoizedProps`
-	current fiber node的`memorizedProps`也就是上一次更新时workingProgress fiber node的`pengingProps`。
-### tag
-- **ClassComponent**
-- **FunctionComponent**
-- **HostComponent**
+#### `pengindProps`
+jsx上的所有参数除了key都会直接作为react element的props，react element执行渲染函数后这些props将作为workingProgress fiber node 下`pendingProps`的值。
+#### `memoizedProps`
+节点更新完之后的props。
+current fiber node的`memorizedProps`也就是上一次更新时workingProgress fiber node的`pengingProps`。
+
+### Fiber.tag
+标记不同的fiber节点类型
+- **ClassComponent**类组件
+- **FunctionComponent**函数组件
+- **HostComponent**DOM元素
 - **Fragment**
 - **SuspenseComponent**
-### 组件
+不同节点类型执行更新的操作步骤也不同。
+
+### 组件状态
 组件类型的tag时，还需要比较组件内部状态的不同。
 
 ## 副作用
 协调结束过程中，会收集更新时产生的所有副作用(`effect`)，协调结束进入提交阶段会处理这些effect。
+
+每个fiber节点内使用使用`Fiber.flags`来存储副作用
+```
+export const NoFlags = 0b0000000;
+export const PerformedWork = 0b0000001;
+export const Placement = 0b0000010;
+export const Update = 0b0000100;
+export const ChildDeletion = 0b0001000;
+```
+
+`completeWork` 阶段会向上冒泡组件的副作用，并在更新过程中使用位运算符存储，合并，删除每个节点的副作用记录。
+
+
 
 整颗 **fiber tree** 完成**协调**以后，所有被标记 **effect** 的 **fiber node** 都被收集到一起使用**单链表**结构存储，**firstEffect** 指向第一个标记 **effect** 的 **fiber node**，**lastEffect** 标记最后一个 **fiber node**，节点之间通过 **nextEffect** 指针连接。
 

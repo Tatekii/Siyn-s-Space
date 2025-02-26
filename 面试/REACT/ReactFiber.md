@@ -13,21 +13,23 @@
 - `Renderer`
 
 ## Fiber架构
-```mermaid
-stateDiagram-v2
-state if_noPriority <<choice>>
-state if_noIdleTime <<choice>>
+```bash
 
-[*] --> state更新
-state更新  --> 【Scheduler】
-【Scheduler】 --> if_noPriority:是否有更高优先级任务？
-if_noPriority --> [*]:否
-if_noPriority --> if_noIdleTime:浏览器空闲？
-if_noIdleTime --> [*]:否
-if_noIdleTime --> 【Reconciler】:--RENDER--
-【Reconciler】-->  【Renderer】:diff并打上update标记
-【Renderer】--> [*]:--COMMIT--
-
+state change 
+|
+schduler update
+|
+render fiber
+|
+- {begin work} [diff 打标flags]
+|
+- {complete work} [根据标记输出DOM结构，向上收集需要更新的flags]
+|
+commit
+|
+- {beforMutation} getSnapshotBeforeUpdate
+|
+- {mutation}  
 ```
 ### `FiberNode`
 用于保存一个React组件的状态，输入及输出的对象。

@@ -11,26 +11,32 @@
 	- 时间切片
 	- 更新任务可区分优先级
 - `Renderer`
+## 旧架构下的生命周期
+![[Pasted image 20250226175957.png]]
 
-## Fiber架构
-```bash
-
-state change 
-|
-schduler update
-|
-render fiber
-|
+## Fiber架构下的生命周期
+```text
+【Update】
+	⬇️
+【Schduler】
+	⬇️
+【Render】
+	⬇️
 - {begin work} [向下生成/执行fiber链表，使用props,state执行渲染函数，hooks执行/状态计算， 打标flags]
-|
-- {complete work} [根据flags输出DOM结构stateNode，向上冒泡flags]
-|
-commit
-|
+	⬇️
+- {complete work} [根据flags输出虚拟DOM=>stateNode，向上冒泡flags]
+	⬇️
+【Commit】
+	⬇️
 - {beforMutation} getSnapshotBeforeUpdate
-|
-- {mutation} DOM操作 
+	⬇️
+- {mutation} 更新虚拟DOM
+	⬇️
+- {layout}
+	⬇️
+【Current切换】
 ```
+
 ### `FiberNode`
 用于保存一个React组件的状态，输入及输出的对象。
 ```javascript

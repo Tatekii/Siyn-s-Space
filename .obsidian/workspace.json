@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228.5
+    "width": 205.5
   },
   "right": {
     "id": "b4fb401750063676",
@@ -201,6 +201,7 @@
   },
   "active": "abfeedb99a07d26d",
   "lastOpenFiles": [
+    "assets/Pasted image 20250226175957.png",
     "面试/REACT/FiberReconciliation.md",
     "面试/REACT/ConcurrrentMode.md",
     "面试/JAVASCRIPT/Generator.md",
@@ -228,7 +229,6 @@
     "全局执行上下文.md",
     "assets/Pasted image 20250220114942.png",
     "面试/JAVASCRIPT/V8引擎.md",
-    "面试/网络/HTTPS.md",
     "数据结构",
     "assets/Pasted image 20250218125604.png",
     "assets/Pasted image 20250218125437.png",

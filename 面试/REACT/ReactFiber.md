@@ -21,15 +21,15 @@ schduler update
 |
 render fiber
 |
-- {begin work} [diff 打标flags]
+- {begin work} [props,state更新 打标flags]
 |
-- {complete work} [根据标记输出DOM结构，向上收集需要更新的flags]
+- {complete work} [根据flags输出DOM结构，向上冒泡flags]
 |
 commit
 |
 - {beforMutation} getSnapshotBeforeUpdate
 |
-- {mutation}  
+- {mutation} DOM操作 
 ```
 ### `FiberNode`
 用于保存一个React组件的状态，输入及输出的对象。

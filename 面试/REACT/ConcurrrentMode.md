@@ -1,12 +1,12 @@
 # ConcurrentMode
 react新架构引入的并发渲染模式，目标是不阻塞60hz(~16.7ms内执行完新一帧的渲染)的屏幕内容更新频率（不阻塞浏览器的渲染线程）。
 
-> react旧的stackReconcile架构，组件的递归更新不可中止，会超过
+React 在每一帧中预留了时间给 js 任务执行(`5ms`)，react旧的stackReconcile架构，组件的递归更新不可中止，会超过这个时间导致渲染线程被占用页面卡顿。
 
-包含三个部分：
-1. 不阻塞渲染
-2. 更新可区分优先级
-3. 更新可中断与恢复
+特性：
+不阻塞渲染
+1. 更新可区分优先级
+2. 更新可中断与恢复
 
 ## 时间切片
 切分时间片及重新请求新的切片。
@@ -60,11 +60,9 @@ processTaskQueue()
 ### 判断优先级
 react内部使用最小[[堆]]识别出目前taskQueue中最高优先级的task。
 
-
 ### 协调调度
 Legacy模式下，协调为workLoopSync不可中断；Concurrent模式下，协调为workLoopConcurrent，可中断/插队与继续。
-
 - workLoopSync
-	在event,setTimeout,network request中出发的更新则启动。
+	在event, setTimeout, network request中出发的更新则启动。
 - workLoopConcurrent
-	与Suspense,useTransition,OffScreen相关则启用。
+	与Suspense, useTransition, offScreen相关则启用。

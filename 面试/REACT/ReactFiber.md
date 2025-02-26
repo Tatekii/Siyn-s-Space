@@ -27,14 +27,28 @@
 - {complete work} [根据flags输出虚拟DOM=>stateNode，向上冒泡flags]
 	⬇️
 【Commit】
+执行`effectList`,用来保存 fiber 节点需要执行副作用的单向链表，执行相应的 DOM 操作。
 	⬇️
-- {beforMutation} getSnapshotBeforeUpdate
+- {commitBeforeMutationEffects}
+	- getSnapshotBeforeUpdate
+	- flushPassiveEffects
 	⬇️
-- {mutation} 更新虚拟DOM
-	⬇️
-- {layout}
-	⬇️
+- {commitMutationEffects}
+	- 解绑`ref`
+	- ⚠️ 同步执行`useLayoutEffect`的销毁函数
+	- 根据不同的标记执行DOM操作
+	- `componentWillUnmount`
 【Current切换】
+	⬇️
+【Layout】
+	⬇️
+- {commitLayoutEffects}
+	- 赋值新的`ref`
+	- ⚠️ 同步执行`useLayoutEffect`的回调
+	- ⚠️ 异步执行`useEffect`的销毁和回调
+	- `componentDidMount`
+	- `componentDidUpdate`
+- {执行 render 函数的回调}
 ```
 
 ### `FiberNode`

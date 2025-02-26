@@ -21,9 +21,9 @@ schduler update
 |
 render fiber
 |
-- {begin work} [props,state更新 打标flags]
+- {begin work} [向下生成/执行fiber链表，使用props,state执行渲染函数，hooks执行/状态计算， 打标flags]
 |
-- {complete work} [根据flags输出DOM结构，向上冒泡flags]
+- {complete work} [根据flags输出DOM结构stateNode，向上冒泡flags]
 |
 commit
 |

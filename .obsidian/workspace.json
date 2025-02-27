@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/ConcurrrentMode.md",
+                "file": "READEME.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ConcurrrentMode"
+              "title": "READEME"
             }
           }
         ]
@@ -191,6 +191,10 @@
   },
   "active": "ebdf154b3ce1d2be",
   "lastOpenFiles": [
+    "面试/Node/微服务/Skaffold.md",
+    "面试/Node/微服务/Micro Service.md",
+    "面试/Node/微服务/K8S.md",
+    "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
     "面试/REACT/ReactFiber.md",
     "面试/算法/KMP.md",
@@ -205,7 +209,6 @@
     "面试/JAVASCRIPT/Async函数.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/网络/HTTP.md",
-    "面试/REACT/ConcurrrentMode.md",
     "面试/JAVASCRIPT/事件循环.md",
     "assets/Pasted image 20250226175957.png",
     "面试/JAVASCRIPT/手写题.md",
@@ -217,9 +220,6 @@
     "面试/JAVASCRIPT/Proxy&Reflect.md",
     "面试/JAVASCRIPT/Reflect.md",
     "面试/SEO.md",
-    "面试/JAVASCRIPT/严格模式.md",
-    "面试/JAVASCRIPT/箭头函数.md",
-    "面试/JAVASCRIPT/变量声明.md",
     "assets/Pasted image 20250220114942.png",
     "数据结构",
     "assets/Pasted image 20250218125604.png",

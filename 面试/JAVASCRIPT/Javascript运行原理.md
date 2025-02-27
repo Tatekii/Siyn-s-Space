@@ -374,11 +374,11 @@ console.log(j)
 
 for(var i = 1 ;i<7;i++){
 
-setTimeout(function(j){
-
-console.log(j);
-
-},1000*i,i)
+	setTimeout(function(j){
+	
+		console.log(j);
+	
+	},1000*i,i)
 
 }
 
@@ -388,11 +388,11 @@ console.log(j);
 
 for(let i = 1 ;i<7;i++){
 
-setTimeout(function(){
-
-console.log(i);
-
-},1000*i)
+	setTimeout(function(){
+	
+		console.log(i);
+	
+	},1000*i)
 
 }
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/ES6及以后新特性.md",
+                "file": "面试/数据结构/队列.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ES6及以后新特性"
+              "title": "队列"
             }
           }
         ]
@@ -191,10 +191,12 @@
   },
   "active": "1c2663ee2800f4d2",
   "lastOpenFiles": [
+    "面试/数据结构/链表.md",
+    "面试/数据结构/队列.md",
+    "面试/JAVASCRIPT/ES6及以后新特性.md",
     "面试/JAVASCRIPT/Iterator.md",
     "面试/JAVASCRIPT/Generator.md",
     "面试/JAVASCRIPT/Async函数.md",
-    "面试/JAVASCRIPT/ES6及以后新特性.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/网络/HTTP.md",
     "面试/REACT/FiberReconciliation.md",
@@ -217,8 +219,6 @@
     "面试/网络/TCP.md",
     "面试/数据结构/栈.md",
     "面试/数据结构/堆.md",
-    "堆.md",
-    "全局执行上下文.md",
     "assets/Pasted image 20250220114942.png",
     "数据结构",
     "assets/Pasted image 20250218125604.png",

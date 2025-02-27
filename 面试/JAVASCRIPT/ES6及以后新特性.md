@@ -226,6 +226,9 @@ JavaScript 是一种基于 ECMAScript 标准实现的编程语言。
     ```
 15. **Optional Chaining Operator (?.)** —— 避免 undefined 报错
 16. **Nullish Coalescing Operator (??)** —— 只处理 null 和 undefined
+	```javascript
+	null ?? 'abc' === 'abc'
+	```
 ### ECMAScript 2021 (ES12)
 
 17. **逻辑赋值操作符**：`&&=`, `||=`, `??=`
@@ -276,9 +279,7 @@ JavaScript 是一种基于 ECMAScript 标准实现的编程语言。
 ### ECMAScript 2022 (ES13)
 
 22. **类的静态块**：
-    ```
-
-javascript
+    ```javascript
     class MyClass {
         static {
             this.myStaticProperty = 'value';
@@ -300,14 +301,19 @@ javascript
 
 ### ECMAScript 2023 (ES14)
 
-25. **数组 `findLast` 和 `findLastIndex`**：
-    ```javascript
-    const arr = [1, 2, 3, 4];
-    console.log(arr.findLast(x => x % 2 === 1)); // 3
-    console.log(arr.findLastIndex(x => x % 2 === 1)); // 2
-    ```
+1. **Array.prototype.**
+	1. toSorted(),
+	2. toSpliced()
+	3. toReversed()
+	4. findLast()
+	5. findLastIndex()
 
-26. **哈希集合和哈希映射的 `with` 方法**：
+2. **Set.prototype.**
+	1. union()
+	2. intersection()
+	3. difference()
+
+3. **哈希集合和哈希映射的 `with` 方法**：
     ```javascript
     const map = new Map([['key1', 'value1'], ['key2', 'value2']]);
     const newMap = map.with('key3', 'value3'); // 新创建一个包含新键值对的Map

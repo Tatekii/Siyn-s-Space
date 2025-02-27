@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a367306ea76efa56",
+        "id": "ce60848749a1ab4e",
         "type": "tabs",
         "children": [
           {
-            "id": "1c2663ee2800f4d2",
+            "id": "ebdf154b3ce1d2be",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/浏览器/缓存策略.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "缓存策略"
+              "title": "New tab"
             }
           }
         ]
@@ -189,10 +185,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1c2663ee2800f4d2",
+  "active": "ebdf154b3ce1d2be",
   "lastOpenFiles": [
-    "面试/前端安全.md",
+    "面试/算法/KMP.md",
     "面试/浏览器/缓存策略.md",
+    "面试/前端安全.md",
     "面试/数据结构/链表.md",
     "面试/浏览器",
     "面试/数据结构/队列.md",
@@ -219,7 +216,6 @@
     "面试/JAVASCRIPT/严格模式.md",
     "面试/JAVASCRIPT/箭头函数.md",
     "面试/JAVASCRIPT/变量声明.md",
-    "面试/网络/TCP.md",
     "assets/Pasted image 20250220114942.png",
     "数据结构",
     "assets/Pasted image 20250218125604.png",

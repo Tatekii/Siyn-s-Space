@@ -11,10 +11,14 @@
             "id": "ebdf154b3ce1d2be",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "面试/REACT/ConcurrrentMode.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "ConcurrrentMode"
             }
           }
         ]
@@ -187,6 +191,8 @@
   },
   "active": "ebdf154b3ce1d2be",
   "lastOpenFiles": [
+    "面试/REACT/FiberReconciliation.md",
+    "面试/REACT/ReactFiber.md",
     "面试/算法/KMP.md",
     "面试/浏览器/缓存策略.md",
     "面试/前端安全.md",
@@ -199,10 +205,8 @@
     "面试/JAVASCRIPT/Async函数.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/网络/HTTP.md",
-    "面试/REACT/FiberReconciliation.md",
     "面试/REACT/ConcurrrentMode.md",
     "面试/JAVASCRIPT/事件循环.md",
-    "面试/REACT/ReactFiber.md",
     "assets/Pasted image 20250226175957.png",
     "面试/JAVASCRIPT/手写题.md",
     "面试/手写题目",

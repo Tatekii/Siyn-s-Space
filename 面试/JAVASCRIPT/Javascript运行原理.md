@@ -273,25 +273,24 @@ const c3 = increment();
 console.log("increment:", c1, c2, c3); // 1,2,3
 
 ```
-
 - 函数柯里化(变量收集和延迟调用)
 ```javascript
 
 function curry(func,...args1){
 
-const fnLen = func.length
-
-const argsArr = [...args1]
-
-function _curry(...args2){
-
-argsArr = [...argsArr,...args2]
-
-return argsArr.length >= fnLen ? func.apply(func,argsArr) : _curry
-
-}
-
-return _curry
+	const fnLen = func.length
+	
+	const argsArr = [...args1]
+	
+		function _curry(...args2){
+		
+			argsArr = [...argsArr,...args2]
+			
+			return argsArr.length >= fnLen ? func.apply(func,argsArr) : _curry
+		
+		}
+	
+	return _curry
 
 }
 
@@ -320,8 +319,6 @@ return innerAdd
 }
 
 ```
-
-
 ## 面试题
 
 - 老生常谈的for循环setTimeout打印问题
@@ -330,11 +327,11 @@ return innerAdd
 
 for (var i = 1; i < 7; i++) {
 
-setTimeout(function () {
-
-console.log(i)
-
-}, 1000 * i)
+	setTimeout(function () {
+	
+		console.log(i)
+	
+	}, 1000 * i)
 
 }
 
@@ -397,24 +394,22 @@ for(let i = 1 ;i<7;i++){
 }
 
 ```
-
--
-
+- 函数作为返回值
 ```javascript
 
 function fn(num2) {
 
-var num = 15;
-
-function abc() { // 函数作为返回值
-
-num++;
-
-return(num + num2);
-
-}
-
-return abc;
+	var num = 15;
+	
+		function abc() { // 函数作为返回值
+		
+			num++;
+			
+			return(num + num2);
+	
+		}
+	
+	return abc;
 
 }
 

@@ -112,15 +112,11 @@ class FiberRootNode {
 function renderRoot(root: FiberRootNode, lane: Lane) {
 
 	const nextLane = getHighestPriorityLane(root.pendingLanes)
-		if (查看) {
-			// NOTE 其他比 SyncLane 低的优先级或 NoLane，重新调度
-			ensureRootIsScheduled(root)
-		
+	
+	if (compare(lane,nextLane)) {
+		// NOTE 其他比 SyncLane 低的优先级或 NoLane，重新调度
+		ensureRootIsScheduled(root)
 	return
-	」
+	}
 }
 ```
-	每次拿到新的**时间片**以后，**workLoopConcurrent** 都会判断本次**协调**对应的**优先级**和上一次**时间片**到期中断的**协调**的**优先级**是否一样。如果一样，说明没有**更高优先级**的更新产生，可以继续上次未完成的**协调**；
-	如果不一样，说明有**更高优先级**的更新进来，会抛弃之前已开始的**协调**过程，从**根节点**开始重新**协调**。等**高优先级更新**处理完成以后，再次从**根节点**开始处理**低优先级更新**。
-
-  

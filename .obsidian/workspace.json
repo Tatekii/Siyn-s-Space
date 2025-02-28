@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "013c866d0409a3bf",
+        "id": "9ee0c79429792ba8",
         "type": "tabs",
         "children": [
           {
-            "id": "07e584a3890afded",
+            "id": "29d46ba8b50f0156",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/REACT/ConcurrrentMode.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ConcurrrentMode"
+              "title": "New tab"
             }
           }
         ]
@@ -189,11 +185,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "07e584a3890afded",
+  "active": "29d46ba8b50f0156",
   "lastOpenFiles": [
+    "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
     "面试/REACT/ReactFiber.md",
-    "面试/REACT/ConcurrrentMode.md",
     "面试/JAVASCRIPT/事件循环.md",
     "README.md",
     "VIM/BASIC.md",

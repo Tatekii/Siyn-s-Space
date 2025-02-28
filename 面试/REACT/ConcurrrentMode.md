@@ -72,17 +72,54 @@ Concurrent模式下，协调为workLoopConcurrent，可中断/插队
 - useTransition
 - offScreen
 
-### 中断与继续
-1. 保存协调的进度
-	```javascript
-	let workInProgress = null // 指向协调的fiber
-	let workInProgressRenderLane = NoLane // 指向协调中的优先级
-	```
-2. lane的记录
-	```javascript
-	FiberRootNode.pendingLane = NoLanes // 每次更新都会讲更新的lane值合并进根fiber的待处理lanes记录中
-	```
-3. 高优先级插队
+## 中断与继续
+### 全局保存协调的进度
+```javascript
+// 全局
+let workInProgress = null // 指向协调的fiber
+let workInProgressRenderLane = NoLane // 指向协调中的优先级
+```
+### fiber内保存协调的进度
+```javascript
+class Fiber {
+	this.updateQueue = {
+		shared: {
+			pending: null, // 指向待处理的更新head
+		}
+	},
+	this.memorizedState = {} // 上次更新完的状态
+	this.memorizedProps = {} // 上次更新完的参数
+}
+
+```
+每个更新对象中lane的记录
+```typescript
+export interface Update<State> {
+	action: Action<State>
+	next: Update<any> | null
+	lane: Lane
+}
+
+```
+根节点中lanes的纪录
+```javascript
+class FiberRootNode {
+	this.pendingLane: Lane // 每次更新都会讲更新的lane值合并进根fiber的待处理lanes记录中
+}
+```
+高优先级插队
+```javascript
+function renderRoot(root: FiberRootNode, lane: Lane) {
+
+	const nextLane = getHighestPriorityLane(root.pendingLanes)
+		if (查看) {
+			// NOTE 其他比 SyncLane 低的优先级或 NoLane，重新调度
+			ensureRootIsScheduled(root)
+		
+	return
+	」
+}
+```
 	每次拿到新的**时间片**以后，**workLoopConcurrent** 都会判断本次**协调**对应的**优先级**和上一次**时间片**到期中断的**协调**的**优先级**是否一样。如果一样，说明没有**更高优先级**的更新产生，可以继续上次未完成的**协调**；
 	如果不一样，说明有**更高优先级**的更新进来，会抛弃之前已开始的**协调**过程，从**根节点**开始重新**协调**。等**高优先级更新**处理完成以后，再次从**根节点**开始处理**低优先级更新**。
 

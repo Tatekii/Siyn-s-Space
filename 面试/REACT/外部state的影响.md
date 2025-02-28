@@ -56,3 +56,28 @@ function updateSyncExternalStore(subscribe, getSnapshot) {
 - The callback:
 	- Calls **getSnapshot()** to get the latest value.
 	- If the snapshot has changed, it triggers a **re-render**.
+```javascript
+  
+
+function useSyncExternalStore(subscribe, getSnapshot) {
+  const [state, setState] = useState(getSnapshot);
+
+  useEffect(() => {
+    function handleStoreChange() {
+      const newSnapshot = getSnapshot();
+      setState(newSnapshot);
+    }
+
+    const unsubscribe = subscribe(handleStoreChange);
+
+    // Check if state changed during mount to avoid stale data
+    handleStoreChange();
+
+    return () => {
+      unsubscribe();
+    };
+  }, [subscribe, getSnapshot]);
+
+  return state;
+}
+```

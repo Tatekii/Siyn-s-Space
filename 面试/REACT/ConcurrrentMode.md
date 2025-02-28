@@ -60,9 +60,20 @@ processTaskQueue()
 ### 判断优先级
 react内部使用最小[[堆]]识别出目前taskQueue中最高优先级的task。
 
-### 协调调度
-Legacy模式下，协调为workLoopSync不可中断；Concurrent模式下，协调为workLoopConcurrent，可中断/插队与继续。
-- workLoopSync
-	在event, setTimeout, network request中出发的更新则启动。
-- workLoopConcurrent
-	与Suspense, useTransition, offScreen相关则启用。
+# 协调调度
+### Legacy
+Legacy模式下，协调为workLoopSync不可中断
+
+触发：
+- event
+- setTimeout
+- network
+### Concurrent
+Concurrent模式下，协调为workLoopConcurrent，可中断/插队
+特性：
+- 每次fiber的协调都会判断时间切片是否到期。
+触发：
+- 
+- Suspense
+- useTransition
+- offScreen

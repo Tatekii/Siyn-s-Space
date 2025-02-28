@@ -57,8 +57,6 @@ function updateSyncExternalStore(subscribe, getSnapshot) {
 	- Calls **getSnapshot()** to get the latest value.
 	- If the snapshot has changed, it triggers a **re-render**.
 ```javascript
-  
-
 function useSyncExternalStore(subscribe, getSnapshot) {
   const [state, setState] = useState(getSnapshot);
 

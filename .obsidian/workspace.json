@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/外部state的影响.md",
+                "file": "面试/REACT/外部state.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "外部state的影响"
+              "title": "外部state"
             }
           }
         ]
@@ -191,7 +191,7 @@
   },
   "active": "29d46ba8b50f0156",
   "lastOpenFiles": [
-    "面试/REACT/外部state的影响.md",
+    "面试/REACT/外部state.md",
     "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
     "面试/REACT/ReactFiber.md",

@@ -1,3 +1,7 @@
+refers:
+- [https://www.jianshu.com/p/4a8f4af4e803](https://www.jianshu.com/p/4a8f4af4e803)
+
+
 ## `merge`
 `git checkout main`
 `git merge feature`
@@ -14,6 +18,30 @@ feature中已经有完整的main记录，不会有merge commit
 ![[Pasted image 20250228143000.png]]
 
 
+
+### `rebase合并commit
+
+#### interactive
+- pick：保留该commit（缩写:p）
+- reword：保留该commit，但我需要修改该commit的注释（缩写:r）
+- edit：保留该commit, 但我要停下来修改该提交(不仅仅修改注释)（缩写:e）
+- squash：将该commit和前一个commit合并（缩写:s）
+- fixup：将该commit和前一个commit合并，但我不要保留该提交的注释信息（缩写:f）
+- exec：执行shell命令（缩写:x）
+- drop：我要丢弃该commit（缩写:d）
+
+```git 
+[feature] A-B-C-D
+[master]  A
+
+git checkou feature
+git rebase -i [startpoint] [endpoint{default HEAD}]
+
+
+
+
+
+```
 
 ## `.gitignore`配置
 

@@ -56,7 +56,7 @@ processTaskQueue()
 ### 判断优先级
 使用最小[[堆]]识别出目前updateQueue中最高优先级的update。
 
-# 协调调度
+# 协调调度的模式
 ## Legacy
 Legacy模式下，协调为workLoopSync不可中断
 
@@ -75,9 +75,20 @@ Concurrent模式下，协调为workLoopConcurrent，可中断/插队
 - offScreen
 
 ### 中断与继续
-1. 如何实现
-	workLoop源码中模块全局变量workInProgress指向当前工作的fiber节点,workInProgressRenderLane指向当前工作的优先级。
-2. 被插队的未完成更新会重新协调
+1. 触发更新
+	```javascript
+	
+	```
+2. 协调的进度
+	```javascript
+	let workInProgress = null // 指向协调的fiber
+	let workInProgressRenderLane = NoLane // 指向协调中的优先级
+	```
+3. lane的记录
+	```javascript
+	FiberRootNode.pendingLane = NoLanes // 每次更新都会讲更新的lane值合并进根fiber的待处理lanes记录中
+	```
+4. 被插队的未完成更新会重新协调
 	每次拿到新的**时间片**以后，**workLoopConcurrent** 都会判断本次**协调**对应的**优先级**和上一次**时间片**到期中断的**协调**的**优先级**是否一样。如果一样，说明没有**更高优先级**的更新产生，可以继续上次未完成的**协调**；如果不一样，说明有**更高优先级**的更新进来，此时要**清空**之前已开始的**协调**过程，从**根节点**开始重新**协调**。等**高优先级更新**处理完成以后，再次从**根节点**开始处理**低优先级更新**。
 
   

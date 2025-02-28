@@ -38,9 +38,21 @@ git checkou feature
 git rebase -i [startpoint] [endpoint{default HEAD}]
 
 
+[feature] A-E
+[master]  A
 
+```
 
+## `cherry-pick`
+```git
+[feature] A-B-C-D
+[master]  A
 
+git checkou master
+git cherry-pick C
+
+[feature] A-B-C-D
+[master]  A-C
 ```
 
 ## `.gitignore`配置

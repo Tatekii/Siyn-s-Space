@@ -1,10 +1,12 @@
 # ConcurrentMode
 react新架构引入的并发渲染模式，目标是不阻塞60hz(~16.7ms内执行完新一帧的渲染)的屏幕内容更新频率（不阻塞浏览器的渲染线程）。
 
-React 在每一帧中预留了时间给 js 任务执行(`5ms`)，react旧的stackReconcile架构，组件的递归更新不可中止，会超过这个时间导致渲染线程被占用页面卡顿。
+
 
 ## 时间切片
-切分时间片及重新请求新的切片。
+React 在每一帧中预留了时间给 js 任务执行(`5ms`)，react旧的stackReconcile架构，组件的递归更新不可中止，会超过这个时间导致渲染线程被占用页面卡顿。
+
+切分时间片及重新请求新的切片：
 ```javascript
 const timeSlice = 5 // 一个切片的时长为5毫秒
 const taskQueue = [] // task队列
@@ -62,6 +64,7 @@ Legacy模式下，协调为workLoopSync不可中断
 ## Concurrent
 Concurrent模式下，协调为workLoopConcurrent，可中断/插队
 特性：
+- 更新存在优先级，高优先的更新会插队低优先级更新
 - 每次fiber的协调都会判断时间切片是否到期
 - 在时间切片到期时，还要检查一遍下一个更新是否”过期“，如果超过过期时间会继续说执行。
 触发：

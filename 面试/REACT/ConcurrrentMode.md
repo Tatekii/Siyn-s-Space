@@ -41,8 +41,7 @@ processTaskQueue()
 - `MessageChannel`
 	MessageChannel 是基于异步消息传递的。当通过 MessageChannel 发送消息时，它会创建一个宏任务，所以可以模拟setTimeout(,0)，并且延迟比setTimeout更小。
 
-## 更新的优先级
-### 优先级
+## 更新优先级
 - **ImmediatePriority**, **直接优先级**，对应用户的 **click**、**input**、**focus** 等操作；
 	- 过期时间-1ms
 - **UserBlockingPriority**，**用户阻塞优先级**，对应用户的 **mousemove**、**scroll** 等操作；
@@ -54,26 +53,26 @@ processTaskQueue()
 - **IdlePriority**，**空闲优先级**，如 **OffScreen**;
 	- 过期时间1073741823ms
 
-### react中任务的创建
-每一次react更新代表一次协调过程，每个更新都会作为回调添加到react得taskQueue中。
-
 ### 判断优先级
-react内部使用最小[[堆]]识别出目前taskQueue中最高优先级的task。
+使用最小[[堆]]识别出目前updateQueue中最高优先级的update。
 
 # 协调调度
-### Legacy
+## Legacy
 Legacy模式下，协调为workLoopSync不可中断
 
 触发：
 - event
 - setTimeout
 - network
-### Concurrent
+## Concurrent
 Concurrent模式下，协调为workLoopConcurrent，可中断/插队
 特性：
-- 每次fiber的协调都会判断时间切片是否到期。
+- 每次fiber的协调都会判断时间切片是否到期
+- 在时间切片到期时，还要检查一遍下一个更新是否”过期“，如果超过过期时间会继续说执行。
 触发：
-- 
 - Suspense
 - useTransition
 - offScreen
+
+### 中断与继续带来的问题
+1. 被插队的未完成更新会

@@ -11,17 +11,14 @@
             "id": "13981ab482ac9732",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "面试/Untitled.canvas",
-                "viewState": {
-                  "x": -3.03798077175707,
-                  "y": -14.885207729861236,
-                  "zoom": 0.05919206390778223
-                }
+                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "Javascript运行原理"
             }
           }
         ]
@@ -145,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/Untitled.canvas",
+                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of Javascript运行原理"
             }
           },
           {
@@ -188,8 +185,8 @@
   },
   "active": "13981ab482ac9732",
   "lastOpenFiles": [
+    "面试/index.canvas",
     "面试/JAVASCRIPT/Javascript运行原理.md",
-    "面试/Untitled.canvas",
     "面试/JAVASCRIPT/Async函数.md",
     "面试/性能优化/构建性能优化.md",
     "Untitled mindmap.md",
@@ -221,7 +218,6 @@
     "面试/数据结构/链表.md",
     "面试/浏览器",
     "面试/数据结构/队列.md",
-    "面试/JAVASCRIPT/ES6及以后新特性.md",
     "assets/Pasted image 20250226175957.png",
     "面试/手写题目",
     "assets/Pasted image 20250220114942.png",

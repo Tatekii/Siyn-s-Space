@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "file": "面试/性能优化/构建阶段.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Javascript运行原理"
+              "title": "构建阶段"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "file": "面试/性能优化/构建阶段.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Javascript运行原理"
+              "title": "Outline of 构建阶段"
             }
           },
           {
@@ -185,10 +185,10 @@
   },
   "active": "13981ab482ac9732",
   "lastOpenFiles": [
-    "面试/index.canvas",
     "面试/JAVASCRIPT/Javascript运行原理.md",
+    "面试/index.canvas",
     "面试/JAVASCRIPT/Async函数.md",
-    "面试/性能优化/构建性能优化.md",
+    "面试/性能优化/构建阶段.md",
     "Untitled mindmap.md",
     "Untitled.md",
     "面试/数据结构/栈.md",

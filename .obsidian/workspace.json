@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "02e9b9dda4c05d07",
+        "id": "9c253f17c24bf777",
         "type": "tabs",
         "children": [
           {
-            "id": "dea6e04745a8c198",
+            "id": "ea4649581c58f650",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "performance",
+                "query": "变量",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,19 +183,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dea6e04745a8c198",
+  "active": "ea4649581c58f650",
   "lastOpenFiles": [
-    "面试/反问.md",
-    "面试/页面渲染流程.md",
-    "面试/浏览器/浏览器缓存.md",
-    "面试/性能优化.md",
-    "面试/前端安全.md",
     "面试/工程化.md",
+    "面试/页面渲染流程.md",
+    "面试/性能优化.md",
+    "面试/TYPESCRIPT/关键字.md",
+    "面试/JAVASCRIPT/Javascript运行原理.md",
+    "面试/反问.md",
+    "面试/浏览器/浏览器缓存.md",
+    "面试/前端安全.md",
     "Untitled",
     "面试/REACT/ConcurrrentMode.md",
     "assets/Pasted image 20250303105843.png",
     "面试/性能优化/运行时性能优化.md",
-    "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/index.canvas",
     "面试/JAVASCRIPT/Async函数.md",
     "Untitled mindmap.md",
@@ -219,7 +220,6 @@
     "面试/Node/微服务/Skaffold.md",
     "面试/Node/微服务/Micro Service.md",
     "面试/Node/微服务/K8S.md",
-    "面试/算法/KMP.md",
     "面试/浏览器",
     "assets/Pasted image 20250226175957.png",
     "面试/手写题目",

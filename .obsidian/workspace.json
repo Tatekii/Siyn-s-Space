@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/VUE/API/watch和computed.md",
+                "file": "面试/前端安全.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "watch和computed"
+              "title": "前端安全"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "CSRF",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -142,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/VUE/API/watch和computed.md",
+                "file": "面试/前端安全.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of watch和computed"
+              "title": "Outline of 前端安全"
             }
           },
           {
@@ -185,8 +186,8 @@
   },
   "active": "e2e67bb8297450e1",
   "lastOpenFiles": [
-    "面试/VUE/API/ref和reactive.md",
     "面试/VUE/API/watch和computed.md",
+    "面试/VUE/API/ref和reactive.md",
     "面试/CSS/属性.md",
     "面试/VUE/API",
     "面试/REACT/API",

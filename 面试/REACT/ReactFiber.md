@@ -51,14 +51,26 @@
 - {执行 render 函数的回调}
 ```
 
-## 总结
-### Mount阶段
-1. constructor
-2. getDerivedStateFromProps
-3. render
-4. componentDidMount
-
-
+### 总结
+#### Mount阶段
+1. constructor()
+2. static getDerivedStateFromProps()
+3. render()
+4. *UNSAFE_componentWillMount()*
+5. componentDidMount()
+#### Update阶段
+ 1. *UNSAFE_componentWillReceiveProps()*
+1. static getDerivedStateFromProps()
+2. shouldComponentUpdate()
+3. render()
+4. getSnapshotBeforeUpdate()
+5. *UNSAFE_componentWillUpdate()*
+6. componentDidUpdate()
+#### UNMOUNT阶段
+7. componentWillUnmount
+#### 错误
+1. static getDerivedStateFromError()
+2. componentDidCatch()
 
 
 ### `FiberNode`

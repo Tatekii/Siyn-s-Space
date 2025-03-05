@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/VUE/vue生命周期.md",
+                "file": "面试/CSS/属性.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vue生命周期"
+              "title": "属性"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/VUE/vue生命周期.md",
+                "file": "面试/CSS/属性.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of vue生命周期"
+              "title": "Outline of 属性"
             }
           },
           {
@@ -185,8 +185,9 @@
   },
   "active": "e2e67bb8297450e1",
   "lastOpenFiles": [
-    "面试/REACT/ReactFiber.md",
     "面试/VUE/vue生命周期.md",
+    "面试/CSS/属性.md",
+    "面试/REACT/ReactFiber.md",
     "面试/REACT/useSyncExternalStore.md",
     "面试/REACT/生命周期.md",
     "面试/JAVASCRIPT/手写题.md",
@@ -219,7 +220,6 @@
     "assets/Pasted image 20250228143000.png",
     "assets/Pasted image 20250228142742.png",
     "assets/Pasted image 20250228142647.png",
-    "面试/REACT/FiberReconciliation.md",
     "面试/浏览器",
     "assets/Pasted image 20250226175957.png",
     "面试/手写题目",

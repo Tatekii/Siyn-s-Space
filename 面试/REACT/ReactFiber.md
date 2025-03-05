@@ -51,6 +51,16 @@
 - {执行 render 函数的回调}
 ```
 
+## 总结
+### Mount阶段
+1. constructor
+2. getDerivedStateFromProps
+3. render
+4. componentDidMount
+
+
+
+
 ### `FiberNode`
 用于保存一个React组件的状态，输入及输出的对象。
 ```javascript

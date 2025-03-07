@@ -69,3 +69,4 @@ console.log(window.test); // undefined
 - **部分全局属性（如 window.location）无法代理**。
 - **Proxy 在 IE 低版本浏览器不支持**。
 ## CSS沙箱
+### CSS scpoe

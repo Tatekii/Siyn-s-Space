@@ -197,8 +197,8 @@ GlobalExecutionContext = {
 ## eval执行上下文**Eval Execution Context(EEC)**
 - `eval()`执行时创建
 
-# 作用域
-作用域决定了变量和函数在代码中的可访问性，在编辑阶段就已经确定（书写时）。
+# 作用域Scope
+作用域决定了变量和函数在代码中的可访问性，在编辑阶段就已经确定（代码结构）。
 - 全局作用域Global Scope
 	- 全局声明的变量
 	- 指向[[#执行上下文 Execution Context(`EC`)#全局执行上下文Global Execution Context(GEC)|全局执行上下文]]

@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "变量提升",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,7 +183,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d2aac8aaec9a9a",
+  "active": "328a4439f200cf35",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/V8引擎.md",
     "面试/JAVASCRIPT/Iterator.md",

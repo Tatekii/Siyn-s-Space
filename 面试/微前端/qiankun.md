@@ -69,4 +69,14 @@ console.log(window.test); // undefined
 - **部分全局属性（如 window.location）无法代理**。
 - **Proxy 在 IE 低版本浏览器不支持**。
 ## CSS沙箱
-### CSS scpoe
+### Scoped CSS
+当 <style scoped> 被添加到组件时，Vue 会为每个组件的样式添加特定的属性选择器，从而实现样式作用域限制。
+
+**原理**
+
+Vue 在编译 scoped 样式时，会为组件的根元素自动生成一个 **动态的 data-v-xxxx 属性**，然后在 CSS 选择器中添加这个属性，以此来限定样式的作用域。
+
+**示例**
+```vue
+
+```

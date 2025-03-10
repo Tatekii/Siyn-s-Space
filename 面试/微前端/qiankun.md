@@ -70,13 +70,54 @@ console.log(window.test); // undefined
 - **Proxy 在 IE 低版本浏览器不支持**。
 ## CSS沙箱
 ### Scoped CSS
-当 <style scoped> 被添加到组件时，Vue 会为每个组件的样式添加特定的属性选择器，从而实现样式作用域限制。
 
-**原理**
+**原理**：
+- **给每个子应用的 DOM 节点添加独立的 data-* 属性**（如 data-qiankun）。
+- **在加载 CSS 时，给所有 CSS 选择器前加上作用域**，确保样式只作用于当前子应用。
 
-Vue 在编译 scoped 样式时，会为组件的根元素自动生成一个 **动态的 data-v-xxxx 属性**，然后在 CSS 选择器中添加这个属性，以此来限定样式的作用域。
+**示例**：
 
-**示例**
-```vue
-
+```css
+[data-qiankun] .btn {
+    color: red;
+}
 ```
+
+**优缺点**：
+
+✅ **优点**：
+- 兼容所有 CSS 方案（普通 CSS、Less、Sass）。
+- 无需修改子应用的代码。
+
+❌ **缺点**：
+- 需要动态解析 CSS，可能会影响性能。
+### CSS-in-JS
+**优缺点**：
+
+✅ **优点**：
+- **完全避免样式污染**，不会影响其他子应用。
+- **适用于组件化开发**。
+
+❌ **缺点**：
+- 需要 **修改子应用代码**，不适用于外部引入的 CSS。
+### Shadow DOM
+**原理**：
+
+- **使用 Shadow DOM 将子应用的 DOM 结构封装起来**，让 CSS 只能作用于子应用内部，无法影响外部应用。
+
+**示例**：
+```js
+const shadowRoot = document.getElementById("micro-app").attachShadow({ mode: "open" });
+const style = document.createElement("style");
+style.textContent = `.btn { color: red; }`;
+shadowRoot.appendChild(style);
+```
+
+**优缺点**：
+
+✅ **优点**：
+- **彻底隔离 CSS**，不会污染外部应用。
+
+❌ **缺点**：
+- **不兼容 IE11** 及以下版本。
+- **影响全局 CSS 变量**，部分 CSS 可能无法生效。

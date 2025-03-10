@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "genera",
+                "query": "自执行",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,7 +184,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "328a4439f200cf35",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/Iterator.md",
     "面试/JAVASCRIPT/Generator.md",

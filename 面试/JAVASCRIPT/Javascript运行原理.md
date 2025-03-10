@@ -38,6 +38,9 @@ javascript 代码执行时所需所需的变量和属性👇，在代码执行�
 - 处理变量提升(`Hoisting`)
 - 全局作用域下的var和函数声明会加入[[#全局对象 Global Object(`GO`)|全局对象]]中
 - `CreateMutableBinding`
+#### 为什么js设计出变量提升
+1. 解释型语言，变量提升有利于解析阶段就确定变量和函数的作用域
+2. 兼容早期js代码
 
 ## This绑定 ThisBanding
 制定函数执行时的上下文，在运行时才能确定。
@@ -146,12 +149,12 @@ AO = {
 ## 全局执行上下文Global Execution Context(GEC)
 代码开始执行时，全局代码块构建为全局执行山下文压入执行上下文栈中。包含：
 
-2. 全局词法环境`GLE`
+3. 全局词法环境`GLE`
 	1. 全局变量环境`GVE`
-3. `this`绑定到[[#全局对象 Global Object(`GO`)]]
+4. `this`绑定到[[#全局对象 Global Object(`GO`)]]
 	- In browsers → window
 	- In Node.js → global
-4. 外部引用: null
+5. 外部引用: null
 ```javascript
 var x = 10;
 let y = 20;
@@ -221,9 +224,9 @@ js中的每个函数都有一个内置属性scope，决定了函数可访问哪�
 
 ### 作用域链`Scope Chain`
 作用域链决定了变量查找的规则：
-5. 查看当前作用域
-6. 往上依次访问上级作用域
-7. 到全局作用域后终止
+6. 查看当前作用域
+7. 往上依次访问上级作用域
+8. 到全局作用域后终止
 
 随着程序的执行，会将当前的活动对象链接到`[scope chain]`的最前端。
 ```json

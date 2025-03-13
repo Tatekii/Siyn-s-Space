@@ -1,16 +1,32 @@
-# External state
+## 核心概念
+useSyncExternalStore 是 **React 18** 引入的一个 Hook，专门用于订阅外部存储（如 Redux、Zustand、浏览器 API）时，确保组件状态在 **并发渲染模式**（Concurrent Mode）下保持一致。
+
+**why**
 In **React Concurrent Mode**, external state (such as global variables, event listeners, or external libraries like Redux, Zustand, or RxJS) can **cause inconsistencies** because React may **pause, resume, or restart rendering**. This means that external state updates **might not be in sync** with React’s rendering cycle.
 
-## 解决方法
-1. useRef
-2. useSyncExternalStore
+## 实现解析
+```js
+function useSyncExternalStore(subscribe, getSnapshot) {
 
-## useSyncExternalStore
-订阅外部状态的更新
-```javascript
-useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)
+  // 使用useState
+  const [state, setState] = useState(getSnapshot());
+
+  useEffect(() => {
+    function handleStoreChange() {
+      setState(getSnapshot()); // 组件状态更新
+    }
+
+    const unsubscribe = subscribe(handleStoreChange);
+    return unsubscribe;
+  }, []);
+
+  return state;
+}
 ```
-**🔹 Step 1: Hook Initialization**
+### hook初始化
+1. 在fiber的updateQueue中新建一个更新;
+2. 执行getSnapshot()获取外部最新数据置为memorizedState;
+3. 
 - useSyncExternalStore initializes an **update queue** inside the current Fiber.
 - Calls **getSnapshot()** to get the current value of the external store.
 - Stores the value inside a **hook state**.

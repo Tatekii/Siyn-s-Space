@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/工程化/Webpack.md",
+                "file": "面试/REACT/批处理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Webpack"
+              "title": "批处理"
             }
           }
         ]
@@ -185,10 +185,11 @@
   },
   "active": "daff6828894913e6",
   "lastOpenFiles": [
+    "面试/工程化/Webpack.md",
+    "面试/REACT/批处理.md",
     "面试/工程化/Webpack HMR vs. Vite 热更新.md",
     "面试/工程化/工程化.md",
     "Rollup.md",
-    "面试/工程化/Webpack.md",
     "面试/工程化/Gulp.md",
     "面试/工程化/Grunt.md",
     "面试/工程化/Yeoman.md",
@@ -212,7 +213,6 @@
     "面试/JAVASCRIPT/原型与原型链.md",
     "面试/页面渲染流程.md",
     "面试/CSS/BFC.md",
-    "面试/CSS/盒模型&包含块.md",
     "assets/Pasted image 20250310095811.png",
     "面试/微前端",
     "面试/VUE/API",

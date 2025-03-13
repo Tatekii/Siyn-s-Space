@@ -1,4 +1,5 @@
-## 实现
+## 概念
+useCallback 的作用是缓存函数的引用，避免因组件重新渲染而创建新的函数实例。基于 useMemo 实现，核心思路是**依赖项未变化时返回相同的函数引用**。
 ```tsx
 export function useCallback<T extends Function>(callback: T, deps: DependencyList): T {
   return useMemo(() => callback, deps);

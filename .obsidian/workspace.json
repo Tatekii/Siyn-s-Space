@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/API/useMemo.md",
+                "file": "面试/REACT/API/useSyncExternalStore.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "useMemo"
+              "title": "useSyncExternalStore"
             }
           },
           {
@@ -69,16 +69,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/Hooks.md",
+                "file": "面试/REACT/API/useSyncExternalStore.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hooks"
+              "title": "useSyncExternalStore"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -135,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -240,13 +240,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "801685a15e8e33fa",
+  "active": "1a7819b0b423a3e7",
   "lastOpenFiles": [
-    "useCallback.md",
-    "面试/REACT/API/useMemo.md",
-    "面试/REACT/API/useEffect.md",
-    "面试/REACT/API/useState.md",
     "面试/REACT/Hooks.md",
+    "面试/REACT/API/useSyncExternalStore.md",
+    "面试/REACT/API/useCallback.md",
+    "面试/REACT/API/useState.md",
+    "面试/REACT/API/useEffect.md",
+    "面试/REACT/API/useMemo.md",
     "面试/REACT/批处理.md",
     "面试/工程化/Webpack.md",
     "面试/工程化/Webpack HMR vs. Vite 热更新.md",
@@ -269,7 +270,6 @@
     "面试/项目问题/通信加密.md",
     "面试/项目问题/Tree拖拽.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
-    "面试/JAVASCRIPT/V8引擎.md",
     "assets/Pasted image 20250310095811.png",
     "面试/微前端",
     "面试/VUE/API",

@@ -43,7 +43,10 @@ function updateMemo<T>(nextCreate: () => T, deps: DependencyList | null): T {
 ### 实现解析
 #### mountMemo：
 - **初次渲染**时，存储 nextCreate() 以及 deps，并返回 nextValue。
-
+#### updateMemo：
+- **更新时**，比较 deps 依赖是否变化：
+	- **没变**：直接返回之前缓存的 nextValue。
+	- **变了**：重新执行 nextCreate()，生成新的 nextValue。
 
 ## 生命周期
 | **生命周期**                      | useMemo       |

@@ -45,3 +45,19 @@ fiber内
 ```jsx
 memoizedState : { state: 0, next -> { state: "Hi", next: null } }
 ```
+
+
+# **React Hooks 在 Fiber 架构下的执行时机**
+| **Hook**                  | **渲染阶段（Render Phase）** | **提交阶段（Commit Phase）**       |
+| ------------------------- | ---------------------- | ---------------------------- |
+| [[useState]] / useReducer | ✅ 计算状态，但不会触发 UI 更新     | —                            |
+| [[useMemo]]               | ✅ 计算 memoized 值        | —                            |
+| [[useCallback]]           | ✅ 计算 memoized 函数       | —                            |
+| useContext                | ✅ 读取 Context           | —                            |
+| [[useRef]]                | ✅ 创建 ref 对象            | ✅ ref.current 在 Commit 时同步更新 |
+| [[useEffect]]             | —                      | ✅ **异步执行**（在 DOM 更新后运行）      |
+| useLayoutEffect           | —                      | ✅ **同步执行**（在 DOM 更新后立即执行）    |
+| useImperativeHandle       | —                      | ✅ 在 DOM 变更后执行                |
+| useTransition             | ✅ 标记某些状态更新为并发          | —                            |
+| useDeferredValue          | ✅标记某些状态更新为并发           | —                            |
+| [[useSyncExternalStore]]  | ✅ 读取外部存储的值             | ✅ 在 commit 阶段触发回调            |

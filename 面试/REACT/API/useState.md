@@ -43,3 +43,14 @@ function Counter() {
 - processQueue() 处理 queue.pending
 - memoizedState = 1
 - **按钮显示 1**
+
+
+## 生命周期
+|**生命周期**|useState **/** useReducer|
+|---|---|
+|**constructor**|初始化状态|
+|**render**|读取状态并渲染|
+|**shouldComponentUpdate**|触发组件更新|
+|**componentDidMount**|组件首次渲染后，状态更新可能触发重渲染|
+|**componentDidUpdate**|状态更新后组件重新渲染|
+|**componentWillUnmount**|组件卸载时不影响状态（但状态变更不会影响已卸载组件）|

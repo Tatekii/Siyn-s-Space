@@ -13,3 +13,41 @@ const memo = {
   next: null
 };
 ```
+
+
+## 实现
+```tsx
+// ReactFiberHook
+function mountMemo<T>(nextCreate: () => T, deps: DependencyList | null): T {
+  const hook = mountWorkInProgressHook();
+  const nextDeps = deps === null ? null : deps;
+  const nextValue = nextCreate();
+  hook.memoizedState = [nextValue, nextDeps];
+  return nextValue;
+}
+
+function updateMemo<T>(nextCreate: () => T, deps: DependencyList | null): T {
+  const hook = updateWorkInProgressHook();
+  const prevState = hook.memoizedState;
+  if (deps !== null) {
+    const prevDeps = prevState[1];
+    if (areHookInputsEqual(deps, prevDeps)) {
+      return prevState[0]; // 直接返回缓存的值
+    }
+  }
+  const nextValue = nextCreate();
+  hook.memoizedState = [nextValue, deps];
+  return nextValue;
+}
+```
+### 实现解析
+#### mountMemo：
+- **初次渲染**时，存储 nextCreate() 以及 deps，并返回 nextValue。
+
+
+## 生命周期
+| **生命周期**                      | useMemo       |
+| ----------------------------- | ------------- |
+| **componentWillReceiveProps** | 依赖项变化时重新计算    |
+| **shouldComponentUpdate**     | 依赖项不变时阻止计算    |
+| **render**                    | 在 render 期间执行 |

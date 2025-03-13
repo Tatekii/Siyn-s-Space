@@ -17,3 +17,10 @@ const effect = {
   next: null // 链表结构，指向下一个 effect
 };
 ```
+
+## 生命周期
+| **生命周期**                 | useEffect   |
+| ------------------------ | ----------- |
+| **componentDidMount**    | 依赖为空 [] 时触发 |
+| **componentDidUpdate**   | 依赖项变化时触发    |
+| **componentWillUnmount** | 触发清理函数      |

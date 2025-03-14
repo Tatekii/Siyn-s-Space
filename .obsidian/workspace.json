@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/TYPESCRIPT/类型操作/&.md",
+                "file": "面试/TYPESCRIPT/类型操作/satisfies.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "&"
+              "title": "satisfies"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "220ab853079bd21b",
   "lastOpenFiles": [
+    "面试/TYPESCRIPT/generics.md",
+    "面试/TYPESCRIPT/类型操作/&.md",
     "面试/TYPESCRIPT/类型操作/as const.md",
     "面试/TYPESCRIPT/类型操作/satisfies.md",
     "面试/TYPESCRIPT/类型操作/is.md",
@@ -195,8 +197,6 @@
     "面试/TYPESCRIPT/类型操作",
     "面试/TYPESCRIPT/tuple.md",
     "面试/TYPESCRIPT/关键字.md",
-    "面试/TYPESCRIPT/类型操作/&.md",
-    "面试/TYPESCRIPT/generics.md",
     "面试/TYPESCRIPT/interface&type.md",
     "面试/JAVASCRIPT/手写题.md",
     "面试/REACT/批处理.md",

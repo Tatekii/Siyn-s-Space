@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/TYPESCRIPT/关键字.md",
+                "file": "面试/TYPESCRIPT/extends.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "关键字"
+              "title": "extends"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "220ab853079bd21b",
   "lastOpenFiles": [
-    "面试/TYPESCRIPT/extends.md",
     "面试/TYPESCRIPT/关键字.md",
+    "面试/TYPESCRIPT/extends.md",
+    "面试/TYPESCRIPT/infer.md",
     "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT/generics.md",
     "面试/TYPESCRIPT/interface&type.md",
@@ -212,7 +213,6 @@
     "面试/网络/HTTP.md",
     "面试/网络/HTTPS.md",
     "面试/网络/网络分层模型.md",
-    "面试/浏览器/缓存策略.md",
     "assets/Pasted image 20250310095811.png",
     "面试/微前端",
     "面试/VUE/API",

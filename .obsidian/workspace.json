@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Webpack HMR vs. Vite 热更新"
             }
-          },
-          {
-            "id": "4de1e5359d21171f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.9"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.9"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,8 +183,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4de1e5359d21171f",
+  "active": "220ab853079bd21b",
   "lastOpenFiles": [
+    "面试/工程化/Webpack HMR vs. Vite 热更新.md",
     "面试/TYPESCRIPT/类型操作/satisfies.md",
     "面试/TYPESCRIPT/generics.md",
     "面试/TYPESCRIPT/类型操作/&.md",
@@ -220,7 +208,6 @@
     "面试/REACT/API/useState.md",
     "面试/REACT/API/useEffect.md",
     "面试/工程化/Webpack.md",
-    "面试/工程化/Webpack HMR vs. Vite 热更新.md",
     "面试/工程化/工程化.md",
     "Rollup.md",
     "面试/工程化/Gulp.md",

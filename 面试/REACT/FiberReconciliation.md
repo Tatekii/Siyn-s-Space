@@ -40,7 +40,7 @@ C->B->A->D
 4. A的newIndex为2，oldIndex为0，oldIndex<lastPlacedIndex,A发生了移动
 5. D的newIndex为3，oldIndex为3，oldIndex>lastPlacedIndex,D没有移动，并且重新赋值lastPlacedIndex = 3
 
-![[Pasted image 20240712170330.png]]
+![[Pasted_image_20240712170330.png]]
 
 [掘金/百应技术团队博客](https://juejin.cn/post/7012961682938920967#heading-9)
 ## 更新节点

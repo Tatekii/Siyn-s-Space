@@ -60,4 +60,41 @@ React 遍历 **每个子节点** 并比较 type 和 props，总共执行 **N 次
 
 由于 React **在每个位置都要检查所有可能的旧节点**，导致 **N 个节点，每个节点都可能触发一个 O(N) 级别的匹配搜索**，最终复杂度：`O(N^2)`
 
-## 
+## **3. Keyed Diff 优化（O(N))**
+**当使用 key 进行优化时**，React **使用 Map 结构（哈希表）存储旧节点的索引**，这样新旧节点可以 **O(1)** 查找，整体复杂度降至：`O(N)`
+
+**示例（使用 key）：**
+```jsx
+<ul>
+  <li key="A">A</li>
+  <li key="B">B</li>
+  <li key="C">C</li>
+</ul>
+
+// 新 Virtual DOM（B 和 A 互换）
+<ul>
+  <li key="B">B</li>
+  <li key="A">A</li>
+  <li key="C">C</li>
+</ul>
+```
+
+**计算过程：**
+
+1. **React 先遍历旧节点，构建一个 Map（哈希表）**
+	```js
+	{
+	  "A": oldFiberA,
+	  "B": oldFiberB,
+	  "C": oldFiberC
+	}
+	```
+**时间复杂度：O(N)**
+ 
+2. **遍历新节点，直接查找 Map 进行匹配**
+	- B 在 Map 里 → 复用 B
+	- A 在 Map 里 → 复用 A
+	- C 在 Map 里 → 复用 C
+**时间复杂度：O(N)**
+
+由于 Map 允许**O(1) 查找**，所以整体复杂度降低至：`O(N)`

@@ -17,19 +17,17 @@ fiber树中执行协调的顺序类似中序遍历，先walk child，然后walk 
 ### 同级比较
 workinProgressFiberNode的直接子节点和currentFiberNode的直接子节点进行比较。不进行跨父节点比较。
 
-### 节点复用（key的作用）
-> key：元素上的key = reactElement的key = fiber节点上的key
-> type：div,input,component,fragemt等
+由于react使用链表存储oldFiber节点，故新旧节点比较时不能使用双指针，需要两次遍历：
 
-- **reactElement.key === currentFiberNode.key && reactElement.type === currentFiberNode.type**, currentFiberNode 可以克隆；
-    
-- **reactElement.key !== currentFiberNode.key**, currentFiberNode 不可克隆；
-    
-- **reactElement.key === currentFiberNode.key && reactElement.type !== currentFiberNode.type**, currentFiberNode 不可克隆；
+1. 第一次遍历更新的节点
+2. 第二次处理不属于更新的节点
 
-新旧子节点的比较会出现两种情况：
-1. 单个新子节点 vs 旧子节点list
-2. ⭐️新子节点list vs 旧子节点list
+### 节点复用
+- ⭐️key：`元素上的key = reactElement的key = fiber节点上的key
+- type：div,input,component,fragemt等
+ 
+ 克隆 currentFiberNode的条件：
+`reactElement.key === currentFiberNode.key && reactElement.type === currentFiberNode.type`
 
 ### 最长递增索引算法
 lastPlacedIndex，定位未发生移动的currentFiberNode
@@ -40,11 +38,12 @@ A->B->C->D
 // workingInProgressTree
 C->B->A->D
 ```
-3. 从直接子节点（DOM结构中的首个子节点）开始
-4. C的newIndex为0, oldIndex为2, lastPlacedIndex初始化=2
-5. B的newIndex为1，oldIndex为1，oldIndex<lastPlacedIndex,B发生了移动
-6. A的newIndex为2，oldIndex为0，oldIndex<lastPlacedIndex,A发生了移动
-7. D的newIndex为3，oldIndex为3，oldIndex>lastPlacedIndex,D没有移动，并且重新赋值lastPlacedIndex = 3
+1. 从直接子节点（DOM结构中的首个子节点）开始
+2. C的newIndex为0, oldIndex为2, lastPlacedIndex初始化=2
+3. B的newIndex为1，oldIndex为1，oldIndex<lastPlacedIndex,B发生了移动
+4. A的newIndex为2，oldIndex为0，oldIndex<lastPlacedIndex,A发生了移动
+5. D的newIndex为3，oldIndex为3，oldIndex>lastPlacedIndex,D没有移动，并且重新赋值lastPlacedIndex = 3
+
 ![[Pasted image 20240712170330.png]][掘金/百应技术团队博客](https://juejin.cn/post/7012961682938920967#heading-9)
 
 
@@ -70,7 +69,7 @@ current fiber node的`memorizedProps`也就是上一次更新时workingProgress 
 不同节点类型执行更新的操作步骤也不同。
 
 ### 组件状态
-组件类型的tag时，还需要比较组件内部状态的不同。
+组件类型的tag相同时，还需要比较组件内部状态的不同。
 
 ## 副作用
 协调结束过程中，会收集更新时产生的所有副作用(`effect`)，协调结束进入提交阶段会处理这些effect。

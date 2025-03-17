@@ -7,123 +7,73 @@
 
 ### 2.使用剩余新children的长度建立source索引数组
 ```javascript
-
 oldChildren = [e,f,k]
-
 newChildren = [f,k,e]
 
-source = [-1,-1,-1]
+// 初始化 source = [-1,-1,-1]
 ```
 
 ### 3.为新vnode建立key，index索引表
 
 ```javascript
-
 keyIndex = {f:0,k:1,e:2}
-
 ```
 
-- 遍历旧children中key去keyIndex中查找`k = keyIndex[oldChildren[i]]`，有这个k则把`source`数组该位置的-1改为旧vNode的索引，并且patch该节点 ;`k=undefined`则说明该节点已经被删除，而source中依旧为-1的节点为新增节点
+遍历旧children中key去keyIndex中查找`k = keyIndex[oldChildren[i]]`，有这个k则把`source`数组该位置的-1改为旧vNode的索引，并且patch该节点 ;`k=undefined`则说明该节点已经被删除，而source中依旧为-1的节点为新增节点
 
 ```javascript
-
 source = [2,0,1]
-
 ```
 
 - 判断是否需要移动
 
 ```javascript
-
 source = [2,0,1]
-
 //source中，最大索引为2，2之后有小于2的索引，说明需要移动
-
 //根据source数组求出最长递增子序列
-
 LIS = [1，2]
-
 // LIS中存储的是source索引
-
 // 表示新旧children中这几个节点位置保持递增关系
-
 ```
 
-- 根据LIS得出不进行移动的节点
+### 4. 根据LIS得出不进行移动的节点
 
 ```javascript
-
 newChildren[LIS] = [f,k]
-
 ```
 
 - 从LIS和新children尾处建立两个指针处理余下节点
-
 - 比较指针的索引是是否相同，不同则移动DOM位置到上个指针的真实DOM之前
 
 > oldVnode.el = 真实DOM，同时source.key = -1的节点直接创建了新的真实DOM
 
-  
-  
-  
-  
-
 ### 最长递增子序列
-
 - 子序列：不要求连续
-
 - 字串：要求连续
-
-  
-
 ```javascript
-
 // 动态规划
-
+// 最长递增子序列的长度
 const longestChildSequence = arr => {
-
-let len = arr.length
-
-if(len < 1) return
-
-const dp = Array(len).fill(1)
-
-// dp[i]代表原始数组该位置的最长子序列长度
-
-for(let i = 1 ; i < len ; i++){
-
-for(let j = 0 ; j < i ; j++){
-
-// j遍历之前遍历过的所有元素
-
-// 可能存在大小不一的递增序列，使用max取得最大值
-
-if(arr[i] > arr [j]){
-
-dp[i] = Math.max(dp[i],dp[j]+1)
-
-// [1,2,3,4,1,2,5]
-
-// 如果只使用dp[j]+1 ，dp[6]会在[1,2,5]中得出结果3
-
-// 使用max比较之前更长的序列[1，2，3，4，5]得到5
-
-  
-
+	let len = arr.length
+	if(len < 1) return
+	const dp = Array(len).fill(1)
+	// dp[i]代表原始数组该位置的最长子序列长度
+	for(let i = 1 ; i < len ; i++){
+		for(let j = 0 ; j < i ; j++){
+			// j遍历之前遍历过的所有元素
+			// 可能存在大小不一的递增序列，使用max取得最大值
+			if(arr[i] > arr [j]){
+				dp[i] = Math.max(dp[i],dp[j]+1)
+				// [1,2,3,4,1,2,5]
+				// 如果只使用dp[j]+1 ，dp[6]会在[1,2,5]中得出结果3
+				// 使用max比较之前更长的序列[1，2，3，4，5]得到5
+			}
+		}
+	}
+	return Math.max(...dp)
 }
-
-}
-
-}
-
-return Math.max(...dp)
-
-}
-
-  
 
 // 贪心+二分
-
 const longestChildSequence = arr => {
 
 let len = arr.length

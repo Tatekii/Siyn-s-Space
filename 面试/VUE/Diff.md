@@ -1,4 +1,37 @@
+## Vue2的双端比较
+> 借鉴`snabbdom.js`
+```javascript
+(oStart)      [oEnd]
+oldA oldB oldC oldD
+
+  
+
+newB newC newD newA
+(nStart)       [nEnd]
+
+// oStart与nEnd匹配上了key，将oldA的DOM移动到新dom最后
+// 移动nEnd
+(oStart)      [oEnd]
+oldA oldB oldC oldD
+｜
+---------------------->
+                ｜
+newB newC newD newA
+(nStart) [nEnd]
+```
+
+- vue同时从新旧children的两端开始比较
+- 四个指针，分别查找是否key相同
+- 匹配到了相同的key，则将真实dom移动,同时四个指针对撞移动
+- 如果第一轮四次匹配不上，则遍历旧node寻找`nStart`
+- if 找到将其真实DOM移动到`oStart`之前，并在原vnode位置置空undefined，后序比较会跳过他
+- else 找不到则添加新增新元素`nStart`到`oStart`之前
+- 匹配结束后`oEnd<oStart`,新增`nStart到nEnd`新元素到`oStart`之前
+- 匹配结束后`nStart>nEnd`,删除`oStart到oEnd`之间元素
+
 ## Vue3 借鉴`inferno`和`ivi`的算法
+- **静态标记**：模板编译时，会提前标记哪些节点是**静态的**，避免重复对比。
+- **双端 Diff**：Vue 采用 **头尾指针**，同时从两端对比，提高性能。
 ### 1.排除相同的首位节点
 ![[Pasted image 20250317214847.png]]
 - 分别从新旧节点的头和尾出发

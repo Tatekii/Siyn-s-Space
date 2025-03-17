@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/工程化/Webpack HMR vs. Vite 热更新.md",
+                "file": "面试/JAVASCRIPT/手写题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Webpack HMR vs. Vite 热更新"
+              "title": "手写题"
             }
           }
         ]

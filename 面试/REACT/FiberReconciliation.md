@@ -17,11 +17,6 @@ fiber树中执行协调的顺序类似中序遍历，先walk child，然后walk 
 ### 同级比较
 workinProgressFiberNode的直接子节点和currentFiberNode的直接子节点进行比较。不进行跨父节点比较。
 
-由于react使用链表存储oldFiber节点，故新旧节点比较时不能使用双指针，需要两次遍历：
-
-1. 第一次遍历更新的节点
-2. 第二次处理不属于更新的节点
-
 ### 节点复用
 - ⭐️key：`元素上的key = reactElement的key = fiber节点上的key
 - type：div,input,component,fragemt等
@@ -29,14 +24,16 @@ workinProgressFiberNode的直接子节点和currentFiberNode的直接子节点�
  克隆 currentFiberNode的条件：
 `reactElement.key === currentFiberNode.key && reactElement.type === currentFiberNode.type`
 
-### 最长递增索引算法
-lastPlacedIndex，定位未发生移动的currentFiberNode
+### 最长递增索引K
+`lastPlacedIndex`为新fiber节点在旧fiber节点中能匹配上的最大索引值，定位未发生移动的currentFiberNode。
 ```javascript
 // currentFiberTree
 A->B->C->D
 
 // workingInProgressTree
 C->B->A->D
+// newChildren [C,B,A,D]
+// K [2,1,0,3]
 ```
 1. 从直接子节点（DOM结构中的首个子节点）开始
 2. C的newIndex为0, oldIndex为2, lastPlacedIndex初始化=2
@@ -44,9 +41,9 @@ C->B->A->D
 4. A的newIndex为2，oldIndex为0，oldIndex<lastPlacedIndex,A发生了移动
 5. D的newIndex为3，oldIndex为3，oldIndex>lastPlacedIndex,D没有移动，并且重新赋值lastPlacedIndex = 3
 
-![[Pasted image 20240712170330.png]][掘金/百应技术团队博客](https://juejin.cn/post/7012961682938920967#heading-9)
+![[Pasted image 20240712170330.png]]
 
-
+[掘金/百应技术团队博客](https://juejin.cn/post/7012961682938920967#heading-9)
 ## 更新节点
 - 新建的节点 -> 执行mount
 - 克隆的节点-> 比较props -> 执行update

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0e1bb52e78bdeba2",
+        "id": "93249245fe10dd71",
         "type": "tabs",
         "children": [
           {
-            "id": "1e9c1450517868da",
+            "id": "35bb4fe9c4e28992",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/CSS/盒模型&包含块.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "盒模型&包含块"
+              "title": "New tab"
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 342.5
+    "width": 230.5
   },
   "right": {
     "id": "b4fb401750063676",
@@ -183,13 +179,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1e9c1450517868da",
+  "active": "328a4439f200cf35",
   "lastOpenFiles": [
+    "assets/Pasted image 20250228143244.png",
+    "assets/Pasted_image_20250310095811.png",
+    "面试/Node/微服务/K8S.md",
+    "assets/Code Test.md",
+    "面试/CSS/盒模型&包含块.md",
+    "面试/CSS/assets/盒模型&包含块/file-20250317224925247.png",
+    "面试/CSS/assets/盒模型&包含块/file-20250317224357866.png",
+    "面试/CSS/assets/盒模型&包含块",
+    "面试/CSS/assets",
     "面试/CSS/BFC.md",
     "面试/CSS/CSS3.md",
     "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/FiberReconciliation.md",
-    "assets/Pasted_image_20250310095811.png",
     "assets/Pasted_image_20250317214847.png",
     "assets/Pasted image 20241115140813.png",
     "assets/Pasted_image_20240712170330.png",
@@ -214,10 +218,6 @@
     "面试/TYPESCRIPT/interface&type.md",
     "面试/REACT/批处理.md",
     "面试/REACT/API/useMemo.md",
-    "面试/REACT/API/useSyncExternalStore.md",
-    "面试/REACT/Hooks.md",
-    "面试/REACT/API/useCallback.md",
-    "面试/REACT/API/useState.md",
     "Untitled",
     "面试/工程化",
     "面试/微前端",
@@ -226,12 +226,7 @@
     "面试/VUE",
     "assets/Pasted image 20250303105843.png",
     "面试/index.canvas",
-    "assets/Pasted image 20250228143244.png",
-    "assets/Pasted image 20250228143227.png",
-    "assets/Pasted image 20250228143200.png",
     "面试/浏览器",
-    "面试/手写题目",
-    "数据结构",
     "通信加密流程.canvas"
   ]
 }

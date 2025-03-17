@@ -4,7 +4,6 @@
 ### 协调的执行
 fiber树中执行协调的顺序类似中序遍历，先walk child，然后walk sibling，再返回上层（return）。
 
-
 ## fiberNode的生成
 1. 浅拷贝currentFiberNode
 	- 只需要进行DOM属性的更新或移动

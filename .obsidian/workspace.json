@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "eca60e3e66484956",
+        "id": "bf6e6262f201a9b6",
         "type": "tabs",
         "children": [
           {
-            "id": "98749ed8e697a1f5",
+            "id": "2c965c0388bd0b4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "英语/XDF_IELTS词汇/短单词拼写法.md",
+                "file": "面试/页面渲染流程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "短单词拼写法"
+              "title": "页面渲染流程"
             }
           }
         ]
@@ -53,8 +53,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "TCP",
-                "matchingCase": false,
+                "query": ".png",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,50 +184,50 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "98749ed8e697a1f5",
+  "active": "2c965c0388bd0b4b",
   "lastOpenFiles": [
+    "面试/Git版本控制.md",
+    "assets/Pasted image 20250228143000.png",
+    "assets/Pasted image 20250228142742.png",
+    "assets/Pasted image 20250228142647.png",
+    "面试/REACT/FiberReconciliation.md",
+    "面试/Node/微服务/K8S.md",
+    "面试/assets/Pasted image 20250228143000.png",
+    "面试/assets/Pasted image 20250228142742.png",
+    "面试/assets/Pasted image 20250228142647.png",
+    "面试/VUE/Diff.md",
+    "面试/JAVASCRIPT/Promise.md",
+    "面试/JAVASCRIPT/Map&WeakMap.md",
+    "面试/JAVASCRIPT/V8引擎.md",
+    "面试/JAVASCRIPT/Proxy&Reflect.md",
+    "面试/JAVASCRIPT/Javascript运行原理.md",
+    "面试/JAVASCRIPT/Iterator.md",
+    "面试/JAVASCRIPT/Generator.md",
+    "面试/JAVASCRIPT/ES6及以后新特性.md",
+    "面试/JAVASCRIPT/Async函数.md",
+    "面试/CSS/盒模型&包含块.md",
+    "面试/CSS/属性.md",
+    "面试/CSS/像素.md",
+    "面试/CSS/伪类和伪元素.md",
+    "面试/CSS/IFC.md",
+    "面试/CSS/CSS3.md",
+    "面试/CSS/BFC.md",
+    "英语/新概念第三册/Pre-unit Test.md",
+    "英语/新概念第三册/Lesson 2 Thirteen equals one.md",
+    "英语/新概念第三册/Lesson 1 A puma at large.md",
+    "英语/XDF_IELTS语法/非谓语动词.md",
+    "英语/XDF_IELTS语法/语态.md",
     "assets/Pasted image 20250102171151.png",
-    "英语/XDF_IELTS词汇/短单词拼写法.md",
     "assets/Pasted image 20250318091428.png",
     "英语/XDF_IELTS词汇/assets/Pasted image 20250318091343.png",
     "英语/XDF_IELTS词汇/assets",
     "英语/XDF_IELTS词汇/assets/file-20250318090911743.png",
-    "英语/XDF_IELTS词汇/assets/thetorch3_080.jpg",
-    "VIM/BASIC.md",
-    "assets/Pasted image 20241115111733.png",
-    "面试/REACT/Diff.md",
-    "assets/file-20250318090733192.png",
     "面试/assets",
-    "面试/CSS/assets/盒模型&包含块/file-20250317224925247.png",
-    "面试/CSS/assets/盒模型&包含块/file-20250317224357866.png",
-    "面试/Node/微服务/K8S.md",
-    "面试/Node/微服务/assets/K8S/file-20250318090400166.png",
     "面试/Node/微服务/assets/K8S",
     "面试/Node/微服务/assets",
-    "面试/Node/微服务/Skaffold.md",
-    "assets/Code Test.md",
-    "面试/CSS/盒模型&包含块.md",
     "面试/CSS/assets/盒模型&包含块",
     "面试/CSS/assets",
-    "面试/CSS/BFC.md",
-    "面试/CSS/CSS3.md",
-    "面试/REACT/ConcurrrentMode.md",
-    "面试/REACT/FiberReconciliation.md",
-    "面试/VUE/Diff.md",
-    "面试/JAVASCRIPT/手写题.md",
-    "面试/工程化/Webpack HMR vs. Vite 热更新.md",
-    "面试/TYPESCRIPT/类型操作/satisfies.md",
-    "面试/TYPESCRIPT/generics.md",
-    "面试/TYPESCRIPT/类型操作/&.md",
-    "面试/TYPESCRIPT/类型操作/as const.md",
-    "面试/TYPESCRIPT/类型操作/is.md",
-    "面试/TYPESCRIPT/类型操作/infer.md",
-    "面试/TYPESCRIPT/类型操作/extends.md",
-    "面试/TYPESCRIPT/类型操作/keyof.md",
-    "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT/类型操作",
-    "面试/TYPESCRIPT/tuple.md",
-    "面试/TYPESCRIPT/关键字.md",
     "Untitled",
     "面试/工程化",
     "面试/微前端",

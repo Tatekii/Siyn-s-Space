@@ -83,3 +83,39 @@ console.log(Colors.Red);  // "RED"
 	```ts
 	type ColorType = typeof Colors[keyof typeof Colors]; // "RED" | "GREEN" | "BLUE"
 	```
+
+### enum的编译产物
+```ts
+enum Status {
+  Pending,
+  Completed
+}
+console.log(Status.Pending);
+console.log(Status[0]);
+```
+编译后的 JavaScript：
+```js
+"use strict";
+var Status;
+(function (Status) {
+    Status[Status["Pending"] = 0] = "Pending";
+    Status[Status["Completed"] = 1] = "Completed";
+})(Status || (Status = {}));
+console.log(Status.Pending); // 0
+console.log(Status[0]);      // "Pending"
+```
+- 生成了一个 **双向映射的对象**。
+- Status.Pending = 0，同时 Status[0] = "Pending"。
+
+如果使用enum则不会产生额外代码
+```ts
+const Status = {
+	Pending:0,
+	Completed:1
+} as const
+// 编译后
+const Status = {
+	Pendingm: 0,    
+	Completed: 1
+};
+```

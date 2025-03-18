@@ -20,3 +20,14 @@
 	type T22 = Bar<{ a: (x: {a:string}) => void; b: (x: {b:number}) => void }> // {a: string;} & {b: number;}
 
 ```
+
+### 实际应用
+#### UnwrapPromise
+提取Promise的结果类型
+```ts
+type UnwrapPromise<T> = T extends Promise<infer R> ? R : T;
+
+type A = UnwrapPromise<Promise<string>>; // string
+type B = UnwrapPromise<Promise<number>>; // number
+type C = UnwrapPromise<string>;          // string
+```

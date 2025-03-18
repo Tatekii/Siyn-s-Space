@@ -4,14 +4,21 @@
 ## 作用
 - 继承接口`interface`，多个用逗号隔开
 - 用作条件类型做约束
-	- 如果extends前面的类型为泛型，且泛型为联合类型，会分别判断
-```javascript
-type res<T> = T extends 'x' ? 1 : 2
 
-type res<'x'|'y'> // 1|2
+### 分布式条件类型
+当条件类型的参数是 **联合类型** 时，TypeScript 会对联合类型的 **每个成员** 单独计算条件类型，并最终合并结果：
+```ts
+type Check<T> = T extends string ? "String" : "Other";
 
-// 使用[]可以组织分发
-type res<T> = [T] extends 'x' ? 1 : 2
+type Test = Check<"hello" | 42>;  // "String" | "Other"
 
-type res<'x'|'y'> // 2
+// 等效于
+Check<'hello'> | Check<42>
 ```
+
+**如果要避免分布式行为**，可以使用 [] 包裹：
+```ts
+type NoDistribution<T> = [T] extends [string] ? "String" : "Other";
+type Result = NoDistribution<"hello" | 42>; // "Other"
+```
+这里 [T] extends [string] 迫使 T 作为整体进行匹配，而不是对每个成员单独计算。

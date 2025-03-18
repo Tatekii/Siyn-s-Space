@@ -1,12 +1,12 @@
 ## 结构
 1. Concept
-	![](../../assets/Pastedimage 20241125103133.png.png)
+	![](../../../assets/Pasted%20image%2020241125103133.png)
 2. Stracture
-	![[Pasted image 20241125103500.png]]
+	![](../../../assets/Pasted%20image%2020241125223229.png)
 3. Cluster Networking
-	![[Pasted image 20241125223229.png]]
+	![](../../../assets/Pasted%20image%2020241125223229.png)
 4. Ingress Controller
-	![[Pasted image 20241125222923.png]]
+	![](../../../assets/Pasted%20image%2020241125222923.png)
 ## 与Pod通信
 ### Ingress
 - Ingress-nginx

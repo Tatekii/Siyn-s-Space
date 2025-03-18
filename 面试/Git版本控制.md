@@ -16,7 +16,7 @@ feature中已经有完整的main记录，不会有merge commit
 ## `rebase`
 `git checkout feature`
 `git rebase main`
-![](assets/Pasted%20image%2020250228143000.png)
+![](../../assets/Pasted%20image%2020250228143000.png)
 
 
 

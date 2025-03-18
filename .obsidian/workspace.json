@@ -11,10 +11,14 @@
             "id": "acd9c809a6bc1969",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "面试/Git版本控制.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Git版本控制"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "批处理",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -181,6 +185,7 @@
   },
   "active": "acd9c809a6bc1969",
   "lastOpenFiles": [
+    "面试/REACT/批处理.md",
     "assets/Pasted image 20241125223229.png",
     "面试/Git版本控制.md",
     "面试/Node/微服务/K8S.md",

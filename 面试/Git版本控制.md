@@ -3,19 +3,36 @@ refers:
 
 
 ## `merge`
+git merge 用于将一个分支的更改合并到当前分支，并创建一个新的合并提交（merge commit）。
+
+**特点**
+- **保留原始提交历史**，不会修改提交顺序。
+- **产生一个额外的合并提交**（merge commit）。
+
+**示例**
 `git checkout main`
 `git merge feature`
-生成一条merge commit
+生成yi tiao
 ![](../../assets/Pasted%20image%2020250228142647.png)
 
 
 ### `fast-forward`
-feature中已经有完整的main记录，不会有merge commit
+注意：feature中已经有完整的main记录，不会有merge commit
 ![](../../assets/Pasted%20image%2020250228142742.png)
 
 ## `rebase`
+git rebase 通过重新应用提交（replay commits）的方式，把一个分支的更改整合到另一个分支，**不会创建合并提交**。
+
+**特点**
+- **不会产生额外的合并提交**，提交历史更加线性清晰。
+- **修改提交历史**（可能导致强推 git push --force）。
+- **适用于代码整理**，如 feature 分支更新 main 的最新代码，而不产生额外的合并提交。
+
+
+**示例**
 `git checkout feature`
 `git rebase main`
+rebase 使得 feature 分支的提交在 main 分支之后，就像是它们刚刚创建的一样。
 ![](../../assets/Pasted%20image%2020250228143000.png)
 
 

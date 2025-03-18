@@ -6,16 +6,16 @@ refers:
 `git checkout main`
 `git merge feature`
 生成一条merge commit
-![[Pasted image 20250228142647.png]]
+![[assets/Pasted image 20250228142647.png]]
 
 ### `fast-forward`
 feature中已经有完整的main记录，不会有merge commit
-![[Pasted image 20250228142742.png]]
+![[assets/Pasted image 20250228142742.png]]
 
 ## `rebase`
 `git checkout feature`
 `git rebase main`
-![[Pasted image 20250228143000.png]]
+![[assets/Pasted image 20250228143000.png]]
 
 
 

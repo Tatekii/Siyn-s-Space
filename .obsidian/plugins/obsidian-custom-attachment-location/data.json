@@ -1,6 +1,6 @@
 {
-  "attachmentFolderPath": "./assets",
-  "attachmentRenameMode": "Only pasted images",
+  "attachmentFolderPath": "assets",
+  "attachmentRenameMode": "None",
   "duplicateNameSeparator": " ",
   "generatedAttachmentFilename": "file-${date:YYYYMMDDHHmmssSSS}",
   "jpegQuality": 0.8,

@@ -3,7 +3,9 @@
   "spellcheck": true,
   "promptDelete": true,
   "alwaysUpdateLinks": true,
-  "newFileLocation": "root",
+  "newFileLocation": "current",
   "newFileFolderPath": "assets",
-  "attachmentFolderPath": "assets"
+  "attachmentFolderPath": "./assets",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }

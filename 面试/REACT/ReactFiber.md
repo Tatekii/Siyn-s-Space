@@ -12,7 +12,7 @@
 	- 更新任务可区分优先级
 - `Renderer`
 ## 旧架构下的生命周期
-![[Pasted image 20250226175957.png]]
+![](../../assets/Pasted%20image%2020250226175957.png)
 
 ## Fiber架构下的生命周期
 ```text

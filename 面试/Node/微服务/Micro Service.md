@@ -8,7 +8,7 @@
 ### service之间的通信
 - `Sync`
 	- service之间直接通信
-	- ![[Pasted image 20241115111733.png]]
+	- ![](../../../assets/Pasted%20image%2020241115111733.png)
 - `Async`
 	- service之间通过事件`events`通信
-	- ![[Pasted image 20241115140813.png]]
+	- ![](../../../assets/Pasted%20image%2020241115140813.png)

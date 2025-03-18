@@ -1,6 +1,6 @@
 ## 结构
 1. Concept
-	![[Pasted image 20241125103133.png]]
+	![](../../assets/Pastedimage 20241125103133.png.png)
 2. Stracture
 	![[Pasted image 20241125103500.png]]
 3. Cluster Networking

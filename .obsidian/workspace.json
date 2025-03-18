@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/TYPESCRIPT/类型操作/infer.md",
+                "file": "面试/JAVASCRIPT/事件循环.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "infer"
+              "title": "事件循环"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "acd9c809a6bc1969",
   "lastOpenFiles": [
-    "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT/类型操作/infer.md",
+    "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT/类型操作/extends.md",
     "面试/TYPESCRIPT/类型守卫.md",
     "面试/JAVASCRIPT/原型与原型链.md",

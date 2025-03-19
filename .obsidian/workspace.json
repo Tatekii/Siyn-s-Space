@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "setPrototypeOf",
+                "query": "_new",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -184,14 +184,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57c1c285583568e8",
+  "active": "acd9c809a6bc1969",
   "lastOpenFiles": [
+    "面试/JAVASCRIPT/Proxy&Reflect.md",
+    "面试/JAVASCRIPT/原型与原型链.md",
     "面试/JAVASCRIPT/事件循环.md",
     "面试/TYPESCRIPT/类型操作/infer.md",
     "面试/TYPESCRIPT/类型工具.md",
     "面试/TYPESCRIPT/类型操作/extends.md",
     "面试/TYPESCRIPT/类型守卫.md",
-    "面试/JAVASCRIPT/原型与原型链.md",
     "面试/TYPESCRIPT/Mapped Types.md",
     "面试/TYPESCRIPT/enum.md",
     "面试/Git版本控制.md",
@@ -214,7 +215,6 @@
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/Map&WeakMap.md",
     "面试/JAVASCRIPT/V8引擎.md",
-    "面试/JAVASCRIPT/Proxy&Reflect.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/JAVASCRIPT/Iterator.md",
     "面试/JAVASCRIPT/Generator.md",

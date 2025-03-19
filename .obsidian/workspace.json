@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d61ebc3d56ffdfcf",
+        "id": "74f23369d0a3e958",
         "type": "tabs",
         "children": [
           {
-            "id": "acd9c809a6bc1969",
+            "id": "c9273acb716bc278",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/手写题.md",
+                "file": "英语/XDF_IELTS语法/复合句.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "手写题"
+              "title": "复合句"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "深拷",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,8 +183,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "acd9c809a6bc1969",
+  "active": "c9273acb716bc278",
   "lastOpenFiles": [
+    "英语/XDF_IELTS语法/并列句.md",
+    "英语/XDF_IELTS语法/复合句.md",
+    "英语/XDF_IELTS语法/并列句 1.md",
+    "英语/XDF_IELTS语法/简单句.md",
+    "面试/JAVASCRIPT/手写题.md",
     "面试/JAVASCRIPT/原型与原型链.md",
     "面试/JAVASCRIPT/Proxy&Reflect.md",
     "面试/JAVASCRIPT/事件循环.md",
@@ -214,11 +218,6 @@
     "面试/VUE/Diff.md",
     "面试/JAVASCRIPT/Promise.md",
     "面试/JAVASCRIPT/Map&WeakMap.md",
-    "面试/JAVASCRIPT/V8引擎.md",
-    "面试/JAVASCRIPT/Javascript运行原理.md",
-    "面试/JAVASCRIPT/Iterator.md",
-    "面试/JAVASCRIPT/Generator.md",
-    "面试/JAVASCRIPT/ES6及以后新特性.md",
     "assets/Pasted image 20250102171151.png",
     "assets/Pasted image 20250318091428.png",
     "英语/XDF_IELTS词汇/assets/Pasted image 20250318091343.png",

@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Update",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,

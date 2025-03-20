@@ -52,28 +52,36 @@ React 18 中，Lane 共有 **31** 种，主要分为 **7 大类**：
 | **SelectiveHydrationLane** | 0b0000001000000000000000000000000 | ~      | **水合过程的选择性更新**，用于 SSR（服务器端渲染）      |
 | **IdleLane**               | 0b0100000000000000000000000000000 | ~      | **空闲更新（最低优先级）**，适用于后台任务            |
 
+### Lane合并
+使用二进制位（bitmask）来表示不同优先级的 Lane，不同 Lane 可以通过 **按位或（|）** 操作 合并。
+```tsx
+const handleClick = () => {
+  setCount((prev) => prev + 1); // SyncLane（同步执行）
+  startTransition(() => {
+    setCount((prev) => prev + 1); // TransitionLanes（延迟执行）
+  });
+};
 
-### 判断优先级
-使用最小[[堆]]识别出目前updateQueue中最高优先级的update。
+// SyncLane 和 TransitionLanes 的 bitmask
+SyncLane          = 0b0000000000000000000000000000001
+TransitionLanes   = 0b0000000000111111111111111100000
 
-# 协调调度的模式
-## Legacy
-Legacy模式下，协调为workLoopSync不可中断
+// 事件回调中触发了 SyncLane 和 TransitionLane
+const mergedLanes = SyncLane | TransitionLanes;
 
-触发：
-- event
-- setTimeout
-- network
-## Concurrent
+mergedLanes = 0b0000000000111111111111111100001
+```
+
+### 优先级判断
+使用最小[[堆]]识别出目前`updateQueue`中最高优先级的update。
+
+
 Concurrent模式下，协调为workLoopConcurrent，可中断/插队
 特性：
 - 更新存在优先级，高优先的更新会插队低优先级更新
 - 每次fiber的协调都会判断时间切片是否到期
 - 在时间切片到期时，还要检查一遍下一个更新是否”过期“，如果超过过期时间会继续说执行。
-触发：
-- Suspense
-- useTransition
-- offScreen
+
 
 ## 中断与继续
 ### 全局保存协调的进度

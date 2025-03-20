@@ -1,7 +1,7 @@
 ## React的架构演变
 ## <16.8 旧架构
 - `Stack Reconciler`
-	- 数据保存在递归的调用[[栈]] 中
+	- 数据保存在递归的调用[[../数据结构/栈]] 中
 	- 递归更新不可中断
 - `Renderer`
 ### >16.8 新架构
@@ -135,6 +135,7 @@ function FiberNode(
 ```
 
 ## `Scheduler`
+[Scheduler](Scheduler.md)
 基于`requestIdleCalllback`封装的浏览器空闲回调执行函数，调度协调的进行。
 ```javascript
 window.requestIdleCallback(callback:Function, options:{timeout:number})
@@ -142,7 +143,7 @@ window.requestIdleCallback(callback:Function, options:{timeout:number})
 ```
 
 ## `Fiber Reconciler`
-[[FiberReconciliation]]
+[[Reconciliation]]
 执行fiber树的协调，虚拟dom的diff，打上更新标记，并收集副作用。
 
 

@@ -1,4 +1,11 @@
-## Fiber的协调
+# Fiber的协调
+React Fiber 的协调过程分为两个阶段：
+- **渲染（Render）阶段**（可中断，计算 Fiber 树）
+- **提交（Commit）阶段**（不可中断，执行 DOM 操作）
+
+Render 阶段
+
+
 ## 双缓存机制
 内存中同时会有两棵Fiber树，一个为对应此时真实DOM的currentFiberTree，一个是协调过程中操作的workInProgressFiberTree。
 ### 协调的执行

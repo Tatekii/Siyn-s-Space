@@ -56,7 +56,7 @@ let workInProgressRenderLane = NoLane // 指向协调中的优先级
 class Fiber {
 	this.updateQueue = {
 		shared: {
-			pending: null, // 指向待处理的更新head
+			pending: null, // 指向💡待处理的UpdateQueue链表头
 		}
 	},
 	this.memorizedState = {} // 上次更新完的状态
@@ -66,7 +66,7 @@ class Fiber {
 每个更新对象中lane的记录
 ```typescript
 export interface Update<State> {
-	action: Action<State>
+	action: Action<State> // 具体更新行为
 	next: Update<any> | null
 	lane: Lane
 }

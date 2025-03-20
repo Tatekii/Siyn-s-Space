@@ -28,15 +28,22 @@ fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，�
 #### mutation()
 - DOM 操作，如 appendChild、removeChild
 #### layout()
+##### commitLayoutEffect()
+- useLayoutEffect
 - componentDidMount
 - componentDidUpdate
+- ref
+##### **commitPassiveEffect**
 - [useEffect](API/useEffect.md)
-#### commitLayoutEffect()
-- 更新ref
-- 同步执行useLayoutEffect
+- [[useEffect]] cleanup
 
 ### 清理（Cleanup）阶段
-- 清空effectList
+- 清空[[effectList]]
+	```tsx
+	root.firstEffect = root.lastEffect = null;
+	```
+- 执行[[useEffect]]清理函数
+- 将`finfishedWork`置空 
 
 
 ## fiberNode的生成

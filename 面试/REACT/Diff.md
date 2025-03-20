@@ -1,18 +1,11 @@
-# fiberNode的生成
-1. 浅拷贝currentFiberNode
-	- 只需要进行DOM属性的更新或移动
-2. 新建fiberNode(createFiberNodeFromXXX)
-3. 完全复用currentFiberNode
-	1. 组件的render没有执行，没有返回新的reactElement，则就直接复用
-	2. 关联的API:`shouldComponentUpdate`,`React.memo()`
-### 同级比较
+## 同级比较
 workinProgressFiberNode的直接子节点和currentFiberNode的直接子节点进行比较。不进行跨父节点比较。
 
 ### 节点复用
 - ⭐️key：`元素上的key = reactElement的key = fiber节点上的key
 - type：div,input,component,fragemt等
  
- 克隆 currentFiberNode的条件：
+ 克隆 currentFiberNode(复用节点)的条件：
 `reactElement.key === currentFiberNode.key && reactElement.type === currentFiberNode.type`
 
 ### 最长递增索引K
@@ -25,6 +18,8 @@ A->B->C->D
 C->B->A->D
 // newChildren [C,B,A,D]
 // K [2,1,0,3]
+
+// 由于fiber为链表，计算时会为oldChildren构建哈希表便于比较
 ```
 1. 从直接子节点（DOM结构中的首个子节点）开始
 2. C的newIndex为0, oldIndex为2, lastPlacedIndex初始化=2
@@ -38,7 +33,7 @@ C->B->A->D
 - 新建的节点 -> 执行mount
 - 克隆的节点-> 比较props -> 执行update
 - 克隆的组件节点 -> 比较props -> 比较state -> 执行update
-### props
+### Fiber.props
 通过对比**pendingProps** 和 memoizedProps就知道属性的改变；
 #### `pengindProps`
 jsx上的所有参数除了key都会直接作为react element的props，react element执行渲染函数后这些props将作为workingProgress fiber node 下`pendingProps`的值。
@@ -59,8 +54,7 @@ current fiber node的`memorizedProps`也就是上一次更新时workingProgress 
 组件类型的tag相同时，还需要比较组件内部状态的不同。
 
 
-
-## 不同情况下Diff
+## 不同情况下Diff差异
 在 React 16+ 的 Fiber 架构中，**Diff 过程**主要发生在 **新旧 Fiber 树的对比**，而新旧节点的核心对比逻辑依赖于 **链表遍历** 和 **Keyed Diff**。
 
 ## **1. 直接对比（O(N))**

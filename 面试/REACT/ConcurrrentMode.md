@@ -101,7 +101,6 @@ class Fiber {
 	this.memorizedState = {} // 上次更新完的状态
 	this.memorizedProps = {} // 上次更新完的参数
 }
-
 ```
 每个更新对象中lane的记录
 ```typescript
@@ -110,12 +109,11 @@ export interface Update<State> {
 	next: Update<any> | null
 	lane: Lane
 }
-
 ```
 根节点中lanes的纪录
 ```javascript
 class FiberRootNode {
-	this.pendingLane: Lane // 每次更新都会讲更新的lane值合并进根fiber的待处理lanes记录中
+	this.pendingLane: Lane // 每次更新都会将更新的lane值合并进根fiber的待处理lanes记录中
 }
 ```
 高优先级插队

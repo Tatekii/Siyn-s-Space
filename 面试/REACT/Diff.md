@@ -1,4 +1,13 @@
-# **React Fiber Diff 的时间复杂度分析**
+# fiberNode的生成
+1. 浅拷贝currentFiberNode
+	- 只需要进行DOM属性的更新或移动
+2. 新建fiberNode(createFiberNodeFromXXX)
+3. 完全复用currentFiberNode
+	1. 组件的render没有执行，没有返回新的reactElement，则就直接复用
+	2. 关联的API:`shouldComponentUpdate`,`React.memo()`
+
+
+# React Fiber Diff 算法
 在 React 16+ 的 Fiber 架构中，**Diff 过程**主要发生在 **新旧 Fiber 树的对比**，而新旧节点的核心对比逻辑依赖于 **链表遍历** 和 **Keyed Diff**。
 
 ## **1. 直接对比（O(N))**

@@ -5,34 +5,35 @@
 ### 协调的执行
 fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，然后walk sibling，再返回上层（return）。
 
-## React Fiber 的协调过程分为两个阶段：
+## 协调过程分为两个阶段
 ### **渲染（Render）阶段**
-- 可中断
-- 创建新的fiber树
-- 更新标记
+>可中断
 #### beginWork()
-- 深度优先遍历fiber链表
-- 执行渲染函数（hooks重新执行）
+- 深度优先遍历fiber链表/[生成新的fiberNode](#fiberNode的生成)
+- 执行渲染函数
+- hooks执行
+	- 生成副作用链表
 - 使用bitmask(位掩码)标记更新`Fiber.flag`
-#### completework()
+#### completeWork()
 - 根据flag输出新的虚拟DOM`stateNode`
 - 回溯过程中冒泡更新标记flags
 
 ### **提交（Commit）阶段**
-- 不可中断
-- 执行effect
-- 
+>不可中断
+- 执行`effectList`(副作用链表)
+- DOM更新到实际页面上
+#### beforeMutation()
+- getSnapshotBeforeMutation
+#### mutation()
+- DOM 操作，如 appendChild、removeChild
+#### layout()
+- componentDidMount
+- componentDidUpdate
+- [useEffect](API/useEffect.md)
 
 
 
 
-## fiberNode的生成
-1. 浅拷贝currentFiberNode
-	- 只需要进行DOM属性的更新或移动
-2. 新建fiberNode(createFiberNodeFromXXX)
-3. 完全复用currentFiberNode
-	1. 组件的render没有执行，没有返回新的reactElement，则就直接复用
-	2. 关联的API:`shouldComponentUpdate`,`React.memo()`
 
 ## ⭐️diff计算
 ### 同级比较

@@ -106,7 +106,6 @@ function FiberNode(
 
   this.ref = null;
   this.refCleanup = null;
-
 	
   this.pendingProps = pendingProps;
   this.memoizedProps = null;

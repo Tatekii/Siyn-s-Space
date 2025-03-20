@@ -13,7 +13,8 @@ const [count, setCount] = useState(0);
 // memorizedState :
 const hook = {
   memoizedState: state, // 存储当前状态值
-  queue: { // 存储更新队列
+  queue: { // 存储steState产生的更新队列
+  // ⭐️环状链表，首尾相连，pending指向当前
     pending: null
   },
   next: null // 指向下一个 hook
@@ -35,7 +36,7 @@ function Counter() {
 
 ### 点击按钮
 - setCount(1)
-- 生成 update = { action: 1 }
+- 生成 update = { action: `()=>1` ,next:null }
 - update 加入 queue.pending
 - 触发 scheduleRender()
 

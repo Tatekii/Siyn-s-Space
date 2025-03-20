@@ -37,17 +37,21 @@ processTaskQueue()
 ### MessageChannel
 MessageChannel 是基于异步消息传递的。当通过 MessageChannel 发送消息时，它会创建一个宏任务，所以可以模拟setTimeout(,0)，并且延迟比setTimeout更小。
 
-## 更新优先级
-- **ImmediatePriority**, **直接优先级**，对应用户的 **click**、**input**、**focus** 等操作；
-	- 过期时间-1ms
-- **UserBlockingPriority**，**用户阻塞优先级**，对应用户的 **mousemove**、**scroll** 等操作；
-	- 过期时间250ms
-- **NormalPriority**，**普通优先级**，对应**网络请求**、**useTransition** 等操作；
-	- 过期时间5000ms
-- **LowPriority**，**低优先级**；
-	- 过期时间10000ms
-- **IdlePriority**，**空闲优先级**，如 **OffScreen**;
-	- 过期时间1073741823ms
+## Lane模型
+Lane（车道） 代表不同优先级的更新任务，类似于马路上的不同车道，不同任务可以在不同车道上同时执行，而不是按队列依次阻塞执行。
+
+React 18 中，Lane 共有 **31** 种，主要分为 **7 大类**：
+
+| **Lane**                   | **数值（二进制）**                       | 过期时间   | **说明**                             |
+| -------------------------- | --------------------------------- | ------ | ---------------------------------- |
+| **SyncLane**               | 0b0000000000000000000000000000001 | -1ms   | **同步更新（最高优先级）**，如 onClick setState |
+| **InputContinuousLane**    | 0b0000000000000000000000000000010 | 250ms  | **输入相关的更新**，如 onChange setState    |
+| **DefaultLanes**           | 0b0000000000000000000000000011100 | 5000ms | **默认更新**，如 effect setState         |
+| **TransitionLanes**        | 0b0000000000111111111111111100000 | ~      | **过渡更新**，如 useTransition 触发的 UI 更新 |
+| **RetryLanes**             | 0b0000000111000000000000000000000 | ~      | **重试更新**，用于 Suspense 失败后重新尝试       |
+| **SelectiveHydrationLane** | 0b0000001000000000000000000000000 | ~      | **水合过程的选择性更新**，用于 SSR（服务器端渲染）      |
+| **IdleLane**               | 0b0100000000000000000000000000000 | ~      | **空闲更新（最低优先级）**，适用于后台任务            |
+
 
 ### 判断优先级
 使用最小[[堆]]识别出目前updateQueue中最高优先级的update。

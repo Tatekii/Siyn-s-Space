@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ConcurrentMode",
+                "query": "Update",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -194,11 +195,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f3d09c65b5765793",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
-    "面试/REACT/Scheduler.md",
-    "面试/REACT/ConcurrrentMode.md",
     "面试/REACT/Fiber架构.md",
+    "面试/REACT/ConcurrrentMode.md",
+    "面试/REACT/Scheduler.md",
     "面试/REACT/Reconciliation.md",
     "面试/REACT/副作用.md",
     "面试/REACT/Diff.md",

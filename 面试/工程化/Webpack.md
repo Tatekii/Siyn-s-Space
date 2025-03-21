@@ -1,7 +1,7 @@
 Webpack
 模块化打包工具
 
-#### 工作原理
+## 工作原理
 
 1. 从入口 js 文件出发，通过各个模块的`require`或者`import`，解析出一棵包含所有使用到资源的依赖树
 2. 递归这颗，对不同的资源类型根据`rules`使用不同的的`loader`加载
@@ -9,8 +9,10 @@ Webpack
 4. 并且模块的加载存在缓存机制，重复加载的模块将直接从缓存对象中读取
 5. 在打包过程中特定时机广播出特定钩子，`plugin`在对应的时机自动执行
 
-#### Hooks
+## Hooks
 [https://webpack.js.org/api/compiler-hooks/](https://webpack.js.org/api/compiler-hooks/)
+- compiler.hooks：全局生命周期，如 done、emit
+- compilation.hooks：单次编译，如 buildModule、seal
 
 #### Loader
 ```javascript
@@ -18,23 +20,14 @@ Webpack
 // webpack.config.js
 
 {
-
-module: {
-
-rules: [
-
-{
-
-test: /\.md$/i,
-
-use: ['html-loader',"./md-loader.js"]
-
-},
-
-],
-
-},
-
+	module: {
+		rules: [
+			{
+				test: /\.md$/i,
+				use: ['html-loader',"./md-loader.js"]
+			},
+		],
+	},
 }
 
 ```
@@ -48,9 +41,9 @@ const { parse } = require("marked");
 
 module.exports = (source) => {
 
-return parse(source); // 交给下一个loader导出
-
-return `module.exports = ${parse(source)}`; // 这是最后的一个loader
+	return parse(source); // 交给下一个loader导出
+	
+	return `module.exports = ${parse(source)}`; // 这是最后的一个loader
 
 };
 
@@ -64,9 +57,7 @@ return `module.exports = ${parse(source)}`; // 这是最后的一个loader
 // webpack.config.js
 
 {
-
-plugins: [new CleanWebpackPlugin()],
-
+	plugins: [new CleanWebpackPlugin()],
 }
 
 ```

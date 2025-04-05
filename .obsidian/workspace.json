@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/VUE/API/ref和reactive.md",
+                "file": "面试/工程化/工程化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ref和reactive"
+              "title": "工程化"
             }
           }
         ]
@@ -196,8 +196,9 @@
   },
   "active": "ec8a6f299a2cdeb1",
   "lastOpenFiles": [
-    "面试/REACT/Reconciliation.md",
+    "面试/工程化/Yeoman.md",
     "面试/VUE/API/ref和reactive.md",
+    "面试/REACT/Reconciliation.md",
     "英语/新概念第三册/Pre-unit Test.md",
     "面试/REACT/Fiber架构.md",
     "面试/工程化/工程化.md",
@@ -222,7 +223,6 @@
     "英语/XDF_IELTS语法/并列句.md",
     "英语/XDF_IELTS语法/并列句 1.md",
     "英语/XDF_IELTS语法/简单句.md",
-    "面试/JAVASCRIPT/Proxy&Reflect.md",
     "assets/Pasted image 20241125223229.png",
     "assets/Pasted image 20250228143000.png",
     "assets/Pasted image 20250228142742.png",

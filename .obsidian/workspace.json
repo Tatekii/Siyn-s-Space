@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/工程化/工程化.md",
+                "file": "面试/设计模式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "工程化"
+              "title": "设计模式"
             }
           }
         ]
@@ -196,12 +196,12 @@
   },
   "active": "ec8a6f299a2cdeb1",
   "lastOpenFiles": [
+    "面试/工程化/工程化.md",
     "面试/工程化/Yeoman.md",
     "面试/VUE/API/ref和reactive.md",
     "面试/REACT/Reconciliation.md",
     "英语/新概念第三册/Pre-unit Test.md",
     "面试/REACT/Fiber架构.md",
-    "面试/工程化/工程化.md",
     "面试/工程化/Grunt.md",
     "面试/JAVASCRIPT/手写题.md",
     "面试/工程化/Webpack.md",

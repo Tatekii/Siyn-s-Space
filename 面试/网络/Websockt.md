@@ -35,4 +35,12 @@ Sec-WebSocket-Accept: xxxxxxxx==
 WebSocket 本身是基于 TCP 的协议，它并不自带加密机制。
 
 当你使用 wss:// 开头时，实际做的就是：
-在 WebSocket 握手之前，**用 [[]] 建立一条加密通道（TCP over TLS）**，然后再在这个安全的通道中完成 WebSocket 握手。
+在 WebSocket 握手之前，**用 [TLS/SSL](HTTPS.md#TLS/SSL) 建立一条加密通道（TCP over TLS）**，然后再在这个安全的通道中完成 WebSocket 握手。
+
+```text
+Client                        Server
+   |----- TLS Handshake ----->|   ← 建立加密通道（和 HTTPS 一样）
+   |----- HTTP Upgrade ------>|
+   |<----- 101 Switching ---- |
+   → WebSocket 通信（加密传输）
+```

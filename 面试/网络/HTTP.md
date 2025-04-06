@@ -158,3 +158,21 @@ http/1.x 是一个超文本协议，而 http2 是一个二进制协议。
 - 切换网络时的连接保持（快速重启会话）
 
 - 加密传输
+
+### 轮询
+#### 轮询
+- 定时请求服务端
+#### 长轮询
+- 请求发出后，服务器**挂起**直到有数据或超时
+- 比轮询节省资源
+```js
+function longPoll() {
+  fetch('/api/messages')
+    .then(res => res.json())
+    .then(data => {
+      render(data);
+      longPoll(); // 再次请求
+    });
+}
+longPoll();
+```

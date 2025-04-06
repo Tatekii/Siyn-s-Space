@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "队头",
+                "query": "UDP",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -197,7 +197,10 @@
   },
   "active": "ec8a6f299a2cdeb1",
   "lastOpenFiles": [
+    "面试/VUE/Diff.md",
+    "面试/性能优化.md",
     "面试/网络/HTTP.md",
+    "面试/网络/网络分层模型.md",
     "面试/浏览器/同源策略.md",
     "面试/网络/TCP.md",
     "面试/设计模式.md",
@@ -220,10 +223,7 @@
     "面试/REACT/API/useEffect.md",
     "面试/REACT/Scheduler.md",
     "面试/REACT/副作用.md",
-    "面试/REACT/Diff.md",
     "Untitled.canvas",
-    "面试/REACT/Hooks.md",
-    "英语/XDF_IELTS语法/复合句.md",
     "assets/Pasted image 20241125223229.png",
     "assets/Pasted image 20250228143000.png",
     "assets/Pasted image 20250228142742.png",

@@ -108,10 +108,8 @@ const longestChildSequence = arr => {
 
 // 贪心+二分
 const longestChildSequence = arr => {
-
-let len = arr.length
-
-if(len < 1) return
+	const len = arr.length
+	if(len < 1) return
 
 const res = [arr[0]]
 

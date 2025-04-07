@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "作用域",
+                "query": "闭包",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,12 +74,12 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b4fb401750063676",
@@ -194,7 +194,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "57c1c285583568e8",
+  "active": "ad851911c5ce5175",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/V8引擎.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",

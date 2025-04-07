@@ -110,62 +110,38 @@ const longestChildSequence = arr => {
 const longestChildSequence = arr => {
 	const len = arr.length
 	if(len < 1) return
+	const res = [arr[0]]
+	//将arr中后续元素arr[i]与res末尾元素比较
+	//大于则push进res
+	//小于则查找res中第一个比arr[i]大的元素并替换
+	//由于存在替换，子序列值不一定正确，但长度是正确的
+	for(let i = 0 ; i< len ;i++){
+		if(arr[i]>res[res.length-1]){
+			res.push(arr[i])
+		}else{
+		// res中左右指针的index
+		// 二分查找
+		let left = 0
+		let right = res.length - 1
+		
+		while(left<right){
+		
+			const mid = Math.floor((left+right)/2)
+			// 浮点小数向下求整
+			if(arr[i]>res[mid]){
+				left = mid + 1
+			}else{
+				right = mid
+			}
+		}
+		
+		res[left] = arr[i]
+	
+		}
+	
+	}
 
-const res = [arr[0]]
-
-//将arr中后续元素arr[i]与res末尾元素比较
-
-//大于则push进res
-
-//小于则查找res中第一个比arr[i]大的元素并替换
-
-//由于存在替换，子序列值不一定正确，但长度是正确的
-
-for(let i = 0 ; i< len ;i++){
-
-if(arr[i]>res[res.length-1]){
-
-res.push(arr[i])
-
-}else{
-
-// res中左右指针的index
-
-// 二分查找
-
-let left = 0
-
-let right = res.length - 1
-
-while(left<right){
-
-// let mid = Math.floor((left+right)/2)
-
-let mid = (left+right) >> 1
-
-// let mid = ((left+right)/2) | 0
-
-// 浮点小数向下求整
-
-if(arr[i]>res[mid]){
-
-left = mid + 1
-
-}else{
-
-right = mid
-
-}
-
-}
-
-res[left] = arr[i]
-
-}
-
-}
-
-return res.length
+	return res.length
 
 }
 

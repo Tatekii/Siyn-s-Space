@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "file": "面试/JAVASCRIPT/原型与原型链.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Javascript运行原理"
+              "title": "原型与原型链"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "闭包",
+                "query": "原型",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,12 +74,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/JAVASCRIPT/Javascript运行原理.md",
+                "file": "面试/JAVASCRIPT/原型与原型链.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Javascript运行原理"
+              "title": "Outline of 原型与原型链"
             }
           },
           {
@@ -196,8 +196,8 @@
   },
   "active": "ad851911c5ce5175",
   "lastOpenFiles": [
-    "面试/JAVASCRIPT/V8引擎.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
+    "面试/JAVASCRIPT/V8引擎.md",
     "面试/VUE/$nextTick.md",
     "面试/性能优化.md",
     "面试/VUE/vue生命周期.md",

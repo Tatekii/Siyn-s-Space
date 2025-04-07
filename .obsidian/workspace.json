@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2e4937a0fbd807dd",
+        "id": "6347e01ca57f7cec",
         "type": "tabs",
         "children": [
           {
-            "id": "a806dd08c9a52527",
+            "id": "8cc844a844c97e3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/CSS/BFC.md",
+                "file": "面试/页面渲染流程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BFC"
+              "title": "页面渲染流程"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "BFC",
+                "query": "CSSOM",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/CSS/BFC.md",
+                "file": "面试/页面渲染流程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of BFC"
+              "title": "Outline of 页面渲染流程"
             }
           },
           {
@@ -194,12 +194,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a806dd08c9a52527",
+  "active": "8cc844a844c97e3b",
   "lastOpenFiles": [
+    "面试/JAVASCRIPT/V8引擎.md",
+    "面试/CSS/BFC.md",
     "面试/页面渲染流程.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
     "面试/JAVASCRIPT/原型与原型链.md",
-    "面试/JAVASCRIPT/V8引擎.md",
     "面试/VUE/$nextTick.md",
     "面试/性能优化.md",
     "面试/VUE/vue生命周期.md",
@@ -221,7 +222,6 @@
     "面试/工程化/Yeoman.md",
     "面试/VUE/API/ref和reactive.md",
     "面试/REACT/Reconciliation.md",
-    "英语/新概念第三册/Pre-unit Test.md",
     "Untitled.canvas",
     "assets/Pasted image 20241125223229.png",
     "assets/Pasted image 20250228143000.png",

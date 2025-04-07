@@ -11,10 +11,10 @@ const [count, setCount] = useState(0);
 在 React 的 fiber 架构中，每个 hook 存储在 fiber.memoizedState [[链表]]中：
 ```js
 // memorizedState :
-const hook = {
+{
   memoizedState: state, // 存储当前状态值
   queue: { // 存储steState产生的更新队列
-  // ⭐️环状链表，首尾相连，pending指向当前
+  // ⭐️环状链表，首尾相连，pending指向当前更新
     pending: null
   },
   next: null // 指向下一个 hook

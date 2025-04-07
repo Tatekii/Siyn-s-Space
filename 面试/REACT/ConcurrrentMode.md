@@ -86,7 +86,7 @@ function renderRoot(root: FiberRootNode, lane: Lane) {
 	if (compare(lane,nextLane)) {
 		// NOTE 其他比 SyncLane 低的优先级或 NoLane，重新调度
 		ensureRootIsScheduled(root)
-	return
+		return
 	}
 }
 ```

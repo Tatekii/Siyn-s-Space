@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/ConcurrrentMode.md",
+                "file": "面试/REACT/Reconciliation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ConcurrrentMode"
+              "title": "Reconciliation"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/REACT/ConcurrrentMode.md",
+                "file": "面试/REACT/Reconciliation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ConcurrrentMode"
+              "title": "Outline of Reconciliation"
             }
           },
           {
@@ -195,6 +195,10 @@
   },
   "active": "8cc844a844c97e3b",
   "lastOpenFiles": [
+    "面试/REACT/Hooks.md",
+    "面试/REACT/Fiber架构.md",
+    "面试/REACT/ConcurrrentMode.md",
+    "面试/数据结构/栈.md",
     "面试/VUE/API/watch和computed.md",
     "面试/VUE/API/ref和reactive.md",
     "面试/VUE/$nextTick.md",
@@ -217,10 +221,6 @@
     "面试/JAVASCRIPT/caller.md",
     "面试/网络/HTTP.md",
     "面试/网络/Websockt.md",
-    "面试/网络/TCP.md",
-    "面试/网络/网络分层模型.md",
-    "面试/设计模式.md",
-    "面试/工程化/工程化.md",
     "Untitled.canvas",
     "assets/Pasted image 20241125223229.png",
     "assets/Pasted image 20250228143000.png",

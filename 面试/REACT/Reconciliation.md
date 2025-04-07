@@ -17,7 +17,7 @@ fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，�
 - 使用bitmask(位掩码)标记更新`Fiber.flag`
 #### completeWork()
 - 根据flag输出新的虚拟DOM`stateNode`
-- 回溯过程中冒泡更新标记flags
+- 回溯过程中冒泡更新标记`flags`
 
 ### **提交（Commit）阶段**
 >不可中断

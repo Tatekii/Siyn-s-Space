@@ -59,5 +59,5 @@ memoizedState : { state: 0, next -> { state: "Hi", next: null } }
 | useLayoutEffect           | —                      | ✅ **同步执行**（在 DOM 更新后立即执行）    |
 | useImperativeHandle       | —                      | ✅ 在 DOM 变更后执行                |
 | useTransition             | ✅ 标记某些状态更新为并发          | —                            |
-| useDeferredValue          | ✅标记某些状态更新为并发           | —                            |
+| useDeferredValue          | ✅标记某些状态更新为并发（低优先级      | —                            |
 | [[useSyncExternalStore]]  | ✅ 读取外部存储的值             | ✅ 在 commit 阶段触发回调            |

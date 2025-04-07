@@ -66,7 +66,7 @@
 4. getSnapshotBeforeUpdate()
 5. *UNSAFE_componentWillUpdate()*
 6. componentDidUpdate()
-#### UNMOUNT阶段
+#### UnMount阶段
 7. componentWillUnmount
 #### 错误
 1. static getDerivedStateFromError()

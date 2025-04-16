@@ -34,31 +34,75 @@
 ### **依赖注入的核心理念：**
 
 - 类不再自己创建依赖对象，而是通过外部传递（注入）这些依赖对象。
-    
+
 - 这样一来，类的依赖关系被管理和注入，不必自己负责这些依赖的创建和管理。
-    
+
+### **依赖注入的工作方式：**
+
+#### **构造函数注入**
+通过构造函数注入依赖项。
+
+#### **属性注入**
+通过 setter 方法注入依赖项。
+
+#### **接口注入**
+通过接口的实现类来注入依赖项。
+
 
   
 
-#### **依赖注入的工作方式：**
-
-- **构造函数注入**：通过构造函数注入依赖项。
-    
-- **属性注入**：通过 setter 方法注入依赖项。
-    
-- **接口注入**：通过接口的实现类来注入依赖项。
-    
-
-  
-
-#### **例子：依赖注入**
-
-  
+### **例子：依赖注入**
 
 假设有一个 Car 类依赖于 Engine 类，如果不使用 DI，Car 类可能自己创建一个 Engine 对象，这样就会导致高耦合。通过 DI，Car 类不再关心如何创建 Engine，而是依赖外部注入的 Engine 对象。
 
-  
+##### 不使用 DI
+```java
+class Engine {
+  start() {
+    console.log('Engine started');
+  }
+}
 
-##### **1.** 
+class Car {
+  constructor() {
+    this.engine = new Engine();  // 创建了自己的 Engine 实例
+  }
 
-##### **不使用 DI：**
+  drive() {
+    this.engine.start();
+    console.log('Car is driving');
+  }
+}
+
+const car = new Car();
+car.drive();
+```
+
+##### 使用 DI
+```java
+class Engine {
+  start() {
+    console.log('Engine started');
+  }
+}
+
+class Car {
+  constructor(engine) {
+    this.engine = engine;  // Engine 对象由外部传入
+  }
+
+  drive() {
+    this.engine.start();
+    console.log('Car is driving');
+  }
+}
+
+const engine = new Engine();
+const car = new Car(engine);  // Engine 由外部创建并传入
+car.drive();
+```
+
+### **DI 的好处：**
+1. **解耦**：对象不再直接控制其依赖的创建，使得它们更容易测试和维护。
+2. **可测试性**：依赖可以在单元测试中轻松地替换为 mock 对象，从而提升测试的效率。
+3. **灵活性**：通过外部配置，可以轻松替换依赖对象，例如替换不同的数据库连接、日志系统等。

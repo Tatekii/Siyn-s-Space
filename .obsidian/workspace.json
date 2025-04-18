@@ -11,10 +11,14 @@
             "id": "82dfb6a88b7d535d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "英语/XDF_IELTS语法/复合句.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "复合句"
             }
           }
         ]
@@ -138,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "英语/XDF_IELTS语法/复合句.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 复合句"
             }
           },
           {
@@ -190,6 +195,9 @@
   },
   "active": "82dfb6a88b7d535d",
   "lastOpenFiles": [
+    "英语/XDF_IELTS语法/并列句.md",
+    "英语/XDF_IELTS语法/复合句.md",
+    "英语/XDF_IELTS语法/非谓语动词.md",
     "面试/Node/NEST/IoC & DI.md",
     "面试/Node/NEST/AOP.md",
     "面试/项目问题/通信加密.md",
@@ -214,9 +222,6 @@
     "面试/VUE/vue生命周期.md",
     "面试/VUE/数据绑定.md",
     "面试/VUE/Diff.md",
-    "面试/网络/HTTPS.md",
-    "面试/JAVASCRIPT/V8引擎.md",
-    "面试/JAVASCRIPT/事件循环.md",
     "Untitled.canvas",
     "assets/Pasted image 20241125223229.png",
     "assets/Pasted image 20250228143000.png",

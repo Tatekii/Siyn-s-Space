@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/常量.md",
+                "file": "Solidity/作用域.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常量"
+              "title": "作用域"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/常量.md",
+                "file": "Solidity/作用域.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 常量"
+              "title": "Outline of 作用域"
             }
           },
           {
@@ -197,9 +197,9 @@
   "lastOpenFiles": [
     "Solidity/变量类型.md",
     "Solidity/常量.md",
+    "Solidity/函数.md",
     "Solidity/变量可见性.md",
     "面试/Node/NEST/IoC & DI.md",
-    "Solidity/函数.md",
     "Solidity/作用域.md",
     "Solidity/Gas.md",
     "面试/Node/NEST/AOP.md",

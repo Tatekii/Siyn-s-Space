@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/作用域.md",
+                "file": "Solidity/变量类型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "作用域"
+              "title": "变量类型"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/作用域.md",
+                "file": "Solidity/变量类型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 作用域"
+              "title": "Outline of 变量类型"
             }
           },
           {
@@ -195,12 +195,13 @@
   },
   "active": "00c385f33a0003ca",
   "lastOpenFiles": [
+    "Solidity/Event.md",
+    "Solidity/作用域.md",
     "Solidity/变量类型.md",
     "Solidity/常量.md",
     "Solidity/函数.md",
     "Solidity/变量可见性.md",
     "面试/Node/NEST/IoC & DI.md",
-    "Solidity/作用域.md",
     "Solidity/Gas.md",
     "面试/Node/NEST/AOP.md",
     "面试/Node/微服务/Skaffold.md",
@@ -233,7 +234,6 @@
     "面试/网络/TCP.md",
     "面试/网络/HTTP.md",
     "面试/网络/网络分层模型.md",
-    "面试/REACT/Diff.md",
     "Untitled.canvas",
     "英语/XDF_IELTS词汇/assets",
     "面试/assets",

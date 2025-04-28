@@ -212,8 +212,8 @@
   "active": "18b130377a1642a9",
   "lastOpenFiles": [
     "Solidity/函数.md",
-    "Solidity/数据类型.md",
     "Solidity/作用域.md",
+    "Solidity/数据类型.md",
     "Solidity/Gas.md",
     "面试/Node/NEST/IoC & DI.md",
     "面试/Node/NEST/AOP.md",

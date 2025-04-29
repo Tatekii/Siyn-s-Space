@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/异常处理.md",
+                "file": "Solidity/Library.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "异常处理"
+              "title": "Library"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/异常处理.md",
+                "file": "Solidity/Library.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 异常处理"
+              "title": "Outline of Library"
             }
           },
           {
@@ -195,9 +195,10 @@
   },
   "active": "00c385f33a0003ca",
   "lastOpenFiles": [
+    "Solidity/异常处理.md",
+    "Solidity/Library.md",
     "Solidity/函数.md",
     "面试/工程化/Yeoman.md",
-    "Solidity/异常处理.md",
     "Solidity/常量.md",
     "Solidity/变量类型.md",
     "Solidity/变量可见性.md",
@@ -233,7 +234,6 @@
     "面试/项目问题/通信加密.md",
     "面试/Node/NEST",
     "面试/项目问题/Tree拖拽.md",
-    "面试/网络/TCP.md",
     "Untitled.canvas",
     "英语/XDF_IELTS词汇/assets",
     "面试/assets",

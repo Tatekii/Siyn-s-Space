@@ -2,7 +2,7 @@
   "accentColor": "",
   "theme": "system",
   "cssTheme": "Minimal",
-  "interfaceFontFamily": "JetBrains Mono",
-  "textFontFamily": "JetBrains Mono",
-  "monospaceFontFamily": "JetBrains Mono"
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": ""
 }

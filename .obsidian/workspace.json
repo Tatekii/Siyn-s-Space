@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/变量类型.md",
+                "file": "Solidity/函数.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "变量类型"
+              "title": "函数"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/变量类型.md",
+                "file": "Solidity/函数.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 变量类型"
+              "title": "Outline of 函数"
             }
           },
           {
@@ -195,8 +195,8 @@
   },
   "active": "00c385f33a0003ca",
   "lastOpenFiles": [
-    "Solidity/变量可见性.md",
     "Solidity/变量类型.md",
+    "Solidity/变量可见性.md",
     "Solidity/Event.md",
     "Solidity/作用域.md",
     "Solidity/常量.md",

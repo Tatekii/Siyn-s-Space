@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/Library.md",
+                "file": "Solidity/继承.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Library"
+              "title": "继承"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/Library.md",
+                "file": "Solidity/继承.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Library"
+              "title": "Outline of 继承"
             }
           },
           {
@@ -195,8 +195,9 @@
   },
   "active": "00c385f33a0003ca",
   "lastOpenFiles": [
-    "Solidity/异常处理.md",
     "Solidity/Library.md",
+    "Solidity/继承.md",
+    "Solidity/异常处理.md",
     "Solidity/函数.md",
     "面试/工程化/Yeoman.md",
     "Solidity/常量.md",
@@ -233,7 +234,6 @@
     "英语/XDF_IELTS语法/非谓语动词.md",
     "面试/项目问题/通信加密.md",
     "面试/Node/NEST",
-    "面试/项目问题/Tree拖拽.md",
     "Untitled.canvas",
     "英语/XDF_IELTS词汇/assets",
     "面试/assets",

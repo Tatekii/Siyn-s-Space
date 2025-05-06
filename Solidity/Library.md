@@ -7,7 +7,7 @@ librbary CustomLib{}
 ```
 
 ## 注意
-1. 库不能定义[`storage`](变量类型.md#`storage`)状态变量
+1. 库不能定义[storage](变量类型.md#`storage`)状态变量
 2. 库不能发送接收以太币
 3. 库不可以被销毁，因为它是无状态的
 4. 库不能继承和被继承

@@ -47,7 +47,14 @@ contract CallerContract {
 ## 接口调用
 - 接口名
 - 实现接口的合约地址
-- 
+- 调用的函数
 ```sol
 MyInterface(contractAddress).myFunction();
+```
+也可使用接口变量
+```sol
+//先定义一个接口变量otherContract
+OtherContractInterface  otherContract = OtherContractInterface(otherContractAddress);
+//随后使用interface.getValue()调用otherContract的getValue函数
+otherContract.getValue();
 ```

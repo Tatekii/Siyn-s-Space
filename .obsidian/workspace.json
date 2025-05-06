@@ -35,7 +35,8 @@
               "title": "全局变量"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/函数.md",
+                "file": "Solidity/全局变量.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 函数"
+              "title": "Outline of 全局变量"
             }
           },
           {
@@ -207,8 +208,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "643b80f362f30fa8",
+  "active": "f7d283246772588f",
   "lastOpenFiles": [
+    "Solidity/函数.md",
     "Solidity/全局变量.md",
     "Solidity/作用域.md",
     "Solidity/Event.md",
@@ -217,7 +219,6 @@
     "Solidity/常量.md",
     "Solidity/异常处理.md",
     "Solidity/继承.md",
-    "Solidity/函数.md",
     "Solidity/abstract.md",
     "面试/JAVASCRIPT/ES6及以后新特性.md",
     "Solidity/library.md",

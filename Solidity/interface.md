@@ -27,7 +27,7 @@ contract CallerContract {
     constructor(address contractAddress) {
         myContract = MyInterface(contractAddress);
     }
-		//通过接口调用MyContract中的myFunction函数（接口调用我们会在下一节中详细讲解）
+		//通过接口调用MyContract中的myFunction函数
     function callInterface(uint256 value) public returns (uint256) {
         uint256 result = myContract.myFunction(value);
         return result;

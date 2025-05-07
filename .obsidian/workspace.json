@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ethers/Provider.md",
+                "file": "Solidity/常量.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Provider"
+              "title": "常量"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "变量类型"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/变量类型.md",
+                "file": "Solidity/常量.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 变量类型"
+              "title": "Outline of 常量"
             }
           },
           {
@@ -208,17 +207,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ae47c3c1ea3d83b1",
+  "active": "643b80f362f30fa8",
   "lastOpenFiles": [
-    "Solidity/常量.md",
+    "Ethers/Provider.md",
     "Solidity/变量类型.md",
+    "Solidity/常量.md",
     "Ethers/单位换算.md",
     "Ethers/加密.md",
     "Ethers/编码.md",
     "Ethers/Contract.md",
     "Ethers/Wallets.md",
     "Ethers/Singer.md",
-    "Ethers/Provider.md",
     "Ethers",
     "Solidity/全局变量.md",
     "Solidity/函数.md",

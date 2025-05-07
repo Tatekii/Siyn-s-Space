@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "结构体",
+                "query": "modifer",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -207,7 +208,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "643b80f362f30fa8",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "Solidity/变量类型.md",
     "Solidity/常量.md",

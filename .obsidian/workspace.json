@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mapping",
+                "query": "结构体",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,7 +194,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "643b80f362f30fa8",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "Solidity/全局变量.md",
     "Solidity/函数.md",

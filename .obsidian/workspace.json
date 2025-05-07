@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/低级调用.md",
+                "file": "Solidity/变量类型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "低级调用"
+              "title": "变量类型"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/低级调用.md",
+                "file": "Solidity/变量类型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 低级调用"
+              "title": "Outline of 变量类型"
             }
           },
           {
@@ -209,9 +209,10 @@
   },
   "active": "643b80f362f30fa8",
   "lastOpenFiles": [
+    "Solidity/变量可见性.md",
+    "Solidity/低级调用.md",
     "Solidity/转账.md",
     "Solidity/函数.md",
-    "Solidity/低级调用.md",
     "Solidity/interface.md",
     "Solidity/Gas.md",
     "Solidity/异常处理.md",
@@ -229,7 +230,6 @@
     "Ethers",
     "Solidity/全局变量.md",
     "Solidity/作用域.md",
-    "Solidity/变量可见性.md",
     "Solidity/Event.md",
     "面试/JAVASCRIPT/ES6及以后新特性.md",
     "Solidity/library.md",

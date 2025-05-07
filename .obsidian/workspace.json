@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ethers/单位换算.md",
+                "file": "Solidity/常量.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "单位换算"
+              "title": "常量"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ethers/单位换算.md",
+                "file": "Solidity/常量.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 单位换算"
+              "title": "Outline of 常量"
             }
           },
           {
@@ -210,14 +210,15 @@
   },
   "active": "ae47c3c1ea3d83b1",
   "lastOpenFiles": [
+    "Solidity/变量类型.md",
+    "Solidity/常量.md",
+    "Ethers/单位换算.md",
     "Ethers/加密.md",
     "Ethers/编码.md",
-    "Ethers/单位换算.md",
     "Ethers/Contract.md",
     "Ethers/Wallets.md",
     "Ethers/Singer.md",
     "Ethers/Provider.md",
-    "Solidity/变量类型.md",
     "Ethers",
     "Solidity/全局变量.md",
     "Solidity/函数.md",
@@ -225,7 +226,6 @@
     "Solidity/变量可见性.md",
     "Solidity/低级调用.md",
     "Solidity/Event.md",
-    "Solidity/常量.md",
     "Solidity/异常处理.md",
     "Solidity/继承.md",
     "Solidity/abstract.md",

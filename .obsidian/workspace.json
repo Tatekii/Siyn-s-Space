@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/interface.md",
+                "file": "Solidity/低级调用.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "interface"
+              "title": "低级调用"
             }
           },
           {
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/interface.md",
+                "file": "Solidity/低级调用.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of interface"
+              "title": "Outline of 低级调用"
             }
           },
           {
@@ -210,13 +209,13 @@
   },
   "active": "643b80f362f30fa8",
   "lastOpenFiles": [
-    "Solidity/Gas.md",
     "Solidity/转账.md",
-    "Solidity/低级调用.md",
     "Solidity/函数.md",
+    "Solidity/低级调用.md",
+    "Solidity/interface.md",
+    "Solidity/Gas.md",
     "Solidity/异常处理.md",
     "Solidity/abstract.md",
-    "Solidity/interface.md",
     "Solidity/继承.md",
     "Solidity/常量.md",
     "Solidity/变量类型.md",

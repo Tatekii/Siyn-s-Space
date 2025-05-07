@@ -88,8 +88,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -208,7 +207,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "643b80f362f30fa8",
+  "active": "328a4439f200cf35",
   "lastOpenFiles": [
     "Solidity/abstract.md",
     "Solidity/Event.md",

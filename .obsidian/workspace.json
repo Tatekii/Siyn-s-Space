@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "useOptimistic",
+                "query": "多线程",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -207,7 +208,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "643b80f362f30fa8",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "面试/性能优化/LCP.md",
     "面试/性能优化/性能优化.md",

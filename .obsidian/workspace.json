@@ -88,8 +88,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -208,7 +207,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "57c1c285583568e8",
+  "active": "328a4439f200cf35",
   "lastOpenFiles": [
     "面试/性能优化/LCP.md",
     "面试/性能优化/性能优化.md",

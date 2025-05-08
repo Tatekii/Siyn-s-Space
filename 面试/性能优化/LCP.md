@@ -26,3 +26,20 @@ LCP 衡量的是**页面主内容（最大可见内容）出现在视口中的�
 ```
 
 ### 字体优化
+- ✅ 使用 font-display: swap（防止字体加载阻塞渲染，字体加载完后切换）
+- ✅ 使用自托管字体
+- ✅ 限制字符集范围
+
+### 脚本优化
+- ✅ 移除未使用的 CSS（Tree Shaking）
+- ✅  CSS压缩（Minify CSS）
+	- 移除空格与换行
+	- 移除注释
+	- 简化颜色值
+	- 合并重复属性规则
+- ✅ 延迟加载非关键 JS（dynamic import() + suspense）
+- ✅ 使用 CSS Modules 或 Tailwind，避免大型全局样式表
+### 服务器与 CDN 优化
+- ✅ 使用CDN
+- ✅ 启用 HTTP/2 or HTTP/3
+- ✅ 使用 SSR/SSG 提前渲染页面内容

@@ -1,13 +1,35 @@
-name: Trigger Netlify Build
+name: Trigger Netlify Build on Content Update
 
 on:
   push:
     branches:
-      - publish
+      - publish  # 或其他用于写作的分支
 
 jobs:
-  trigger:
+  trigger-netlify-build:
+    name: Trigger Netlify Build
     runs-on: ubuntu-latest
+
     steps:
-      - name: Send POST to Netlify Build Hook
-        run: curl -X POST -d '{}' ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+      - name: Display trigger context
+        run: echo "Triggered by commit on ${{ github.repository }} @ ${{ github.sha }}"
+
+      - name: Send build request to Netlify
+        id: netlify
+        run: |
+          echo "Triggering Netlify build..."
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK_URL }}")
+
+          echo "Netlify responded with HTTP $response"
+          
+          # Store response code as output
+          echo "response_code=$response" >> $GITHUB_OUTPUT
+
+      - name: Check if Netlify trigger succeeded
+        run: |
+          if [[ "${{ steps.netlify.outputs.response_code }}" != "200" ]]; then
+            echo "❌ Netlify build trigger failed with status ${{ steps.netlify.outputs.response_code }}"
+            exit 1
+          else
+            echo "✅ Netlify build successfully triggered."
+          fi

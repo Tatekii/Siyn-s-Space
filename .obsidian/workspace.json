@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Solidity/library.md",
+                "file": "Solidity/interface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "library"
+              "title": "interface"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Solidity/library.md",
+                "file": "Solidity/interface.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of library"
+              "title": "Outline of interface"
             }
           },
           {
@@ -195,6 +195,7 @@
   },
   "active": "644ecf5e29dc2f88",
   "lastOpenFiles": [
+    "Solidity/library.md",
     "Solidity/interface.md",
     "Solidity/标准/ERC20.md",
     "README.md",
@@ -218,7 +219,6 @@
     "Solidity/abstract.md",
     "Solidity/Event.md",
     "Solidity/Gas.md",
-    "Solidity/library.md",
     "Solidity/作用域.md",
     "Solidity/变量可见性.md",
     "Solidity/低级调用.md",

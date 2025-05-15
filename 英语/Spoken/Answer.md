@@ -33,3 +33,5 @@
 #### Dislike
 - can't stand
 - can't bear
+- be sick of
+- loathe[/ləʊð/]

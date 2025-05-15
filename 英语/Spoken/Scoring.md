@@ -12,7 +12,7 @@ A discourse marker is a word or phrase that plays a role in managing the flow an
 - well
 - you know
 - I mean
-#### Discourse Connectives
+### Discourse Connectives
 - so
 - because
 	- as
@@ -23,6 +23,16 @@ A discourse marker is a word or phrase that plays a role in managing the flow an
 	- yet
 # Lexical Resource
 ## Less common words
+
+## Idioms [/'ɪdɪəm/]
+
+# Grammatical Range & Accuracy
+## Tenses
+时态
+## Person
+
+## Sentence structure
 # Pronunciation
 ## Intonation
+语调
 ## Clarity

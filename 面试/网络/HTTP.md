@@ -128,7 +128,8 @@ HTTP 是基于 TCP/IP 协议的应用层协议，用于客户端和服务器之�
 😭存在队头阻塞(Head-of-Line Blocking, HOLB)
 ### HTTP1.1
 
-- yin ru l
+- 引入了更细致的缓存控制如 `Cache-Control`、`ETag` 等。
+- 范围请求（Byte-Range Requests）：允许客户端请求资源的某个部分（例如，断点续传）。
 #### 持久连接
 也称为 **HTTP Keep-Alive**，是指在一个 TCP 连接上可以发送和接收**多个 HTTP 请求和响应**，而不需要为每个请求都建立和关闭新的 TCP 连接。
 连接会在一段时间不活动后（由 `Keep-Alive` 超时时间控制）或在任一方明确关闭时才断开。

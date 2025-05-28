@@ -188,10 +188,7 @@ Keep-Alive: timeout=5, max=100
 `HTTP/2` 协议本身没有强制要求加密，但所有主流浏览器（如 Chrome, Firefox, Edge）都只支持在 TLS/SSL 之上运行的 `HTTP/2` (`h2`)。这使得 `HTTP/2` 实际上是基于 HTTPS 的。
 ### HTTP3
 http3 使用新的 UDP 协议`QUIC (Quick UDP Internet Connections)`
-
-
-- 解决 http2 时代丢包阻塞
-
-- 切换网络时的连接保持（快速重启会话）
-
-- 加密传输
+- **TCP 队头阻塞的解决：** 由于 QUIC 内部的多路复用是基于 UDP 帧的，一个流的丢包不会影响其他流的传输，从而彻底解决了 TCP 层的队头阻塞。
+- **更快的连接建立：** QUIC 可以在第一次握手时就完成 TLS 握手，实现 0-RTT（Zero Round-Trip Time）或 1-RTT 连接建立，大大减少了连接延迟。
+- **连接迁移：** 当用户网络环境变化（例如，从 Wi-Fi 切换到蜂窝网络）时，QUIC 连接可以平滑地迁移到新的 IP 地址，而无需重新建立连接，这对移动设备非常有利。
+- **内置加密：** QUIC 协议内置了 TLS 1.3 加密，所有 QUIC 连接都是加密的，安全性更高。

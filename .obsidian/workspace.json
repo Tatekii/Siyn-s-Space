@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/工程化/Babel.md",
+                "file": "面试/前端安全.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Babel"
+              "title": "前端安全"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5,
+    "width": 212.5,
     "collapsed": true
   },
   "right": {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/工程化/Babel.md",
+                "file": "面试/前端安全.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Babel"
+              "title": "Outline of 前端安全"
             }
           },
           {
@@ -196,8 +196,10 @@
   },
   "active": "8b282bd283233a44",
   "lastOpenFiles": [
-    "面试/工程化/Webpack.md",
+    "面试/三面&HR问题.md",
+    "面试/SEO.md",
     "面试/工程化/Babel.md",
+    "面试/工程化/Webpack.md",
     "面试/工程化/Untitled",
     "面试/REACT/Reconciliation.md",
     "面试/REACT/ConcurrrentMode.md",
@@ -222,9 +224,7 @@
     "Solidity/library.md",
     "Solidity/标准/ERC20.md",
     "README.md",
-    "Ethers/编码.md",
     "untitled folder",
-    "Solidity/标准/ERC721.md",
     "Solidity/标准",
     "面试/性能优化",
     "面试/NEXT",

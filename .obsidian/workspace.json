@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/网络/Websockt.md",
+                "file": "面试/网络/HTTP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Websockt"
+              "title": "HTTP"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.5
+    "width": 212.5,
+    "collapsed": true
   },
   "right": {
     "id": "b4fb401750063676",
@@ -142,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/网络/Websockt.md",
+                "file": "面试/网络/HTTP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Websockt"
+              "title": "Outline of HTTP"
             }
           },
           {
@@ -195,6 +196,7 @@
   },
   "active": "075d9feddd706f5a",
   "lastOpenFiles": [
+    "面试/网络/Websockt.md",
     "面试/工程化/Webpack HMR vs. Vite 热更新.md",
     "面试/工程化/Webpack.md",
     "面试/工程化/nginx.conf.md",
@@ -221,7 +223,6 @@
     "英语/XDF_IELTS语法/非谓语动词.md",
     "英语/Spoken/Further Information.md",
     "英语/Spoken/Answer.md",
-    "英语/Spoken/Scoring.md",
     "英语/Spoken",
     "untitled folder",
     "Solidity/标准",

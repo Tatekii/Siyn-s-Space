@@ -14,13 +14,9 @@ fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，�
 - hooks执行
 - 将fiber链接到[副作用](副作用.md)
 - 记录副作用类型使用bitmask(位掩码)标记`Fiber.flag`
-
 #### completeWork()
-- 根据flag输出新的虚拟DOM`stateNode`
-- 回溯过程中冒泡更新标记`flags`
-- **构建/更新 DOM 节点：** 对于宿主组件（如 `div`），在 `completeWork` 阶段会创建或更新对应的真实 DOM 节点 (`stateNode`)，并应用 `props`。
-- **收集并冒泡副作用：** 这是 `completeWork` 的一个核心职责。它会收集子 Fiber 节点的所有副作用，并将它们连接到当前 Fiber 节点的副作用链表 (`firstEffect` 和 `lastEffect`)。这样，副作用信息就从子节点向父节点传递，最终形成一个包含所有需要执行副作用的 Fiber 节点的链表，这个链表在 Commit 阶段被遍历。
-- **完成 Fiber 节点：** 标记该 Fiber 节点已完成其 Render 阶段的工作。
+- 根据flag输出新的DOM节点`stateNode`
+- 回溯过程中冒泡并收集副作用，并将它们连接到Fiber 节点的副作用链表 (`firstEffect` 和 `lastEffect`)。（子节点将自己的副作用冒泡给父节点的过程）。
 
 ### **提交（Commit）阶段**
 >⚠️不可中断！保证UI完整性

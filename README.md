@@ -1,1 +1,4 @@
 个人obsidian笔记同步
+
+祝你出走半生归来仍是本地优先markdown
+

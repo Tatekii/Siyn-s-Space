@@ -124,7 +124,7 @@ http {
     # 引入其他配置文件。
     # 通常将每个虚拟主机的配置放在独立的 .conf 文件中，并放在 conf.d 或 sites-enabled 目录下，
     # 这样可以更好地组织和管理配置。
-    include /etc/nginx/conf.d/*.conf;
+    # include /etc/nginx/conf.d/*.conf;
     # (某些发行版可能使用 sites-enabled 目录)
     # include /etc/nginx/sites-enabled/*;
 }
@@ -260,6 +260,7 @@ server {
 # 上游服务器组 (upstream context)
 # 定义一组后端服务器，通常与负载均衡结合使用。
 # ----------------------------------------------------------------------
+
 # 定义一个名为 'backend_servers' 的上游服务器组。
 # 当你在 proxy_pass 指令中使用这个组名时，Nginx 会根据负载均衡算法选择一个后端服务器。
 upstream backend_servers {

@@ -1,6 +1,11 @@
 # Websocket
 WebSocket 是一种在单个 TCP 连接上进行**全双工、长连接通信**的协议，用于浏览器和服务器之间进行实时、低延迟的数据交换。
 
+### websocket之前的实时通信
+1. 客户端轮询
+2. 长轮询（刮起请求不响应）
+3. 流式HTTP (HTTP Streaming) / Server-Sent Events (SSE)
+
 ## 特点
 - 全双工双向通信
 	- 服务端推送
@@ -8,18 +13,20 @@ WebSocket 是一种在单个 TCP 连接上进行**全双工、长连接通信**�
 - 低延迟，轻量头部
 
 
-
+## 工作原理
 ### WS握手
-
 1. 客户端请求
 
 ```http
-GET /chat HTTP/1.1
-Host: example.com
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Key: xxxxxxxxx==
-Sec-WebSocket-Version: 13
+GET /chat HTTP/1.1 
+Host: server.example.com 
+Upgrade: websocket 
+Connection: Upgrade 
+%% 握手过程的安全性验证。 %%
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ== 
+%% 客户端支持的 WebSocket 协议版本 %%
+Sec-WebSocket-Version: 13 
+Origin: http://client.example.com
 ```
 
 2. 服务端响应协议升级

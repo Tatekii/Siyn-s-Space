@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/手写题.md",
+                "file": "面试/Node/NEST/IoC & DI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "手写题"
+              "title": "IoC & DI"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "控制反转",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.5,
-    "collapsed": true
+    "width": 212.5
   },
   "right": {
     "id": "b4fb401750063676",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/JAVASCRIPT/手写题.md",
+                "file": "面试/Node/NEST/IoC & DI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 手写题"
+              "title": "Outline of IoC & DI"
             }
           },
           {
@@ -194,8 +193,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "075d9feddd706f5a",
+  "active": "328a4439f200cf35",
   "lastOpenFiles": [
+    "面试/JAVASCRIPT/手写题.md",
     "面试/网络/HTTP.md",
     "面试/网络/Websockt.md",
     "面试/工程化/Webpack HMR vs. Vite 热更新.md",
@@ -222,7 +222,6 @@
     "英语/XDF_IELTS语法/时态.md",
     "英语/XDF_IELTS语法/语态.md",
     "英语/XDF_IELTS语法/非谓语动词.md",
-    "英语/Spoken/Further Information.md",
     "英语/Spoken",
     "untitled folder",
     "Solidity/标准",

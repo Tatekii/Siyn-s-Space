@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/Node/NEST/生命周期.md",
+                "file": "面试/Node/NEST/多环境配置.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "生命周期"
+              "title": "多环境配置"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/Node/NEST/生命周期.md",
+                "file": "面试/Node/NEST/多环境配置.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 生命周期"
+              "title": "Outline of 多环境配置"
             }
           },
           {
@@ -195,8 +195,9 @@
   },
   "active": "075d9feddd706f5a",
   "lastOpenFiles": [
-    "面试/Node/NEST/AOP.md",
     "面试/Node/NEST/生命周期.md",
+    "面试/Node/NEST/多环境配置.md",
+    "面试/Node/NEST/AOP.md",
     "面试/Node/NEST/IoC & DI.md",
     "面试/JAVASCRIPT/手写题.md",
     "面试/网络/HTTP.md",
@@ -221,7 +222,6 @@
     "英语/XDF_IELTS语法/复合句.md",
     "面试/JAVASCRIPT/ES6及以后新特性.md",
     "英语/XDF_IELTS语法/并列句.md",
-    "英语/XDF_IELTS语法/情态.md",
     "英语/Spoken",
     "untitled folder",
     "Solidity/标准",

@@ -1,9 +1,11 @@
 # Provider Class
+`Provider`类是一个为以太坊网络连接提供抽象的类，它提供对区块链及其状态的**只读**访问。
+
 ## `ethers.getDefaultProvider()`
 ```js
 const provider = ethers.getDefaultProvider("network");
 ```
-
+默认节点有速度限制。
 ### 支持的网络
 - goerli 
 - kovan 
@@ -51,7 +53,7 @@ https://eth-mainnet.alchemyapi.io/v2/YOUR_API_KEY
 获取有关网络的信息，例如网络名称、链ID等。
 
 ### getBlockNumber()
-获取当前区块号。
+获取当前区块高度。
 
 ### getTransactionCount()
 返回特定地址的交易数量，包括收入和支出的交易。

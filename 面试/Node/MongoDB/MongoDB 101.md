@@ -77,9 +77,7 @@ MongoDB 允许在文档中嵌入其他文档或数组，这使得复杂的数据
 - **删除集合**：`db.collection.drop()`
     
 - **删除数据库**：`db.dropDatabase()`
-    
 
----
 
 ## 索引（Indexes）
 
@@ -105,12 +103,52 @@ db.collection.createIndex({ email: 1 }, { unique: true })`，确保 `email` 字�
 只为存在索引字段的文档创建索引。
 ```js
 db.users.createIndex( { email: 1 }, { unique: true, sparse: true } )
-
 ```
-### **TTL 索引（Time-To-Live Indexes）**
-用于自动删除过期文档，常用于日志或会话数据。
+在这个例子中：
+- 如果一个文档是 `{ _id: 1, name: "Alice", email: "alice@example.com" }`，它会包含在索引中。
+- 如果一个文档是 `{ _id: 2, name: "Bob", email: "bob@example.com" }`，它会包含在索引中。
+- 如果一个文档是 `{ _id: 3, name: "Charlie" }`（没有 `email` 字段），它**不会**包含在索引中。
+- 现在，你可以插入两个 `email` 字段都为空或不存在的文档，而不会违反唯一性约束，例如：
+    - `db.users.insertOne({ name: "David" })`
+    - `db.users.insertOne({ name: "Eve" })`
+    - 但你不能插入两个 `email` 都是 `"frank@example.com"` 的文档。
 
-### **分析查询**
+### **TTL 索引（Time-To-Live Indexes）**
+**TTL（Time-To-Live）索引**是一种特殊的单字段索引，MongoDB 利用它来**自动删除**超过一定“寿命”的文档。这在处理时效性数据（如日志、会话、缓存）时非常有用。
+
+TTL 索引基于日期类型的字段，MongoDB 会定期检查该字段的值，并删除那些值早于当前时间加上一个指定存活时间的文档。
+
+示例：
+```js
+db.log_entries.createIndex( { "createdAt": 1 }, { expireAfterSeconds: 86400 } // 24小时 = 86400秒 )
+```
+在这个例子中：
+
+- `createdAt` 必须是一个 **日期类型**（Date）的字段。
+- 当一个文档插入后，MongoDB 会查看 `createdAt` 字段的值。
+- 在 `createdAt` 值的基础上加上 86400 秒后，如果当前时间超过了这个计算出来的时间点，该文档就会被 MongoDB 的后台 TTL 清理进程自动删除。
+    
+#### TTL 索引的工作机制
+
+- **后台进程**：MongoDB 有一个专门的后台进程会定期（默认为 60 秒一次）运行，扫描包含 TTL 索引的集合。
+    
+- **删除策略**：当进程发现某个文档的过期时间已到，就会将其从集合中删除。删除操作类似于常规的删除，但由数据库自动触发。
+    
+- **单字段限制**：TTL 索引只能定义在**单个字段**上。
+    
+- **复合索引不能是 TTL 索引**：你不能在一个复合索引上指定 `expireAfterSeconds`。
+    
+- **字段类型**：被索引的字段必须是 **BSON 日期类型**。如果该字段是数组，MongoDB 会使用数组中最小的（最老的）日期来计算过期时间。如果字段不存在或不是日期类型，文档不会被删除。
+
+#### 注意事项：
+
+- TTL 索引只删除**整个文档**，不能删除文档中的某个字段。
+    
+- 删除操作是异步的，所以文档在过期后可能不会立即被删除。这通常是分钟级到秒级的延迟。
+    
+- TTL 索引不能用于复制集的主节点之外的节点，从节点会复制主节点的删除操作。
+
+### ⏱️**分析查询**
 使用 `db.collection.explain().find(...)` 可以查看查询的执行计划，了解是否使用了索引以及查询效率。
     
 ## 聚合框架（Aggregation Framework）

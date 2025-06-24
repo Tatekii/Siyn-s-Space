@@ -103,10 +103,13 @@ db.collection.createIndex({ email: 1 }, { unique: true })`，确保 `email` 字�
     
 ### **稀疏索引（Sparse Indexes）**
 只为存在索引字段的文档创建索引。
-    
+```js
+db.users.createIndex( { email: 1 }, { unique: true, sparse: true } )
+
+```
 ### **TTL 索引（Time-To-Live Indexes）**
 用于自动删除过期文档，常用于日志或会话数据。
-    
+
 ### **分析查询**
 使用 `db.collection.explain().find(...)` 可以查看查询的执行计划，了解是否使用了索引以及查询效率。
     
@@ -215,19 +218,18 @@ db.orders.aggregate([
 ### **最小权限原则**
 为用户授予完成其工作所需的最小权限。
     
-**网络访问控制**：限制哪些 IP 地址可以连接到 MongoDB 实例。
+### **网络访问控制**
+限制哪些 IP 地址可以连接到 MongoDB 实例。
     
-- **数据加密**：考虑传输中的数据加密（TLS/SSL）和静态数据加密。
-    
+### **数据加密**
+考虑传输中的数据加密（TLS/SSL）和静态数据加密。
 
----
-
-## 9. 备份与恢复
-
+## 备份与恢复
 了解如何备份和恢复 MongoDB 数据至关重要，以防数据丢失或损坏。
 
-- **mongodump/mongorestore**：官方提供的命令行工具，用于备份和恢复整个数据库或集合。
-    
-- **文件系统快照**：对数据库目录进行快照备份。
-    
-- **MongoDB Cloud Manager / Ops Manager**：提供更全面的自动化备份和恢复解决方案。
+-  **mongodump/mongorestore**
+	官方提供的命令行工具，用于备份和恢复整个数据库或集合。
+- **文件系统快照**
+	对数据库目录进行快照备份。
+-  **MongoDB Cloud Manager / Ops Manager**
+	提供更全面的自动化备份和恢复解决方案。

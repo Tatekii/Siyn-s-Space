@@ -153,31 +153,74 @@ db.log_entries.createIndex( { "createdAt": 1 }, { expireAfterSeconds: 86400 } //
     
 ## 聚合框架（Aggregation Framework）
 
-MongoDB 的聚合框架是一个强大的工具，用于对文档进行数据处理和分析，类似于 SQL 中的 `GROUP BY`、`JOIN`、`SUM` 等操作。它通过**管道（Pipeline）**的形式工作，每个阶段对输入文档执行特定的操作，然后将结果传递给下一个阶段。
+MongoDB 的聚合框架是一个强大的工具，用于对文档进行数据处理和分析，类似于 SQL 中的 `GROUP BY`、`JOIN`、`SUM` 等操作。它通过管道（Pipeline）的形式工作，每个阶段对输入文档执行特定的操作，然后将结果传递给下一个阶段。
 
 ### **常用管道阶段**：
-    
+
 #### `$match`
 过滤文档（相当于 `WHERE`）。
-        
+```js
+db.orders.aggregate([ { $match: { status: "completed", amount: { $gt: 100 } } } ])
+```
 ####  `$project`
-选择、重命名或添加/删除字段。
-        
+选择、重命名或添加/删除字段（相当于SELECT）。
+```js
+db.users.aggregate([ { $project: { _id: 0, 
+// 不显示 _id 字段 
+fullName: { $concat: ["$firstName", " ", "$lastName"] }, // 合并字段 email: 1 // 显示 email 字段 } } ])
+```
+
 #### `$group`
 对文档进行分组，并执行聚合计算（如 `$sum`, `$avg`, `$min`, `$max`）。
-        
+**类比 SQL**：`GROUP BY` 子句，以及 `SUM()`, `COUNT()`, `AVG()` 等聚合函数。
+```js
+db.products.aggregate([ 
+	{ $group: { 
+		_id: "$category", // 按 category 字段分组 
+		totalProducts: { $sum: 1 }, // 计算每个分类的产品数
+		averagePrice: { $avg: "$price" } // 计算每个分类的平均价格 
+		} 
+	} 
+])
+```
+
 #### `$sort`
 对结果进行排序。
-        
+**类比 SQL**：`ORDER BY` 子句。
+```js
+db.employees.aggregate([ { $sort: { salary: -1, name: 1 } } // 先按薪水降序，再按姓名升序 ])
+```
+
 #### `$limit`
 限制返回的文档数量。
         
 #### `$skip`
 跳过指定数量的文档。
-        
+
+#### `$unwind`
+将文档中的数组字段“解构”，为数组中的每个元素生成一个新文档。
+```js
+// 原始文档: 
+{ _id: 1, name: "Product A", tags: ["电子", "家居"] } 
+
+db.products.aggregate([ { $unwind: "$tags" } ]) 
+// 结果示例: 
+{ _id: 1, name: "Product A", tags: "电子" } 
+{ _id: 1, name: "Product A", tags: "家居" }
+```
 #### `$lookup`
-执行左外连接，将来自另一个集合的文档添加到结果中（MongoDB 4.0 引入，部分弥补了无 JOIN 的劣势）。
-        
+执行左外连接（left outer join）操作，将来自另一个集合的文档添加到结果中（MongoDB 4.0 引入，部分弥补了无 JOIN 的劣势）。
+```js
+// 假设有 orders 集合和 products 集合 
+db.orders.aggregate([ 
+	{ $lookup: { 
+		from: "products", // 要连接的集合 
+		localField: "productId", // orders 集合中的字段 
+		foreignField: "_id", // products 集合中的字段 
+		as: "productInfo" // 结果中添加的新字段名，包含匹配的 products 文档} 
+	} 
+])
+```
 ### **示例**：计算每个用户的订单总金额
     
 ```js

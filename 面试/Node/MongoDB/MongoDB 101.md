@@ -277,7 +277,14 @@ db.orders.aggregate([
     
 ### **读写分离**
 可以将读请求分发到从节点，减轻主节点压力，提高读取性能。
-1. z
+1. 在连接复制集时指定读偏好
+2. 查询级别配置（覆盖默认值）
+```js
+// 这个查询将强制从主节点读取 
+const primaryDoc = await collection.find({ status: "critical" }, { readPreference: 'primary' }).toArray(); console.log("Docs from primary (forced):", primaryDoc); 
+// 这个查询将强制从从节点读取 
+const secondaryDoc = await collection.find({ category: "logs" }, { readPreference: 'secondary' }).toArray(); console.log("Docs from secondary (forced):", secondaryDoc);
+```
     
 ### **搭建**
 通常需要至少 3 个节点（一个主节点，两个从节点）来实现多数派选举，保证数据一致性。

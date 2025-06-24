@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/Node/MongoDB/数据模型设计.md",
+                "file": "面试/Node/MongoDB/MongoDB 101.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数据模型设计"
+              "title": "MongoDB 101"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/Node/MongoDB/数据模型设计.md",
+                "file": "面试/Node/MongoDB/MongoDB 101.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 数据模型设计"
+              "title": "Outline of MongoDB 101"
             }
           },
           {
@@ -195,8 +195,8 @@
   },
   "active": "fecc85fb5faad29d",
   "lastOpenFiles": [
-    "面试/Node/MongoDB/MongoDB 101.md",
     "面试/Node/MongoDB/数据模型设计.md",
+    "面试/Node/MongoDB/MongoDB 101.md",
     "面试/Node/MongoDB/分片示例.md",
     "面试/REACT/ConcurrrentMode.md",
     "面试/Node/Untitled.md",

@@ -245,7 +245,7 @@ db.orders.aggregate([
     
 - **避免全表扫描**：设计聚合管道时尽量利用索引。
 ## 💿复制集（Replica Sets）
-**复制集（Replica Set）**是 MongoDB 提高数据**高可用性（High Availability）**和**数据冗余（Data Redundancy）**的核心机制。它由一组 MongoDB 实例组成，这些实例维护着相同的数据集，确保即使某个实例发生故障，数据服务也能持续可用。
+**复制集（Replica Set）** 是 MongoDB 提高数据**高可用性（High Availability）**和**数据冗余（Data Redundancy）**的核心机制。它由一组 MongoDB 实例组成，这些实例维护着相同的数据集，确保即使某个实例发生故障，数据服务也能持续可用。
 ### **主节点（Primary）**
 - **写入操作的唯一入口：** 复制集中所有的**写入操作**（插入、更新、删除）都必须通过主节点进行。
     

@@ -20,7 +20,7 @@ fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，�
 
 ### **提交（Commit）阶段**
 >⚠️不可中断！保证UI完整性
-- 执行`effectList`(副作用链表)wo
+- 执行`effectList`(副作用链表)
 - DOM更新到实际页面上
 #### beforeMutation()
 - getSnapshotBeforeMutation

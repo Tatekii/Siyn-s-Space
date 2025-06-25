@@ -14,7 +14,7 @@ const [count, setCount] = useState(0);
 {
   memoizedState: state, // 存储当前状态值
   queue: { // 存储steState产生的更新队列
-  // ⭐️环状链表，首尾相连，pending指向当前更新
+  // ⭐️环状链表，首尾相连，pending指向最后一个Update对象
     pending: null
   },
   next: null // 指向下一个 hook

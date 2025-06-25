@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/API/useState.md",
+                "file": "面试/REACT/API/useEffect.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "useState"
+              "title": "useEffect"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/REACT/API/useState.md",
+                "file": "面试/REACT/API/useEffect.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of useState"
+              "title": "Outline of useEffect"
             }
           },
           {
@@ -198,6 +197,8 @@
   "lastOpenFiles": [
     "面试/REACT/API/useMemo.md",
     "面试/REACT/API/useEffect.md",
+    "面试/REACT/API/useState.md",
+    "面试/REACT/API/setState.md",
     "面试/REACT/Reconciliation.md",
     "面试/REACT/Hooks.md",
     "面试/REACT/Fiber架构.md",
@@ -221,8 +222,6 @@
     "Solidity/函数.md",
     "Ethers/Provider.md",
     "Solidity/interface.md",
-    "Ethers/StaticCall.md",
-    "Ethers/单位换算.md",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",
     "英语/Spoken",

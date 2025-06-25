@@ -27,7 +27,7 @@ const effect = {
 ```
 
 ### Effect.next
-理想状态下，一个useEffect
+理想状态下，一个useEffect只会有一个活跃的create和destroy。
 
 协调过程中，中断/继续，deps的变化会使得同一个effect使用不同的上下文执行。在某个状态的effect还有活跃的状态（比如上个deps的destroy还没有执行时），新状态的effect对象会被链接到旧effect.next上，确保所有effect都执行完毕。
 

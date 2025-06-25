@@ -36,13 +36,15 @@ function Counter() {
 
 ### 点击按钮
 - setCount(1)
-- 生成 update = { action: `()=>1` ,next:null }
-- update 加入 queue.pending
+- queue.pending = { action: `()=>1` ,next:null }
 - 触发 scheduleRender()
 
 ### 更新渲染
-- processQueue() 处理 queue.pending
+- 执行Counter函数
+- 以hooks链表中的第一项为参数执行useState函数
+- queue.pending不为null，processQueue() 处理 queue.pending
 - memoizedState = 1
+- useState返回的count值为1
 - **按钮显示 1**
 
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/网络/HTTP.md",
+                "file": "面试/前端安全.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTTP"
+              "title": "前端安全"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "POST",
+                "query": "cookie",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/网络/HTTP.md",
+                "file": "面试/前端安全.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of HTTP"
+              "title": "Outline of 前端安全"
             }
           },
           {
@@ -196,6 +196,8 @@
   },
   "active": "fecc85fb5faad29d",
   "lastOpenFiles": [
+    "面试/浏览器/缓存策略.md",
+    "面试/网络/HTTP.md",
     "面试/性能优化/性能优化.md",
     "面试/性能优化/LCP.md",
     "面试/网络/网络分层模型.md",
@@ -220,8 +222,6 @@
     "面试/REACT/API/setState.md",
     "面试/REACT/Reconciliation.md",
     "面试/REACT/Hooks.md",
-    "面试/REACT/Fiber架构.md",
-    "面试/Node/MongoDB/容器化.md",
     "面试/Node/MongoDB",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",

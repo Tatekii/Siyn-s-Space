@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/数据结构/堆.md",
+                "file": "面试/设计模式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "堆"
+              "title": "设计模式"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/数据结构/堆.md",
+                "file": "面试/设计模式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 堆"
+              "title": "Outline of 设计模式"
             }
           },
           {
@@ -195,6 +195,10 @@
   },
   "active": "fecc85fb5faad29d",
   "lastOpenFiles": [
+    "面试/算法/KMP.md",
+    "面试/数据结构/图.md",
+    "面试/数据结构/树.md",
+    "面试/数据结构/堆.md",
     "面试/数据结构/栈.md",
     "面试/数据结构/链表.md",
     "面试/数据结构/队列.md",
@@ -218,10 +222,6 @@
     "Ethers/Wallet.md",
     "Ethers/Singer.md",
     "Ethers/签名.md",
-    "Ethers/编码.md",
-    "Solidity/全局变量.md",
-    "Ethers/Interface.md",
-    "Ethers/Contract.md",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",
     "英语/Spoken",

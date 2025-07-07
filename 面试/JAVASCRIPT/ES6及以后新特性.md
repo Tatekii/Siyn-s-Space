@@ -635,7 +635,15 @@ JavaScript 是一种基于 ECMAScript 标准实现的编程语言。
 ### ECMAScript 2025 (ES16)
 
 1.  **迭代器辅助方法 (Iterator Helpers)**：引入了一系列新的迭代器方法，使得处理迭代器更高效，因为它们是惰性求值的（按需计算）。
-    * **类似数组的方法**: `iterator.filter()`, `iterator.map()`, `iterator.flatMap()`, `iterator.some()`, `iterator.every()`, `iterator.find()`, `iterator.reduce()`, `iterator.forEach()`。
+    * **类似数组的方法**: 
+	    * `iterator.filter()`
+	    * `iterator.map()`
+	    * `iterator.flatMap()`
+	    * `iterator.some()`
+	    * `iterator.every()`
+	    * `iterator.find()`
+	    * `iterator.reduce()`
+	    * `iterator.forEach()`。
     * **迭代器独有的方法**:
         * **`iterator.drop(limit)`**: 返回一个不包含前 `limit` 个元素的迭代器。
         * **`iterator.take(limit)`**: 返回一个只包含前 `limit` 个元素的迭代器。
@@ -661,8 +669,15 @@ JavaScript 是一种基于 ECMAScript 标准实现的编程语言。
     ```
 
 2.  **Set 方法增强 (Set Method Enhancements)**：为 `Set` 对象引入了新的方法，以简化常见的集合操作。
-    * **集合组合**: `Set.prototype.union(other)`, `Set.prototype.intersection(other)`, `Set.prototype.difference(other)`, `Set.prototype.symmetricDifference(other)`。
-    * **集合关系检查**: `Set.prototype.isSubsetOf(other)`, `Set.prototype.isSupersetOf(other)`, `Set.prototype.isDisjointFrom(other)`。
+    * **集合组合**: 
+	    * `Set.prototype.union(other)`并集
+	    * `Set.prototype.intersection(other)`交集
+	    * `Set.prototype.difference(other)`other中不存在
+	    * `Set.prototype.symmetricDifference(other)`交集的🔄
+    * **集合关系检查**: 
+	    * `Set.prototype.isSubsetOf(other)` 子集
+	    * `Set.prototype.isSupersetOf(other)`超集
+	    * `Set.prototype.isDisjointFrom(other)`不相ji
     ```javascript
     const setA = new Set([1, 2, 3]);
     const setB = new Set([3, 4, 5]);

@@ -670,14 +670,14 @@ JavaScript 是一种基于 ECMAScript 标准实现的编程语言。
 
 2.  **Set 方法增强 (Set Method Enhancements)**：为 `Set` 对象引入了新的方法，以简化常见的集合操作。
     * **集合组合**: 
-	    * `Set.prototype.union(other)`并集
-	    * `Set.prototype.intersection(other)`交集
-	    * `Set.prototype.difference(other)`other中不存在
-	    * `Set.prototype.symmetricDifference(other)`交集的🔄
+	    * `Set.prototype.union(other)`并集A∪B
+	    * `Set.prototype.intersection(other)`交集A∩B
+	    * `Set.prototype.difference(other)`A∖B
+	    * `Set.prototype.symmetricDifference(other)`AΔB=(A∪B)∖(A∩B)
     * **集合关系检查**: 
 	    * `Set.prototype.isSubsetOf(other)` 子集
 	    * `Set.prototype.isSupersetOf(other)`超集
-	    * `Set.prototype.isDisjointFrom(other)`不相ji
+	    * `Set.prototype.isDisjointFrom(other)`不相交
     ```javascript
     const setA = new Set([1, 2, 3]);
     const setB = new Set([3, 4, 5]);

@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -193,7 +194,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "328a4439f200cf35",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "面试/JAVASCRIPT/ES6及以后新特性.md",
     "面试/前端安全.md",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/Fiber架构.md",
+                "file": "面试/REACT/版本变化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fiber架构"
+              "title": "版本变化"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/REACT/Fiber架构.md",
+                "file": "面试/REACT/版本变化.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Fiber架构"
+              "title": "Outline of 版本变化"
             }
           },
           {
@@ -196,6 +195,7 @@
   },
   "active": "fecc85fb5faad29d",
   "lastOpenFiles": [
+    "面试/REACT/Fiber架构.md",
     "面试/Node/MongoDB/MongoDB 101.md",
     "面试/JAVASCRIPT/ES6及以后新特性.md",
     "面试/前端安全.md",
@@ -221,7 +221,6 @@
     "面试/REACT/API/useState.md",
     "面试/REACT/API/useMemo.md",
     "面试/REACT/API/setState.md",
-    "面试/REACT/Reconciliation.md",
     "面试/Node/MongoDB",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",

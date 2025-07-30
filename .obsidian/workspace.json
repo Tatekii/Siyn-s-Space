@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/JAVASCRIPT/事件循环.md",
+                "file": "面试/Node/事件循环.md",
                 "mode": "source",
                 "source": false
               },
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "宏任务",
+                "query": "libuv",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/JAVASCRIPT/事件循环.md",
+                "file": "面试/Node/事件循环.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -196,6 +196,7 @@
   },
   "active": "fecc85fb5faad29d",
   "lastOpenFiles": [
+    "面试/JAVASCRIPT/事件循环.md",
     "面试/Node/事件循环.md",
     "面试/VUE/$nextTick.md",
     "面试/JAVASCRIPT/Javascript运行原理.md",
@@ -221,7 +222,6 @@
     "面试/数据结构/栈.md",
     "面试/数据结构/链表.md",
     "面试/数据结构/队列.md",
-    "面试/数据结构/集合.md",
     "面试/Node/MongoDB",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",

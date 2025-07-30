@@ -9,35 +9,39 @@ fiber树中执行协调的顺序类似中序遍历/深度优先搜索（DFS）�
 ### **渲染（Render）阶段**
 >可中断
 #### beginWork()
-- 深度优先遍历fiber链表/[生成新的fiberNode](#fiberNode的生成)
+- 深度优先遍历fiber链表，[生成新的fiberNode](#fiberNode的生成)
 - 执行渲染函数
 - hooks执行
 - 将fiber链接到[副作用](副作用.md)
 - 记录副作用类型使用bitmask(位掩码)标记`Fiber.flag`
 #### completeWork()
-- 根据flag输出新的DOM节点`stateNode`
-- 回溯过程中冒泡并收集副作用，并将它们连接到Fiber 节点的副作用链表 (`firstEffect` 和 `lastEffect`)。（子节点将自己的副作用冒泡给父节点的过程）。
+- 从最深节点向上回溯，收集所有带有effectTag的fiberNode到effectList
+	- 子节点将自己的副作用冒泡给父节点
+- 根据flag构建新的Virtual DOM结构存储到`stateNode`
 
 ### **提交（Commit）阶段**
->⚠️不可中断！保证UI完整性
-- 执行`effectList`(副作用链表)
-- DOM更新到实际页面上
-#### beforeMutation()
-- getSnapshotBeforeMutation
-#### mutation() ⭐️DOM已更新⭐️
-- DOM 操作，如 appendChild、removeChild
-#### layout()
-##### commitLayoutEffect()
-- useLayoutEffect cleanup
-- useLayoutEffect
-- componentDidMount
-- componentDidUpdate
-- ref
-#### Passive() ⚠️异步执行⚠️
-##### commitPassiveEffect()
+>不可中断
+#### commitBeforeMutationEffects
+- getSnapshotBeforeMutation (类组件)
+#### commitMutationEffects
+- **解綁/清理 `ref`**：處理舊的 `ref`（如果需要）。
+- **根據不同的 `flags` 執行 DOM 操作**：插入、更新屬性、刪除節點等。
+- **執行 `componentWillUnmount`** (如果組件被卸載)。
+- ⚠️ **同步執行 `useLayoutEffect.cleanup`**
+#### commitLayoutEffects
+- **賦值新的 `ref`**。
+- **類組件的 `componentDidMount`** (對於新挂載的組件)。
+- **類組件的 `componentDidUpdate`**。
+- ⚠️ **同步執行 `useLayoutEffect`**。
+
+
+- ⚠️ **異步執行 `useEffect` 的銷毀函數和回調函數**：
+    - `useEffect` 的銷毀函數會在下一次渲染前執行。
+    - `useEffect` 的回調函數會在瀏覽器完成 DOM 繪製後，**在一個單獨的宏任務（或微任務，取決於具體實現和上下文，但通常被認為是在瀏覽器繪製之後的非阻塞時機）**中異步執行。它不會阻塞瀏覽器渲染。
+##### flushPassiveEffects
+> 异步执行
 - [[useEffect]] cleanup
 - [useEffect](API/useEffect.md)
-- 触发 `setTimeout`、事件监听等
 
 
 ## fiberNode的生成

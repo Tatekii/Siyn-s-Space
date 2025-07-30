@@ -35,7 +35,7 @@ fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，�
 - ref
 #### Passive() ⚠️异步执行⚠️
 ##### commitPassiveEffect()
-- [[API/useEffect]] cleanup
+- [[useEffect]] cleanup
 - [useEffect](API/useEffect.md)
 - 触发 `setTimeout`、事件监听等
 

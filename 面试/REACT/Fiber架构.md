@@ -24,30 +24,29 @@
 	⬇️
 - {begin work} [向下生成/执行fiber链表，使用props,state执行渲染函数，hooks执行/状态计算， 打标flags]
 	⬇️
-- {complete work} [根据flags输出虚拟DOM=>stateNode，向上冒泡flags]
+- {complete work} [根据flags输出虚拟DOM=>stateNode，向上冒泡flags构建`effectList`]
 	⬇️
 【Commit】
-执行`effectList`,用来保存 fiber 节点需要执行副作用的单向链表，执行相应的 DOM 操作。
+👀执行`effectList`（三遍），执行相应的 DOM 操作。
 	⬇️
 - {commitBeforeMutationEffects}
-	- getSnapshotBeforeUpdate
-	- flushPassiveEffects
+	- 类组件的`getSnapshotBeforeUpdate`
 	⬇️
 - {commitMutationEffects}
 	- 解绑`ref`
 	- ⚠️ 同步执行`useLayoutEffect`的销毁函数
 	- 根据不同的标记执行DOM操作
-	- `componentWillUnmount`
-【Current切换】
-	⬇️
-【Layout】
+	- 类组件的`componentWillUnmount`
 	⬇️
 - {commitLayoutEffects}
 	- 赋值新的`ref`
 	- ⚠️ 同步执行`useLayoutEffect`的回调
 	- ⚠️ 异步执行`useEffect`的销毁和回调
-	- `componentDidMount`
-	- `componentDidUpdate`
+	- 类组件的`componentDidMount`
+	- 类组件的`componentDidUpdate`
+	⬇️
+【Current切换】
+	⬇️
 - {执行 render 函数的回调}
 ```
 

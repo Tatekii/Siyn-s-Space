@@ -3,7 +3,7 @@
 ## 双缓存机制
 内存中同时会有两棵Fiber树，一个为对应此时真实DOM的currentFiberTree，一个是协调过程中操作的workInProgressFiberTree。
 ### 协调的执行
-fiber树中执行协调的顺序类似中序遍历（DFS），先walk child，然后walk sibling，再返回上层（return）。
+fiber树中执行协调的顺序类似中序遍历/深度优先搜索（DFS），先walk child，然后walk sibling，再返回上层（return）。
 
 ## 协调过程
 ### **渲染（Render）阶段**

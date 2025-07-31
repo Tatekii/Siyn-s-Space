@@ -35,7 +35,7 @@
 - {commitMutationEffects}
 	- 解绑`ref`
 	- ⚠️ 同步执行`useLayoutEffect`的销毁函数
-	- 根据不同的标记执行DOM操作
+	- 根据不同的标记执行真实DOM操作
 	- 类组件的`componentWillUnmount`
 	⬇️
 - {commitLayoutEffects}

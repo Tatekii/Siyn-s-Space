@@ -17,8 +17,7 @@ fiber树中执行协调的顺序类似中序遍历/深度优先搜索（DFS）�
 #### completeWork()
 - 从最深节点向上回溯，收集所有带有effectTag的fiberNode到effectList
 	- 子节点将自己的副作用冒泡给父节点
-- 根据flag构建新的DOM结构存储到`stateNode`
-- 如果是更新则`stateNode`还是指向旧的DOM
+- 对应的真实DOM节点（新建或已存在的），指针存储到`stateNode`
 
 ### **提交（Commit）阶段**
 >不可中断
@@ -26,7 +25,7 @@ fiber树中执行协调的顺序类似中序遍历/深度优先搜索（DFS）�
 - getSnapshotBeforeMutation (类组件)
 #### commitMutationEffects
 - **解綁/清理 `ref`**：處理舊的 `ref`（如果需要）。
-- **根據不同的 `flags` 執行 DOM 操作**：插入、更新屬性、刪除節點等。
+- **根據不同的 `flags` 執行 DOM 操作**（操作`StateNode`）：插入、更新屬性、刪除節點等。
 - **執行 `componentWillUnmount`** (如果組件被卸載)。
 - ⚠️ **同步執行 `useLayoutEffect.cleanup`**
 #### commitLayoutEffects

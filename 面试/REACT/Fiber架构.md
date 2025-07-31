@@ -24,7 +24,7 @@
 	⬇️
 - {begin work} [向下生成/执行fiber链表，使用props,state执行渲染函数，hooks执行/状态计算， 打标flags]
 	⬇️
-- {complete work} [根据flags（新建/更新/删除）新建or指向真实DOM`stateNode`，向上冒泡flags构建`effectList`]
+- {complete work} [创建真实DOM节点`stateNode`，向上冒泡flags构建`effectList`]
 	⬇️
 【Commit】
 👀执行`effectList`（三遍），执行相应的 DOM 操作。

@@ -17,7 +17,8 @@ fiber树中执行协调的顺序类似中序遍历/深度优先搜索（DFS）�
 #### completeWork()
 - 从最深节点向上回溯，收集所有带有effectTag的fiberNode到effectList
 	- 子节点将自己的副作用冒泡给父节点
-- 根据flag构建新的Virtual DOM结构存储到`stateNode`
+- 根据flag构建新的DOM结构存储到`stateNode`
+- 如果是更新则`stateNode`还是指向旧的DOM
 
 ### **提交（Commit）阶段**
 >不可中断

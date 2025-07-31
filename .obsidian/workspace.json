@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "stateNod",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -193,13 +194,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fecc85fb5faad29d",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "面试/REACT/Reconciliation.md",
+    "面试/REACT/Fiber架构.md",
     "面试/REACT/Diff.md",
     "面试/性能优化/性能优化.md",
     "面试/工程化/Lerna.md",
-    "面试/REACT/Fiber架构.md",
     "面试/REACT/Hooks.md",
     "面试/REACT/副作用.md",
     "面试/REACT/API/useEffect.md",

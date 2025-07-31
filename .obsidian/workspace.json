@@ -8,34 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fecc85fb5faad29d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/页面渲染流程.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "页面渲染流程"
-            }
-          },
-          {
-            "id": "3d77f3d7395d1d2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/JAVASCRIPT/手写题.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "手写题"
-            }
-          },
-          {
             "id": "0df69b00b9fdc7e3",
             "type": "leaf",
             "state": {
@@ -49,8 +21,7 @@
               "title": "HTTPS"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/JAVASCRIPT/手写题.md",
+                "file": "面试/网络/HTTPS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 手写题"
+              "title": "Outline of HTTPS"
             }
           },
           {
@@ -223,9 +194,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3d77f3d7395d1d2c",
+  "active": "0df69b00b9fdc7e3",
   "lastOpenFiles": [
     "面试/页面渲染流程.md",
+    "面试/JAVASCRIPT/手写题.md",
     "面试/网络/HTTPS.md",
     "面试/数据结构/链表.md",
     "面试/VUE/Diff.md",
@@ -250,7 +222,6 @@
     "面试/浏览器/缓存策略.md",
     "面试/网络/HTTP.md",
     "面试/性能优化/LCP.md",
-    "面试/网络/网络分层模型.md",
     "面试/Node/MongoDB",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",

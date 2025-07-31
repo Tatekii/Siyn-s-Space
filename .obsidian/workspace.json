@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/REACT/Reconciliation.md",
+                "file": "面试/VUE/Diff.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reconciliation"
+              "title": "Diff"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "stateNod",
+                "query": "最长递增",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b4fb401750063676",
@@ -144,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/REACT/Reconciliation.md",
+                "file": "面试/VUE/Diff.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Reconciliation"
+              "title": "Outline of Diff"
             }
           },
           {
@@ -197,9 +196,10 @@
   },
   "active": "fecc85fb5faad29d",
   "lastOpenFiles": [
-    "面试/REACT/Fiber架构.md",
-    "面试/REACT/Reconciliation.md",
     "面试/REACT/Diff.md",
+    "面试/VUE/Diff.md",
+    "面试/REACT/Reconciliation.md",
+    "面试/REACT/Fiber架构.md",
     "面试/性能优化/性能优化.md",
     "面试/工程化/Lerna.md",
     "面试/REACT/Hooks.md",
@@ -222,7 +222,6 @@
     "面试/模块化.md",
     "面试/设计模式.md",
     "面试/算法/KMP.md",
-    "面试/数据结构/图.md",
     "面试/Node/MongoDB",
     "assets/Pasted image 20250618122428.png",
     "面试/工程化/Untitled",

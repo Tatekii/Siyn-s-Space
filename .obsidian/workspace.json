@@ -53,8 +53,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rebase",
-                "matchingCase": true,
+                "query": "",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -194,7 +194,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0df69b00b9fdc7e3",
+  "active": "57c1c285583568e8",
   "lastOpenFiles": [
     "面试/浏览器/缓存策略.md",
     "面试/REACT/Fiber架构.md",
